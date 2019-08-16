@@ -7,8 +7,11 @@
 <title>End of Game</title>
 </head>
 <body>
-  <h1 align = "center">You lost. Please try again</h1>
-   
-   <a href="/">Play Again</a>
+    
+	<h1 text-align="center" style="color:#FF0000; background: black">You Lost! Please try again!</h1>
+	
+	<p><a href="/">Home</a></p>
+	
+
 </body>
 </html>
