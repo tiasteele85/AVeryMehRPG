@@ -18,7 +18,7 @@ public class Character {
 	@JsonProperty("hit_die")
 	private int hit_die;
 	@JsonProperty("starting_equipment")
-	private StartingEquipment starting_equipment;
+	private StartingEquipmentURL starting_equipment;
 	private String url;
 	
 	public int getIndex() {
@@ -40,10 +40,10 @@ public class Character {
 		this.hit_die = hit_die;
 	}
 	
-	public StartingEquipment getStarting_equipment() {
+	public StartingEquipmentURL getStarting_equipment() {
 		return starting_equipment;
 	}
-	public void setStarting_equipment(StartingEquipment starting_equipment) {
+	public void setStarting_equipment(StartingEquipmentURL starting_equipment) {
 		this.starting_equipment = starting_equipment;
 	}
 	public String getUrl() {

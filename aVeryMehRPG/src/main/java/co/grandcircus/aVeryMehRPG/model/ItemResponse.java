@@ -4,8 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class StartingEquipmentDetails {
-
+public class ItemResponse {
 	@JsonProperty("item")
 	private List<Item> items;
 
@@ -21,6 +20,4 @@ public class StartingEquipmentDetails {
 	public String toString() {
 		return "StartingEquipment [items=" + items + "]";
 	}
-	
-	
 }

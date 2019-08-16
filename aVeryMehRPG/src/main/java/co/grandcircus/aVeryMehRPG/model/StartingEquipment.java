@@ -3,27 +3,26 @@ package co.grandcircus.aVeryMehRPG.model;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-/*
- * "item": {
- */
-public class StartingEquipment {
-	//@JsonProperty("starting_equipment")
-	private List<StartingEquipmentDetails> details;
 
-	public List<StartingEquipmentDetails> getDetails() {
-		return details;
+public class StartingEquipment {
+
+	
+	private List<ItemResponse> items;
+
+	public List<ItemResponse> getItems() {
+		return items;
 	}
 
-	public void setDetails(List<StartingEquipmentDetails> details) {
-		this.details = details;
+	public void setItems(List<ItemResponse> items) {
+		this.items = items;
 	}
 
 	@Override
 	public String toString() {
-		return "StartingEquipment [details=" + details + "]";
+		return "StartingEquipment [items=" + items + "]";
 	}
 	
 	
 	
-
+	
 }
