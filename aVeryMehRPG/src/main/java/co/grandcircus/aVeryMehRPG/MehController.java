@@ -15,7 +15,8 @@ public class MehController {
 	public ModelAndView showHome() {
 		System.out.println(apiService.showAll());
 		System.out.println(apiService.showAllWeapons());
-		System.out.println(apiService.showCharacter(3));
+		System.out.println(apiService.showCharacter(9));
+		System.out.println(apiService.chooseWeapon(apiService.showCharacter(9)));
 		return new ModelAndView("home");
 	}
 }

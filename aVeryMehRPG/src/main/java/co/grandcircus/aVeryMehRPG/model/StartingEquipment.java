@@ -1,26 +1,61 @@
 package co.grandcircus.aVeryMehRPG.model;
 
-import java.util.List;
+
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartingEquipment {
 
+	private int quantity;
+	@JsonProperty("item")
+	private Item item;
+	private int index;
+	private String url;
 	
-	private List<ItemResponse> items;
-
-	public List<ItemResponse> getItems() {
-		return items;
+	
+	public int getQuantity() {
+		return quantity;
 	}
 
-	public void setItems(List<ItemResponse> items) {
-		this.items = items;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	
+
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
+	
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	@Override
 	public String toString() {
-		return "StartingEquipment [items=" + items + "]";
+		return "StartingEquipment [quantity=" + quantity + ", item=" + item + ", index=" + index + ", url=" + url + "]";
 	}
+
+	
+
 	
 	
 	

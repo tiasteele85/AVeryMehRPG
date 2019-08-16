@@ -10,6 +10,9 @@ import co.grandcircus.aVeryMehRPG.model.ClassTypes;
 import co.grandcircus.aVeryMehRPG.model.Classes;
 import co.grandcircus.aVeryMehRPG.model.Equipment;
 import co.grandcircus.aVeryMehRPG.model.EquipmentResponse;
+import co.grandcircus.aVeryMehRPG.model.StartingEquipmentResponse;
+import co.grandcircus.aVeryMehRPG.model.Weapon;
+
 
 @Component
 public class ApiService {
@@ -33,11 +36,7 @@ public class ApiService {
 	}
 	
 //	public StartingEquipment getEquipment(int index) {
-//		//url to populate starting equipment because it's a different end point
-//		String url2 = "http://www.dnd5eapi.co/api/startingequipment/";
-//		StartingEquipmentResponse details = restTemplate.getForObject(url2, StartingEquipmentResponse.class);
-//		StartingEquipment weapon = details.getDetails().get(index);
-//		return weapon;
+//		
 //		
 //	}
 	
@@ -49,6 +48,15 @@ public class ApiService {
 		return equipments;
 	}
 	
+	public Weapon chooseWeapon(Character character) {
+		//url to populate starting equipment because it's a different end point
+		
+		StartingEquipmentResponse response = restTemplate.getForObject(character.getStarting_equipment().getUrl(), StartingEquipmentResponse.class);		
+		String weaponURL = response.getStartingEquipment().get(1).getItem().getUrl();
+		Weapon weapon = restTemplate.getForObject(weaponURL, Weapon.class);		
+				
+		return weapon;
+	}
 	
 	
 }

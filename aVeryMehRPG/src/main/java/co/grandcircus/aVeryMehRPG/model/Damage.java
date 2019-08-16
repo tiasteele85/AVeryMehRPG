@@ -1,8 +1,17 @@
 package co.grandcircus.aVeryMehRPG.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+/*
+ * 
+ * "damage": {
+ *	"dice_count": 1,
+ *	"dice_value": 6,
+ */
 public class Damage {
-	
+	@JsonProperty("dice_count")
 	private int dice_count;
+	@JsonProperty("dice_value")
 	private int dice_value;
 	
 	

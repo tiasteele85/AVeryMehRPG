@@ -7,21 +7,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * "item": {
  */
 public class StartingEquipmentResponse {
-	//@JsonProperty("starting_equipment")
-	private List<StartingEquipment> details;
+	@JsonProperty("starting_equipment")
+	private List<StartingEquipment> startingEquipment;
 
-	public List<StartingEquipment> getDetails() {
-		return details;
+	public List<StartingEquipment> getStartingEquipment() {
+		return startingEquipment;
 	}
 
-	public void setDetails(List<StartingEquipment> details) {
-		this.details = details;
+	public void setStartingEquipment(List<StartingEquipment> startingEquipment) {
+		this.startingEquipment = startingEquipment;
 	}
 
 	@Override
 	public String toString() {
-		return "StartingEquipment [details=" + details + "]";
+		return "StartingEquipmentResponse [startingEquipment=" + startingEquipment + "]";
 	}
+
 	
 	
 	
