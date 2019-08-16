@@ -10,8 +10,6 @@ import co.grandcircus.aVeryMehRPG.model.ClassTypes;
 import co.grandcircus.aVeryMehRPG.model.Classes;
 import co.grandcircus.aVeryMehRPG.model.Equipment;
 import co.grandcircus.aVeryMehRPG.model.EquipmentResponse;
-import co.grandcircus.aVeryMehRPG.model.StartingEquipmentResponse;
-import co.grandcircus.aVeryMehRPG.model.StartingEquipment;
 
 @Component
 public class ApiService {
