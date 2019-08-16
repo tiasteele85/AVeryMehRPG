@@ -24,6 +24,10 @@ public class ClassTypes {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	@Override
+	public String toString() {
+		return "ClassTypes [name=" + name + ", url=" + url + "]";
+	}
 	
 	
 }

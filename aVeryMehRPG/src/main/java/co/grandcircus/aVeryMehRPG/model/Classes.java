@@ -22,8 +22,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Classes {
 	
 	@JsonProperty("results")
-	private List<ClassTypes> classes;
-	private List<ClassTypes> availCharacterTypes;
+	private List<ClassTypes> classes;	
+	
+	
+	@Override
+	public String toString() {
+		return "Classes [classes=" + classes + "]";
+	}
 	public List<ClassTypes> getClasses() {
 		return classes;
 	}
@@ -31,16 +36,7 @@ public class Classes {
 		this.classes = classes;
 	}
 	
-	public void setAvailCharacterTypes() {
-		availCharacterTypes.add(classes.get(2));
-		availCharacterTypes.add(classes.get(4));
-		availCharacterTypes.add(classes.get(6));
-		availCharacterTypes.add(classes.get(9));
-	}
-	
-	public List<ClassTypes> getAvailCharacters(){
-		return availCharacterTypes;
-	}
+
 	
 	
 }
