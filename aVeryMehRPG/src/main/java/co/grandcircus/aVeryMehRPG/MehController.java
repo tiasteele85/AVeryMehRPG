@@ -7,8 +7,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import co.grandcircus.aVeryMehRPG.dm.DungeonMaster;
 import co.grandcircus.aVeryMehRPG.model.ClassTypes;
 
 @Controller
@@ -16,6 +18,8 @@ public class MehController {
 
 	@Autowired
 	ApiService apiService;
+	
+	DungeonMaster dm = new DungeonMaster();
 	
 	@RequestMapping("/")
 	public ModelAndView showHome() {
@@ -34,5 +38,25 @@ public class MehController {
 	public ModelAndView showStory() {
 	return new ModelAndView("story");
 }
+	
+	@RequestMapping("/fight")
+	public ModelAndView showFightScene() {
+		
+	
+		return new ModelAndView("fight", "fight", dm.BaseFight());
+	}
+	
+	@RequestMapping("/takeDamage")
+	public ModelAndView takeDamage(
+			@RequestParam(value="punch", required=false) String buttonClick) {
+		System.out.println(buttonClick);
+		
+		if(buttonClick.equals("punch"))
+		{
+			dm.BaseFight();
+		}
+		
+		return new ModelAndView("redirect:/fight");
+	}
 
 }
