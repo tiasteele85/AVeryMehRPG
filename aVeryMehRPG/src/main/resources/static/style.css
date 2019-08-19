@@ -15,6 +15,20 @@ p {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
 	font-size: 25px;
-	padding: 25px;
 	text-shadow: 2px 2px black;
+}
+
+a {
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+	font-size: 35px;
+}
+
+span {
+	position: fixed;
+	top: 42px;
+	right: 80px;
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+	font-size: 18px;
 }
