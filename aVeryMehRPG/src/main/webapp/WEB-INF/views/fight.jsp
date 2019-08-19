@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
 <body>
 <audio autoplay>
-      <source src="http://23.237.126.42/ost/bs-zelda-1996-snes/afchiyjwpk/02%20Overworld.mp3">
+      <source src="">
 </audio>
 	<div>
 		<div style="float:left;">
