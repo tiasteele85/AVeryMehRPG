@@ -1,7 +1,5 @@
 package co.grandcircus.aVeryMehRPG;
 
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +34,8 @@ public class MehController {
 	
 	@RequestMapping("/story")
 	public ModelAndView showStory() {
+	
+		
 	return new ModelAndView("story");
 }
 	
