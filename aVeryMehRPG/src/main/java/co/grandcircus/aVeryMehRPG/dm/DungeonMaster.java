@@ -24,6 +24,7 @@ public class DungeonMaster {
 		enemy.setHit_die(character.getHit_die());
 		enemy.setWeapon(weapon);
 		
+		//TESTING
 		System.out.println("Hello:" + enemy);
 		System.out.println("Name: " + enemy.getName() );
 		System.out.println("Hit Die: " + enemy.getHit_die() );	
@@ -33,29 +34,45 @@ public class DungeonMaster {
 		
 		System.out.println("W:" + weapon.getName());
 		System.out.println("D:" + weapon.getDamage());
+		//TESTING
+	}
+	
+	public void setPlayer(Character character, Weapon weapon) {
+		player.setName(character.getName());
+		player.setHit_die(character.getHit_die());
+		player.setWeapon(weapon);
+		
+		//TESTING
+		System.out.println("Hello:" + player);
+		System.out.println("Name: " + player.getName() );
+		System.out.println("Hit Die: " + player.getHit_die() );	
+		System.out.println("Weapons: " + player.getWeapon());
+		System.out.println("P W:" + player.getWeapon().getName());
+		System.out.println("P W:" + player.getWeapon().getDamage());
+		
+		System.out.println("W:" + weapon.getName());
+		System.out.println("D:" + weapon.getDamage());
+		//TESTING
 	}
 	
 	
+	public String getPlayer() {
+		return player.toString();
+	}
 	
+	public String getEnemy() {
+		return enemy.toString();
+	}
 	
-	
-	
-	
-	public String BaseFight() {
-
-		// System.out.println("Player takes a punch " + (player.getHealth().getHealth()
-		// - 5));
-		// System.out.println("Enemy takes a punch " + (enemy.getHealth().getHealth() -
-		// 5));
-
-		return player.getHealth().toString();
+	public void BaseFight() {
+		
 	}
 
 	public String takeAPunch() {
 
-		System.out.println(enemy.getHit_die());
+		System.out.println("Woodblock");
 		
-		int damage = dice.basicDamage(1);
+		int damage = dice.basicDamage(enemy.getHit_die() + 1);
 		
 		if(isAlive(player.getHealth().getHealth())) {
 			player.getHealth().setHealth(damage);

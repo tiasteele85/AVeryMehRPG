@@ -20,7 +20,8 @@
 					</thead>
 					<tbody>
 						<td>
-							<p>${ fight }</p>
+							<p>${ player }</p>
+							<p>${ enemy }</p>
 						</td>
 					</tbody>
 				</table>

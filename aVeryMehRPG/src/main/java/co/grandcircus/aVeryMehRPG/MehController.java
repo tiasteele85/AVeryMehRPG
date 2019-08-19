@@ -23,8 +23,8 @@ public class MehController {
 	
 	@RequestMapping("/")
 	public ModelAndView showHome() {
-		/*System.out.println(apiService.showAll());
-		System.out.println(apiService.showAllWeapons());
+		System.out.println(apiService.showAll());
+		/*System.out.println(apiService.showAllWeapons());
 		System.out.println(apiService.showCharacter(9));
 		System.out.println(apiService.chooseWeapon(apiService.showCharacter(9)));*/
 		
@@ -35,11 +35,14 @@ public class MehController {
 	}
 	
 	@RequestMapping("/story")
-	public ModelAndView showStory() {
+	public ModelAndView showStory(
+			@RequestParam(value="Character") int player) {
 		Random rand = new Random();
-		//int num = (rand.nextInt(12));
-		dm.setEnemy(apiService.showCharacter(1), apiService.chooseWeapon(apiService.showCharacter(1)));
-		
+		int num = (rand.nextInt(12));
+		dm.setEnemy(apiService.showCharacter(num), apiService.chooseWeapon(apiService.showCharacter(num)));
+//		int index = Integer.parseInt(player.substring(player.length()-1));
+		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
+		System.out.println(player);
 		
 	return new ModelAndView("story");
 }
@@ -47,7 +50,11 @@ public class MehController {
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
 		
-		return new ModelAndView("fight", "fight", dm.takeAPunch());
+		ModelAndView mv =  new ModelAndView("fight");
+		mv.addObject(" player ",dm.getPlayer());
+		mv.addObject(" enemy ",dm.getEnemy());
+		
+		return mv;
 	}
 	
 	@RequestMapping("/takeDamage")

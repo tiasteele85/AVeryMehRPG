@@ -24,7 +24,7 @@
 	<form action="/story" method="get">
 		<select name="Character">
 			<c:forEach items = "${list}" var = "character">
-				<option value = "${character.name}" name="character">${character.name} </option>
+				<option value = "${character.index}" name="character">${character.name} </option>
 			</c:forEach>
 		</select>
 		<p><input type="submit" value="Select"></p>

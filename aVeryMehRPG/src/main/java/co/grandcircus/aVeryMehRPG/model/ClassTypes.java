@@ -24,6 +24,21 @@ public class ClassTypes {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public int getIndex() {
+		String test = "/";
+		
+		System.out.println("Captain Joe: " + url.substring(url.length()-2, url.length()-1).equals(test));
+		System.out.println(url.charAt(url.length()-2));
+		if(url.substring(url.length()-2, url.length()-1).equals(test))
+		{
+			return Integer.parseInt(url.substring(url.length()-1));
+		}else {
+			return Integer.parseInt(url.substring(url.length()-2));
+		}
+			
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "ClassTypes [name=" + name + ", url=" + url + "]";
