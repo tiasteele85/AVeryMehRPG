@@ -18,7 +18,7 @@
 
 	<h1>Welcome to a Very Meh RPG :/</h1>
 	<div style="width:21%;height:3;padding-bottom:10%;position:relative;">
-	<iframe src="https://giphy.com/embed/lPulTNfJ53X9BglIZc" width="100%" height="100%" style="position:absolute" frameBorder="0">
+	<iframe width="100%" height="100%" style="position:absolute" frameBorder="0">
 	</iframe>
 	</div>
 	

@@ -36,6 +36,8 @@ public class MehController {
 	
 	@RequestMapping("/story")
 	public ModelAndView showStory() {
+	
+		
 	return new ModelAndView("story");
 }
 	
