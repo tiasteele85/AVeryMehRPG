@@ -25,7 +25,7 @@ public class SideOfRoad {
 	public void Lover() {
 		System.out.println(
 				"The Knight draws his sword and cuts you in half, you try to love him to death, but alas your heart is not as powerful as a steel sword.");
-
+		// this goes to the only death screen that should occur by natural selection
 	}
 
 }
