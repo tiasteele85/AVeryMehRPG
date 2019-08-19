@@ -13,6 +13,7 @@ h1 {
 	text-shadow: 2px 2px black;
 }
 
+
 p {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
@@ -26,14 +27,6 @@ a {
 	font-size: 35px;
 }
 
-span {
-	position: fixed;
-	top: 42px;
-	right: 80px;
-	color: yellow;
-	font-family: 'Barriecito', cursive;
-	font-size: 18px;
-}
 
 select {
 	color: yellow;
@@ -46,4 +39,12 @@ div {
 	top: 1px;
 	right: 150px;
 	position:fixed;
+}
+
+img {
+	position: relative;
+	left: 240px;
+	width:600px;
+	height:500px;
+	border-color:yellow;
 }

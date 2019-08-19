@@ -5,8 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/custom.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
 <meta charset="ISO-8859-1">
@@ -29,6 +27,7 @@
 			</c:forEach>
 		</select>
 						<br></br>
+						<if: 
 							<br><a href="/story">Select</a></br>
 </center>
 	
