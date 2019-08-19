@@ -24,10 +24,10 @@
 	<form action="/story" method="get">
 		<select name="Character">
 			<c:forEach items = "${list}" var = "character">
-				<option value = "selection">${character.name} </option>
+				<option value = "${character.name}" name="character">${character.name} </option>
 			</c:forEach>
 		</select>
-		<p><input type=submit value="Select"></p>
+		<p><input type="submit" value="Select"></p>
 		</form>
 		
 						<br></br>
