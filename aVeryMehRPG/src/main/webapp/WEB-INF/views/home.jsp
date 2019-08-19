@@ -21,14 +21,16 @@
 	</div>
 	
 	<p>Choose your character, you son of a monkey! </p>
-		<select>
+	<form action="/story" method="get">
+		<select name="Character">
 			<c:forEach items = "${list}" var = "character">
-				<option>${character.name}</option>
+				<option value = "selection">${character.name} </option>
 			</c:forEach>
 		</select>
+		<p><input type=submit value="Select"></p>
+		</form>
+		
 						<br></br>
-						<if: 
-							<br><a href="/story">Select</a></br>
 </center>
 	
 	

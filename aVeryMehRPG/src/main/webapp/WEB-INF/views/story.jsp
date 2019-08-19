@@ -11,7 +11,7 @@
 </head>
 <body>
 <center>
-<h1>Hello </h1>
+<h1>Hello</h1>
 <img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></h1>
 
 </center>
