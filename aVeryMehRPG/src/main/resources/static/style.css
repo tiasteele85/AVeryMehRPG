@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 body {
-	background-image: radial-gradient(red , black);
+	background-color: #67110a;
 }
 
 h1 {
 	color: yellow;
 	position: relative;
-	top:40px;
+	left:10px;
+	top:5px;
 	font-family: 'Barriecito', cursive;
 	font-size: 65px;
 	text-shadow: 2px 2px black;
 }
-
 
 p {
 	color: yellow;
@@ -43,11 +43,12 @@ div {
 }
 
 img {
-	position: relative;
-	left: 240px;
+	position: fixed;
+	top:90px;
+	left: 750px;
 	width:600px;
 	height:500px;
-	border-color:yellow;
+	border-color:#660000;
 }
 
 input {
@@ -56,5 +57,28 @@ input {
 	font-size: 25px;
 	background-color: black;
 	border-color: yellow;
+	
+}
+
+span {
+	position: fixed;
+	left:20px;
+	width:650px;
+	height:400px;
+	font-size:23px;
+	letter-spacing:3px;
+	line-spacing:6px;
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+}
+
+button {
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+	font-size: 35px;
+	margin:520px;
+	background-color:black;
+	
+	
 	
 }
