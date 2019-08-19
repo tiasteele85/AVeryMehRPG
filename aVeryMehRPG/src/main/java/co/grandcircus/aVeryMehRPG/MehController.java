@@ -42,8 +42,8 @@ public class MehController {
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
 		
-	
-		return new ModelAndView("fight", "fight", dm.BaseFight());
+		
+		return new ModelAndView("fight", "fight", dm.takeAPunch());
 	}
 	
 	@RequestMapping("/takeDamage")
@@ -53,7 +53,7 @@ public class MehController {
 		
 		if(buttonClick.equals("punch"))
 		{
-			dm.BaseFight();
+			dm.takeAPunch();
 		}
 		
 		return new ModelAndView("redirect:/fight");

@@ -1,9 +1,9 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
 public class Health {
-	
+
 	private int health;
-	
+
 	public Health() {
 		health = 100;
 	}
@@ -18,8 +18,15 @@ public class Health {
 	}
 
 	public void setHealth(int damage) {
-		health -= damage;
+		if (health > 0) {
+			health -= damage;
+			if(health < 0) {
+				health = 0;
+			}
+		}
 	}
-	
-	
+
+	public void resetHealth() {
+		health = 100;
+	}
 }
