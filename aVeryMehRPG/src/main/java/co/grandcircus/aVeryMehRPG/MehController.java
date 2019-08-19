@@ -25,7 +25,7 @@ public class MehController {
 		System.out.println(apiService.chooseWeapon(apiService.showCharacter(9)));*/
 		
 		List <ClassTypes> character = apiService.showAll();
-		ModelAndView mv = new ModelAndView();
+		ModelAndView mv = new ModelAndView("home");
 		mv.addObject("list", character);
 		return mv;
 	}

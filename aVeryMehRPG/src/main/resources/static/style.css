@@ -32,3 +32,10 @@ span {
 	font-family: 'Barriecito', cursive;
 	font-size: 18px;
 }
+
+select {
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+	font-size: 25px;
+	background-color: black;
+}

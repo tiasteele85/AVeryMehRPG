@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -18,12 +18,13 @@
 	<h1>Welcome to a Very Meh RPG :/</h1>
 	
 	<p>Choose your character, you son of a monkey! </p>
-	<c:forEach items = "{list}" value = "character">
-	<tr>
-	<td><a id="{list.name}">{list.name}</a></td>
-	</tr>
+	<select>
+	<c:forEach items = "${list}" var = "character">
+		<option>${character.name}</option>
 	</c:forEach>
-	<a href="/story">Select</a>
+	</select>
+	<br></br>
+	<br><a href="/story">Select</a></br>
 	</center>
 	
 	
