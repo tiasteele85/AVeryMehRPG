@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
 body {
-	background-image: radial-gradient(green , black);
+	background-image: radial-gradient(red , black);
 }
 
 h1 {
 	color: yellow;
+	position: relative;
+	top:40px;
 	font-family: 'Barriecito', cursive;
 	font-size: 65px;
 	text-shadow: 2px 2px black;
@@ -38,4 +40,10 @@ select {
 	font-family: 'Barriecito', cursive;
 	font-size: 25px;
 	background-color: black;
+}
+
+div {
+	top: 1px;
+	right: 150px;
+	position:fixed;
 }
