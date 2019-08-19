@@ -52,7 +52,7 @@ public class ApiService {
 		//url to populate starting equipment because it's a different end point
 		
 		StartingEquipmentResponse response = restTemplate.getForObject(character.getStarting_equipment().getUrl(), StartingEquipmentResponse.class);		
-		String weaponURL = response.getStartingEquipment().get(1).getItem().getUrl();
+		String weaponURL = response.getStartingEquipment().get(0).getItem().getUrl();
 		Weapon weapon = restTemplate.getForObject(weaponURL, Weapon.class);		
 				
 		return weapon;

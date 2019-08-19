@@ -16,10 +16,16 @@ public class Dice {
 		Random rand = new Random();
 		int quantity = damage.getDiceCount();
 		
-		damageAmount = (quantity * rand.nextInt(damage.getDiceValue()));
+		damageAmount = (quantity * rand.nextInt(damage.getDiceValue()) + 1);
 		
 		damageAmount += rand.nextInt(hit);
 		
+		return damageAmount;
+	}
+	
+	public int basicDamage(int hit) {
+		Random rand = new Random();
+		damageAmount = (rand.nextInt(hit) + 1);
 		return damageAmount;
 	}
 }

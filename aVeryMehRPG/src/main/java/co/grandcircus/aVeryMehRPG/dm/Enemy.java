@@ -1,14 +1,18 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
-import co.grandcircus.aVeryMehRPG.model.StartingEquipmentURL;
+
 import co.grandcircus.aVeryMehRPG.model.Weapon;
 
 public class Enemy {
+	
 	private Health health;
 	private String name;
-	private int hit_die;
-	
+	private int hit_die;	
 	private Weapon weapon;
+	
+	public Enemy() {
+		health = new Health();
+	}
 
 	public Health getHealth() {
 		return health;
