@@ -37,7 +37,7 @@ public class MehController {
 	public ModelAndView showStory() {
 		Random rand = new Random();
 		//int num = (rand.nextInt(12));
-		dm.getEnemy(apiService.showCharacter(1), apiService.chooseWeapon(apiService.showCharacter(1)));
+		dm.setEnemy(apiService.showCharacter(1), apiService.chooseWeapon(apiService.showCharacter(1)));
 		
 		
 	return new ModelAndView("story");
