@@ -61,7 +61,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Player [health=" + health + "]";
+		return "Player [name= "+ name +", health= " + health + "]";
 	}
 	
 	

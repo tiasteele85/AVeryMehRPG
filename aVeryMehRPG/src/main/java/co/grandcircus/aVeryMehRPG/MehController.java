@@ -51,9 +51,10 @@ public class MehController {
 	public ModelAndView showFightScene() {
 		
 		ModelAndView mv =  new ModelAndView("fight");
-		mv.addObject(" player ",dm.getPlayer());
-		mv.addObject(" enemy ",dm.getEnemy());
-		
+		mv.addObject("player" , dm.getPlayer());
+		System.out.println(dm.getPlayer());
+		mv.addObject("enemy" , dm.getEnemy());
+		System.out.println(dm.getEnemy());
 		return mv;
 	}
 	
@@ -65,6 +66,7 @@ public class MehController {
 		if(buttonClick.equals("punch"))
 		{
 			dm.takeAPunch();
+			dm.giveAPunch();
 		}
 		
 		return new ModelAndView("redirect:/fight");

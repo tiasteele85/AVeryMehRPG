@@ -81,6 +81,17 @@ public class DungeonMaster {
 			return "You're Dead";
 		}
 	}
+	
+	public String giveAPunch() {
+		int damage = dice.basicDamage(player.getHit_die() + 1);
+		
+		if(isAlive(enemy.getHealth().getHealth())) {
+			enemy.getHealth().setHealth(damage);
+			return enemy.getHealth().toString();
+		} else {
+			return "They're Dead";
+		}
+	}
 
 	public void resetHealth() {
 		player.getHealth().resetHealth();

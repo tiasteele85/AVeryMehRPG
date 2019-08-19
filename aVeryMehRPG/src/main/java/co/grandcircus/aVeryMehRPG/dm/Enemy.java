@@ -51,7 +51,7 @@ public class Enemy {
 
 	@Override
 	public String toString() {
-		return "Enemy [health=" + health + ", name=" + name + ", hit_die=" + hit_die + " ,weapon=" + weapon + "]";
+		return "Enemy [name= " + name + ", health= " + health + "]";
 	}
 
 }
