@@ -1,6 +1,7 @@
 package co.grandcircus.aVeryMehRPG;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,14 +35,16 @@ public class MehController {
 	
 	@RequestMapping("/story")
 	public ModelAndView showStory() {
-	
+		Random rand = new Random();
+		//int num = (rand.nextInt(12));
+		dm.getEnemy(apiService.showCharacter(1), apiService.chooseWeapon(apiService.showCharacter(1)));
+		
 		
 	return new ModelAndView("story");
 }
 	
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
-		
 		
 		return new ModelAndView("fight", "fight", dm.takeAPunch());
 	}
