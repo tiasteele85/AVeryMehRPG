@@ -60,6 +60,11 @@ input {
 	
 }
 
+th {
+	color: yellow;
+	font-family: 'Barriecito', cursive;	
+}
+
 span {
 	position: fixed;
 	left:20px;

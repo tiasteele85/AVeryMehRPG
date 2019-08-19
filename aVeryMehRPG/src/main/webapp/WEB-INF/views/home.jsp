@@ -7,14 +7,18 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+<linke href="http://23.237.126.42/ost/bs-zelda-snes-original-soundtrack/msdbzydr/02%20-%20Dungeon.mp3" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
 </head>
 <body>
-
+<audio autoplay>
+      <source src="http://23.237.126.42/ost/bs-zelda-snes-original-soundtrack/msdbzydr/02%20-%20Dungeon.mp3">
+</audio>
 <center>
 
-	<h1>Welcome to a Very Meh RPG :/</h1>
+
+	<h1>Welcome to a Very Meh RPG !</h1>
 	<div style="width:21%;height:3;padding-bottom:10%;position:relative;">
 	<iframe src="https://giphy.com/embed/lPulTNfJ53X9BglIZc" width="100%" height="100%" style="position:absolute" frameBorder="0">
 	</iframe>

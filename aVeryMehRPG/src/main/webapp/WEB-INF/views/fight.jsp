@@ -6,7 +6,12 @@
 <meta charset="ISO-8859-1">
 <title>Fight Fight Fight</title>
 </head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
 <body>
+<audio autoplay>
+      <source src="http://23.237.126.42/ost/bs-zelda-1996-snes/afchiyjwpk/02%20Overworld.mp3">
+</audio>
 	<div>
 		<div style="float:left;">
 			<p></p>
@@ -29,8 +34,7 @@
 			<div>
 				<p></p>
 				<form action="/takeDamage">
-					<input type="submit" name="punch" value="punch" />
-					
+					<input type="submit" name="punch" value="punch">
 				</form>
 			</div>
 		</div>

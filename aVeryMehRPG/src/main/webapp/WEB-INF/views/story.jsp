@@ -10,7 +10,12 @@
 <title>Story Page</title>
 </head>
 <body>
+<audio autoplay>
+      <source src="http://23.237.126.42/ost/bs-zelda-snes-original-soundtrack/ougnpgkd/03%20-%20Ganon.mp3">
+</audio>
 <h1>Hello name</h1> 
+
+
 <span>Astral plane base attack bonus command word item cross-class skill darkness favored class fire 
 immunity pounce spell slot supernatural ability water domain. Chaos domain creature double weapon 
 evil domain flank good domain melee weapon multiplying native subtype nonabilities pinned plane of 
@@ -26,10 +31,6 @@ pattern subschool prone spell resistance staggered subject swim threat touch att
 <form action="/fight" method ="get">
 <button><option><input type="submit" value"submit">Fight</button></option>
 </form>
-
-
-
-
 
 </body>
 </html>
