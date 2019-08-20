@@ -8,6 +8,7 @@ body {
 	
 }
 
+<<<<<<< Updated upstream
 #storybody {
 	color:yellow;
 	position:relative;
@@ -15,6 +16,15 @@ body {
     height:100px;
 }
 
+=======
+.wrapper{
+	width: 500px;
+}
+
+.inner{
+	width: 300px;
+}
+>>>>>>> Stashed changes
 
 h1 {
 	position: relative;
