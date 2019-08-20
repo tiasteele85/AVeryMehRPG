@@ -1,5 +1,7 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
+import java.util.Scanner;
+
 import co.grandcircus.aVeryMehRPG.model.Character;
 import co.grandcircus.aVeryMehRPG.model.Weapon;
 /*
@@ -60,20 +62,9 @@ public class DungeonMaster {
 		return player.toString();
 	}
 	
-	public int getPlayerHealth() {
-		return player.getHealth().getHealth();
-	}
-	
-	
-	
 	public String getEnemy() {
 		return enemy.toString();
 	}
-	
-	public int getEnemyHealth() {
-		return enemy.getHealth().getHealth();
-	}
-	
 	
 	public void BaseFight() {
 		
@@ -83,10 +74,10 @@ public class DungeonMaster {
 
 		System.out.println("Woodblock");
 		
-		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
+		int damage = dice.basicDamage(enemy.getHit_die() + 1);
 		
 		if(isAlive(player.getHealth().getHealth())) {
-			player.getHealth().setHealth(pDamage);
+			player.getHealth().setHealth(damage);
 			return player.getHealth().toString();
 		} else {
 			return "You're Dead";
@@ -94,10 +85,10 @@ public class DungeonMaster {
 	}
 	
 	public String giveAPunch() {
-		int eDamage = dice.basicDamage(player.getHit_die() + 1);
+		int damage = dice.basicDamage(player.getHit_die() + 1);
 		
 		if(isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(eDamage);
+			enemy.getHealth().setHealth(damage);
 			return enemy.getHealth().toString();
 		} else {
 			return "They're Dead";
@@ -116,4 +107,49 @@ public class DungeonMaster {
 			return true;
 		}
 	}
+
+	public void story() {
+		Scanner scnr = new Scanner(System.in);
+		String drink = null,decline= null,fight=null,yell=null,craft=null,deeper=null,snarky=null,sock=null,refuse=null,insist=null,love = null;
+		System.out.println("We start off in dark and gloomy bar in the heart of Technologica Woods . "
+				+ "\nOur hero sits at the bar after another victorious mission. \nThen out of nowhere the bartender David the master of all Java comes over and places a drink in-front of you and exclaims “Hero! This drink was bought for you by that mysterious man over there!” ");
+		System.out.println("************************************************************************");
+		System.out.println("What do you do? \n 1.Drink the beverage \n 2.Decline the drink and leave the bar");
+		scnr.next();
+		
+		if(drink.equalsIgnoreCase("drink")) {
+			System.out.println("You drink the mysterious beverage and immediately feel ill, you vision becomes blurry and you fall to the ground.");
+			System.out.println("You wake up several hours in the middle of the woods and realize that your brand-new collectable Batman shoes have been taken" + 
+					"\nand you’ve lost 5 points of health.");
+			System.out.println("*******************************************************");
+			System.out.println("Do you: 1. Craft makeshift pair of shoes out of leaves and walk back towards civilizations"
+			+ "\n 2.  Go deeper into the woods and just accept the fact that no one will believe you that a stranger took your shoes so that this is now your home.");
+			if(craft.equalsIgnoreCase("craft")) {
+				System.out.println("Do you: 1. Craft makeshift pair of shoes out of leaves and walk back towards civilizations"
+						+ "\n 2.  Go deeper into the woods and just accept the fact that no one will believe you that a stranger took your shoes so that this is now your home.");
+			}
+		
+		
+		}
+	
+		
+		
+		
+		
+		
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
