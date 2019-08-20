@@ -7,25 +7,37 @@
 <title>Fight Fight Fight</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
+	rel="stylesheet">
 <body>
 
-<audio autoplay>
-      <source src="">
-</audio>
-	<div>		
-			                <h1>Fight Story</h1>
-							<p>${ player }</p>
-							<p>${ enemy }</p>
-						
-			
+	<audio autoplay>
+		<source src="">
+	</audio>
+	<div>
+		<div style="float: left; height: 100%;">
+			<p></p>
+
+
+
+		</div>
+		<div style="float:right;">
+			<div>
+				<h1 align="center">Fight Story</h1>
+				<p>${ player }</p>
+				<p>${ enemy }</p>
+
 				<p></p>
 				<form action="/takeDamage">
-					<input type="submit" name="punch" value="punch">
-					<input type="submit" name="kick" value="kick">
+					<input type="submit" name="punch" value="punch"> <input
+						type="submit" name="kick" value="kick">
 				</form>
-			
-		
+			</div>
+		</div>
 	</div>
+
+
+
 </body>
 </html>
