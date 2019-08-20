@@ -1,5 +1,12 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
+
+/*
+ * SHOULD CONTAIN JUST THE VERBAGE FOR FIGHT TEXT 
+ * lIKE STORY OF THE FIGHT NOT THE DAMAGE OR PLAYER OR ....
+ * 
+ * 
+ */
 public class Fight {
 	
 	private Player player;

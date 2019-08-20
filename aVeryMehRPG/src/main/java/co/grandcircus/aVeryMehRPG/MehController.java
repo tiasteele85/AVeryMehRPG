@@ -64,12 +64,26 @@ public class MehController {
 		System.out.println(buttonClick);
 		
 		if(buttonClick.equals("punch"))
-		{
+		{		
 			dm.takeAPunch();
 			dm.giveAPunch();
+			if(dm.getPlayerHealth() == 0) {
+				return new ModelAndView("death");
+			}else if (dm.getEnemyHealth() == 0) {
+				return new ModelAndView("winner");
+			}else {
+				return new ModelAndView("redirect:/fight");
+			}
+		}else {
+			if(dm.getPlayerHealth() == 0) {
+				return new ModelAndView("death");
+			}else if (dm.getEnemyHealth() == 0) {
+				return new ModelAndView("winner");
+			}else {
+				return new ModelAndView("redirect:/fight");
+			}
 		}
 		
-		return new ModelAndView("redirect:/fight");
 	}
 
 }

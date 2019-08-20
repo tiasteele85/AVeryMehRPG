@@ -39,6 +39,7 @@
 				<p></p>
 				<form action="/takeDamage">
 					<input type="submit" name="punch" value="punch">
+					<input type="submit" name="kick" value="kick">
 				</form>
 			</div>
 		</div>

@@ -60,9 +60,20 @@ public class DungeonMaster {
 		return player.toString();
 	}
 	
+	public int getPlayerHealth() {
+		return player.getHealth().getHealth();
+	}
+	
+	
+	
 	public String getEnemy() {
 		return enemy.toString();
 	}
+	
+	public int getEnemyHealth() {
+		return enemy.getHealth().getHealth();
+	}
+	
 	
 	public void BaseFight() {
 		
@@ -72,10 +83,10 @@ public class DungeonMaster {
 
 		System.out.println("Woodblock");
 		
-		int damage = dice.basicDamage(enemy.getHit_die() + 1);
+		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
 		
 		if(isAlive(player.getHealth().getHealth())) {
-			player.getHealth().setHealth(damage);
+			player.getHealth().setHealth(pDamage);
 			return player.getHealth().toString();
 		} else {
 			return "You're Dead";
@@ -83,10 +94,10 @@ public class DungeonMaster {
 	}
 	
 	public String giveAPunch() {
-		int damage = dice.basicDamage(player.getHit_die() + 1);
+		int eDamage = dice.basicDamage(player.getHit_die() + 1);
 		
 		if(isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(damage);
+			enemy.getHealth().setHealth(eDamage);
 			return enemy.getHealth().toString();
 		} else {
 			return "They're Dead";
