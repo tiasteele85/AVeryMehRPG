@@ -1,5 +1,7 @@
 package co.grandcircus.aVeryMehRPG.model;
 
+import co.grandcircus.aVeryMehRPG.dm.Player;
+
 public class Bar {
 
 	// initial story should only be called once per game
@@ -48,12 +50,14 @@ public class Bar {
 
 	// goes to bar fight .jsp
 
-	public String Meanie() {
+	public String Meanie(Player playie) {
+		
 		String meanie = "You walk up to the stranger and exclaim “hey man you poisoned me and stole my shoes!! not cool broheim!” "
 				+ "\nThe stranger then revels himself as Kyle the TA and proceeds to respond with kindness in his voice “hey, I’m sorry I got carried away back there let me get you another drink. "
 				+ "\nPoison free this time I promise.” As you turn to head to the bar you feel a sharp pain in your side. "
 				+ "\nKyle has stabbed you and you lose 15 additional points of health. "
 				+ "\nAngry you begin to swing wildly at Kyle and the battle begins.";
+		playie.getHealth().setHealth(15);
 		return meanie;
 	}
 

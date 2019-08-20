@@ -1,9 +1,11 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import co.grandcircus.aVeryMehRPG.model.Character;
 import co.grandcircus.aVeryMehRPG.model.Weapon;
+import co.grandcircus.aVeryMehRPG.model.Woods;
 
 /*
  * This guy handles all the stuffs
@@ -67,60 +69,82 @@ public class DungeonMaster {
 		return enemy.toString();
 	}
 
-	public void BaseFight() {
-
+	public String BaseFight() {
+		Random rand = new Random();
+		int toggle = rand.nextInt(2)+1;
+		
+		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
+		System.out.println("Random Fun: "+toggle);
+		if(toggle == 1)
+		{
+			
+			if (isAlive(player.getHealth().getHealth())) {
+				player.getHealth().setHealth(eDamage);
+				return player.getHealth().toString();
+			} else {
+				return "You're Dead";
+			}
+		}else {
+			int kickMultiplier = (int)(.15 * eDamage);
+			if (isAlive(player.getHealth().getHealth())) {
+				player.getHealth().setHealth(eDamage + kickMultiplier);
+				return player.getHealth().toString();
+			} else {
+				return "You're Dead";
+			}
+		}
 	}
 
 	public String takeAPunch() {
 
-		System.out.println("Woodblock");
+		System.out.println("Woodblocker");
 
-		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
-
-		if (isAlive(player.getHealth().getHealth())) {
-			player.getHealth().setHealth(pDamage);
-			return player.getHealth().toString();
-		} else {
-			return "You're Dead";
-		}
-	}
-
-	public String giveAPunch() {
-		int eDamage = dice.basicDamage(player.getHit_die() + 1);
+		int pDamage = dice.basicDamage(player.getHit_die() + 1);
 
 		if (isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(eDamage);
+			enemy.getHealth().setHealth(pDamage);
 			return enemy.getHealth().toString();
 		} else {
 			return "They're Dead";
 		}
 	}
+
+//	public String giveAPunch() {
+//		int eDamage = dice.basicDamage(player.getHit_die() + 1);
+//
+//		if (isAlive(enemy.getHealth().getHealth())) {
+//			enemy.getHealth().setHealth(eDamage);
+//			return enemy.getHealth().toString();
+//		} else {
+//			return "They're Dead";
+//		}
+//	}
 	
 	public String takeAKick() {
 
 		System.out.println("KickPluck");
 
-		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
-		int kickMultiplier = (int)(.25 * pDamage);
+		int pDamage = dice.basicDamage(player.getHit_die() + 1);
+		int kickMultiplier = (int)(.15 * pDamage);
 		
-		if (isAlive(player.getHealth().getHealth())) {
-			player.getHealth().setHealth(pDamage + kickMultiplier);
-			return player.getHealth().toString();
-		} else {
-			return "You're Dead";
-		}
-	}
-
-	public String giveAKick() {
-		int eDamage = dice.basicDamage(player.getHit_die() + 1);
-		int kickMultiplier = (int)(.25 * eDamage);
 		if (isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(eDamage + kickMultiplier);
+			enemy.getHealth().setHealth(pDamage + kickMultiplier);
 			return enemy.getHealth().toString();
 		} else {
 			return "They're Dead";
 		}
 	}
+
+//	public String giveAKick() {
+//		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
+//		int kickMultiplier = (int)(.25 * eDamage);
+//		if (isAlive(enemy.getHealth().getHealth())) {
+//			enemy.getHealth().setHealth(eDamage + kickMultiplier);
+//			return enemy.getHealth().toString();
+//		} else {
+//			return "They're Dead";
+//		}
+//	}
 
 	public void resetHealth() {
 		player.getHealth().resetHealth();
@@ -128,7 +152,7 @@ public class DungeonMaster {
 
 	public boolean isAlive(int health) {
 
-		if (health == 0) {
+		if (health < 1) {
 			return false;
 		} else {
 			return true;
@@ -225,6 +249,7 @@ public class DungeonMaster {
 			}
 			scnr.close();
 		}
+		System.out.println(Woods.class);
 	}
-
+	
 }
