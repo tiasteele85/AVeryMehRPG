@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.aVeryMehRPG.dm.DungeonMaster;
+import co.grandcircus.aVeryMehRPG.dm.Player;
 import co.grandcircus.aVeryMehRPG.model.ClassTypes;
 
 @Controller
@@ -29,9 +30,9 @@ public class MehController {
 		System.out.println(apiService.showCharacter(9));
 		System.out.println(apiService.chooseWeapon(apiService.showCharacter(9)));*/
 		
-		List <ClassTypes> character = apiService.showAll();
+		List <ClassTypes> characters = apiService.showAll();
 		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("list", character);
+		mv.addObject("list", characters);
 		return mv;
 	}
 	
@@ -45,7 +46,10 @@ public class MehController {
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
 		
-	return new ModelAndView("story");
+		
+		
+		
+	return new ModelAndView("story", "player", dm.player.getName());
 }
 	
 	@RequestMapping("/fight")
