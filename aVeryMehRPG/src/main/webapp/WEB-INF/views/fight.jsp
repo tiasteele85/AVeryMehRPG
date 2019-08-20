@@ -39,12 +39,13 @@
 	
 
 	<form>
-       Player<br>
+       Enemy<br>
        <input type="text" name="player"><br>
     </form>
+      
     
     <form>   
-       Enemy<br>
+       Player<br>
        <input type="text" name="enemy">
     </form>
 	<p>
