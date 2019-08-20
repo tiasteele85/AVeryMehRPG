@@ -3,6 +3,8 @@ package co.grandcircus.aVeryMehRPG;
 import java.util.List;
 import java.util.Random;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,15 +24,17 @@ public class MehController {
 	DungeonMaster dm;
 
 	@RequestMapping("/")
-	public ModelAndView showHome() {
-		dm = new DungeonMaster();
+	public ModelAndView showHome(HttpSession session) {
+		session.setAttribute("master", dm = new DungeonMaster());
+		
+		//dm = new DungeonMaster();
 		System.out.println(apiService.showAll());
 		/*
 		 * System.out.println(apiService.showAllWeapons());
 		 * System.out.println(apiService.showCharacter(9));
 		 * System.out.println(apiService.chooseWeapon(apiService.showCharacter(9)));
 		 */
-
+		
 		List<ClassTypes> characters = apiService.showAll();
 		ModelAndView mv = new ModelAndView("home");
 		mv.addObject("list", characters);
@@ -38,23 +42,24 @@ public class MehController {
 	}
 
 	@RequestMapping("/story")
-	public ModelAndView showStory(@RequestParam(value = "Character") int player) {
+	public ModelAndView showStory(
+			@RequestParam(value = "Character") int player) {
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
 		dm.setEnemy(apiService.showCharacter(num), apiService.chooseWeapon(apiService.showCharacter(num)));
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
-
-		return new ModelAndView("story", "player", dm.player.getName());
-
+		return new ModelAndView("story");
 	}
+
 
 	@RequestMapping("/deathJoke")
 	public ModelAndView showDeathJoke() {
 		ModelAndView mv = new ModelAndView("deathJoke");
 		return mv;
 	}
+
 
 
 	@RequestMapping("/sideOfRoad")
@@ -68,6 +73,7 @@ public class MehController {
 		ModelAndView mv = new ModelAndView("woods");
 		return mv;
 	}
+
 
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
@@ -121,4 +127,9 @@ public class MehController {
 		}
 	}
 
+	@RequestMapping("/death")
+	public ModelAndView dead(HttpSession session) {
+		session.invalidate();
+		return new ModelAndView("death");
+	}
 }
