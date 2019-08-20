@@ -45,8 +45,19 @@ public class MehController {
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
+<<<<<<< HEAD
 
 		return new ModelAndView("story", "player", dm.player.getName());
+=======
+<<<<<<< HEAD
+
+		
+=======
+>>>>>>> d1893a322766a505852656caf7a7726ed7186ba9
+	return new ModelAndView("story", "player", dm.player.getName());
+	
+	
+>>>>>>> e17ff24075caec480c00b182c7e7943032416f4c
 	}
 
 	@RequestMapping("/deathJoke")
@@ -54,6 +65,7 @@ public class MehController {
 		ModelAndView mv = new ModelAndView("deathJoke");
 		return mv;
 	}
+<<<<<<< HEAD
 
 	@RequestMapping("/sideOfRoad")
 	public ModelAndView showSideOfRoad() {
@@ -67,6 +79,13 @@ public class MehController {
 		return mv;
 	}
 
+=======
+<<<<<<< HEAD
+	
+=======
+>>>>>>> d1893a322766a505852656caf7a7726ed7186ba9
+
+>>>>>>> e17ff24075caec480c00b182c7e7943032416f4c
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
 
