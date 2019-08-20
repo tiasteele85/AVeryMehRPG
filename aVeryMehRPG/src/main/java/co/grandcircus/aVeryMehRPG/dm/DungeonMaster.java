@@ -62,6 +62,7 @@ public class DungeonMaster {
 		return player.toString();
 	}
 	
+	
 	public String getEnemy() {
 		return enemy.toString();
 	}

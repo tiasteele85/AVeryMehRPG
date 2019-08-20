@@ -67,17 +67,17 @@ public class MehController {
 		{		
 			dm.takeAPunch();
 			dm.giveAPunch();
-			if(dm.getPlayerHealth() == 0) {
+			if(dm.takeAPunch().equals("You're Dead")) {
 				return new ModelAndView("death");
-			}else if (dm.getEnemyHealth() == 0) {
+			}else if (dm.giveAPunch().equals("They're Dead")) {
 				return new ModelAndView("winner");
 			}else {
 				return new ModelAndView("redirect:/fight");
 			}
 		}else {
-			if(dm.getPlayerHealth() == 0) {
+			if(dm.takeAPunch().equals("You're Dead")) {
 				return new ModelAndView("death");
-			}else if (dm.getEnemyHealth() == 0) {
+			}else if (dm.takeAPunch().equals("You're Dead")) {
 				return new ModelAndView("winner");
 			}else {
 				return new ModelAndView("redirect:/fight");
