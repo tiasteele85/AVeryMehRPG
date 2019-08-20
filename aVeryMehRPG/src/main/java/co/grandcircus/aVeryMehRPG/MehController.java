@@ -45,22 +45,17 @@ public class MehController {
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
-<<<<<<< HEAD
-		
 	return new ModelAndView("story", "player", dm.player.getName());
-}
+	
+	
+	}
+
 	@RequestMapping("/deathJoke")
 	public ModelAndView showDeathJoke() {
 		ModelAndView mv = new ModelAndView("deathJoke");
 		return mv;
 	}
-	
-=======
 
-		return new ModelAndView("story", "player", dm.player.getName());
-	}
-
->>>>>>> 7ef8f1e2265bb2421e246412ab6e4e53d6341373
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
 
