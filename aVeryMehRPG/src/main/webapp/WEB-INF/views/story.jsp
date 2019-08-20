@@ -27,14 +27,13 @@ pattern subschool prone spell resistance staggered subject swim threat touch att
 
 </p>
 
-<img border="5px" src="bar.jpg" alt = "bar" width="500" height="350">
+<img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></img>
 <table id="storytable">
 	<tr>
 <th><a href="/woods">Drink</a></th>
 <th><a href="/sideOfRoad">Leave</a></th>
-<th><a href="/deathJoke">I'm a lover not a fighter</a></th>
+
+	</tr>
 </table>
-</form>
-</tr>
 </body>
 </html>
