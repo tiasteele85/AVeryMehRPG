@@ -23,8 +23,8 @@
 		<div style="float: left">
 			<div>
 				<h1 align="center">Fight Story</h1>
-				<p>${ player }</p>
-				<p>${ enemy }</p>
+				<p>${ punch }</p>
+				<p>${ ePunch }</p>
 
 				<p></p>
 				<form action="/takeDamage">

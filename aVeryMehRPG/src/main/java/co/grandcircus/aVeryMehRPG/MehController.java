@@ -80,9 +80,17 @@ public class MehController {
 
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene(
-			@SessionAttribute("master") DungeonMaster dm) {
+			@SessionAttribute("master") DungeonMaster dm,
+			@RequestParam(value = "punch", required = false) String punch,
+			@RequestParam(value = "ePunch", required = false) String ePunch) {
 
 		ModelAndView mv = new ModelAndView("fight");
+		
+		if(punch != null) {
+			mv.addObject("punch", punch);
+			mv.addObject("ePunch", ePunch);
+			
+		}
 		mv.addObject("player", dm.player);
 		System.out.println(dm.getPlayer());
 		mv.addObject("enemy", dm.enemy);
@@ -126,8 +134,11 @@ public class MehController {
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
 				return new ModelAndView("winner");
 			} else {
-				
-				return new ModelAndView("redirect:/fight");
+				ModelAndView mv = new ModelAndView("redirect:/fight");
+				System.out.println(dm.punchText());
+				mv.addObject("punch", dm.punchText());
+				mv.addObject("ePunch", dm.punchText());
+				return mv;
 			}
 		} else if (kickbuttonClick != null) {
 

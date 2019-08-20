@@ -24,7 +24,7 @@ public class DungeonMaster {
 	public Bar bar;
 	public Woods woods;
 	public SideOfRoad sideofroad;
-	
+	public Fight fight = new Fight();
 
 	/*
 	 * Collect data from API to create an enemy in the game
@@ -151,6 +151,13 @@ public class DungeonMaster {
 //		}
 //	}
 
+	public String punchText() {
+		String test = fight.punchie();
+		System.out.println("Punchie: " + test);
+		return test;
+	}
+	
+	
 	public void resetHealth() {
 		player.getHealth().resetHealth();
 	}

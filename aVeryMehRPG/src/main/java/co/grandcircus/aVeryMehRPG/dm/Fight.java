@@ -1,5 +1,6 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
+import java.util.Random;
 
 /*
  * SHOULD CONTAIN JUST THE VERBAGE FOR FIGHT TEXT 
@@ -8,35 +9,38 @@ package co.grandcircus.aVeryMehRPG.dm;
  * 
  */
 public class Fight {
-	
-	private Player player;
-	private Enemy enemy;
-	
+
 	public Fight() {
+
+	}
+
+	public String punchie() {
+		Random rand = new Random();
+		int num = rand.nextInt(5) + 1;
+		String word = "";
+
+		switch (num) {
+		case 1:
+			word = "A swift fist to the face";
+			break;
+		case 2:
+			word = "A whipped whooper to the abdomen";
+			break;
+		case 3:
+			word = "Take 3 knuckles and a finger to the eye";
+			break;
+		case 4:
+			word = "Whoop Whoop Whoop Whoop, punch";
+			break;
+		case 5:
+			word = "Ninja fist so fast you don't know where it landed";
+			break;
+		default:
+			word = "Just a simple punch";
+			break;
+		}
 		
+		return word;
 	}
-
-	public Player getPlayer() {
-		return player;
-	}
-
-	public void setPlayer(Player player) {
-		this.player = player;
-	}
-
-	public Enemy getEnemy() {
-		return enemy;
-	}
-
-	public void setEnemy(Enemy enemy) {
-		this.enemy = enemy;
-	}
-
-	@Override
-	public String toString() {
-		return "Fight [player=" + player + ", enemy=" + enemy + "]";
-	}
-	
-	
 
 }
