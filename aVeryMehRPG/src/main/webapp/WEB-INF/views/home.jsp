@@ -11,9 +11,9 @@
 <title>Home Page</title>
 </head>
 <body>
-<audio autoplay>
-      <source src="">
+	<audio autoplay><source src="http://ccmixter.org/content/texasradiofish/texasradiofish_-_Rock_Purple_Wizards_1.mp3">
 </audio>
+
 <center>
 
 
@@ -26,6 +26,7 @@
 	<p>Choose your character, you son of a monkey! </p>
 	<form action="/story" method="get">
 		<select name="Character">
+		
 			<c:forEach items = "${list}" var = "character">
 				<option value = "${character.index}" name="character">${character.name} </option>
 			</c:forEach>
