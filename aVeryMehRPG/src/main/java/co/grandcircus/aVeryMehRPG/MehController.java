@@ -47,7 +47,9 @@ public class MehController {
 		System.out.println(player);
 		
 		
-	return new ModelAndView("story");
+		
+		
+	return new ModelAndView("story", "player", dm.player.getName());
 }
 	
 	@RequestMapping("/fight")

@@ -20,8 +20,8 @@ public class DungeonMaster {
 	}
 			
 
-	Player player = new Player();
-	Enemy enemy = new Enemy();
+	public Player player = new Player();
+	public Enemy enemy = new Enemy();
 	Dice dice = new Dice();
 	/*
 	 * Collect data from API to create an enemy in the game
