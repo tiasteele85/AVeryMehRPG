@@ -33,7 +33,7 @@ Do you:
 <table id="storytable">
 	<tr>
 <th><a href="/fight">Snarky comment</a></th>
-<th><a href="/death">Throw My Sock</a></th>
+<th><a href="/fight">Throw My Sock</a></th>
 	</tr>
 </table>
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
