@@ -18,7 +18,7 @@
 	<div class="wrapper">
 		<div class="inner" style="float: left">
 			<p></p>
-			<p>hello hi</p>
+
 		</div>
 		<div style="float: left">
 			<div>
@@ -36,8 +36,17 @@
 	</div>
 	
 	<div></div>
+	
 
-	<p>hello hi</p>
+	<form>
+       Player<br>
+       <input type="text" name="player"><br>
+    </form>
+    
+    <form>   
+       Enemy<br>
+       <input type="text" name="enemy">
+    </form>
 	<p>
 		<a href="/">Home</a>
 	</p>
