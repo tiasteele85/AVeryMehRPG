@@ -49,7 +49,7 @@ public class MehController {
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
-<<<<<<< Updated upstream
+
 		return new ModelAndView("story");
 	}
 
@@ -63,14 +63,7 @@ public class MehController {
 	public ModelAndView showSideOfRoad() {
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		return mv;
-=======
 
-		
-
-	return new ModelAndView("story", "player", dm.player.getName());
-	
-	
->>>>>>> Stashed changes
 	}
 
 	@RequestMapping("/deathJoke")
@@ -78,10 +71,7 @@ public class MehController {
 		ModelAndView mv = new ModelAndView("deathJoke");
 		return mv;
 	}
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {
@@ -151,11 +141,5 @@ public class MehController {
 				return new ModelAndView("redirect:/fight");
 			}
 		}
-	}
-
-	@RequestMapping("/death")
-	public ModelAndView dead(HttpSession session) {
-		session.invalidate();
-		return new ModelAndView("death");
 	}
 }
