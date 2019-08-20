@@ -12,5 +12,12 @@
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
 </audio>
 <h1>We're in the woods</h1>
+<table id="storytable">
+	<tr>
+<th><a href="/craftShoes">Craft Shoes</a></th>
+<th><a href="/deeperInTheWoods">Go Deeper</a></th>
+
+	</tr>
+</table>
 </body>
 </html>

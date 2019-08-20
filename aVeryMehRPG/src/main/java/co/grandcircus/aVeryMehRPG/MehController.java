@@ -52,6 +52,7 @@ public class MehController {
 		System.out.println(player);
 		return new ModelAndView("story");
 	}
+<<<<<<< Updated upstream
 
 
 	@RequestMapping("/deathJoke")
@@ -62,15 +63,24 @@ public class MehController {
 
 
 
+=======
+	
+	@RequestMapping("/woods")
+	public ModelAndView showWoods() {
+		ModelAndView mv = new ModelAndView("woods");
+		return mv;
+	}
+	
+>>>>>>> Stashed changes
 	@RequestMapping("/sideOfRoad")
 	public ModelAndView showSideOfRoad() {
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		return mv;
 	}
 
-	@RequestMapping("/woods")
-	public ModelAndView showWoods() {
-		ModelAndView mv = new ModelAndView("woods");
+	@RequestMapping("/deathJoke")
+	public ModelAndView showDeathJoke() {
+		ModelAndView mv = new ModelAndView("deathJoke");
 		return mv;
 	}
 
@@ -85,7 +95,25 @@ public class MehController {
 		System.out.println(dm.getEnemy());
 		return mv;
 	}
-
+	
+	@RequestMapping("/craftShoes")
+	public ModelAndView showShoes() {
+		ModelAndView mv = new ModelAndView("craftShoes");
+		return mv;
+	}
+	
+	@RequestMapping("/deeperInTheWoods")
+	public ModelAndView showDeeper() {
+		ModelAndView mv = new ModelAndView("deeperInTheWoods");
+		return mv;
+	}
+	
+	@RequestMapping("/death")
+	public ModelAndView showDeath() {
+		ModelAndView mv = new ModelAndView("death");
+		return mv;
+	}
+	
 	@RequestMapping("/takeDamage")
 	public ModelAndView takeDamage(@RequestParam(value = "punch", required = false) String punchbuttonClick,
 			@RequestParam(value = "kick", required = false) String kickbuttonClick) {

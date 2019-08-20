@@ -12,9 +12,9 @@
 <audio autoplay><source src="http://ccmixter.org/content/soundtails/soundtails_-_Dark_Sky_1.mp3">
 </audio>
     
-	<h1 text-align="center" style="color:#FF0000; background: black">You Lost! Please try again!</h1>
+	<center><h1 text-align="center" style="color:yellow;">Womp Womp</h1>
 	
-	<p><a href="/">Home</a></p>
+	<a href="/">Play Again?</a></center>
 	
 
 </body>

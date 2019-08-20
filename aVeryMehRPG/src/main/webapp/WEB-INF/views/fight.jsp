@@ -6,7 +6,6 @@
 <meta charset="ISO-8859-1">
 <title>Fight Fight Fight</title>
 </head>
-
 <link
 	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
 	rel="stylesheet">
