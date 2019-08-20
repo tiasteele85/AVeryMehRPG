@@ -71,24 +71,28 @@ public class MehController {
 		System.out.println(kickbuttonClick);
 		
 		if(punchbuttonClick != null)
-		{		
+		{	
+			System.out.println("Here");
 			dm.takeAPunch();
-			dm.giveAPunch();
-			if(dm.takeAPunch().equals("You're Dead")) {
+			dm.BaseFight();
+			if(dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
-			}else if (dm.giveAPunch().equals("They're Dead")) {
+			}else if (dm.enemy.getHealth().getHealth() == 0) {
 				return new ModelAndView("winner");
 			}else {
+				
 				return new ModelAndView("redirect:/fight");
 			}
 		}else if (kickbuttonClick != null) {
+			
 			dm.takeAKick();
-			dm.giveAKick();
+			dm.BaseFight();
 			if(dm.takeAKick().equals("You're Dead")) {
 				return new ModelAndView("death");
-			}else if (dm.takeAKick().equals("You're Dead")) {
+			}else if (dm.BaseFight().equals("They're Dead")) {
 				return new ModelAndView("winner");
 			}else {
+				
 				return new ModelAndView("redirect:/fight");
 			}
 		}else {
