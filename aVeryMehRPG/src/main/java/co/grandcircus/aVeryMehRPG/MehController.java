@@ -19,10 +19,11 @@ public class MehController {
 	@Autowired
 	ApiService apiService;
 	
-	DungeonMaster dm = new DungeonMaster();
+	DungeonMaster dm;
 	
 	@RequestMapping("/")
 	public ModelAndView showHome() {
+		dm = new DungeonMaster();
 		System.out.println(apiService.showAll());
 		/*System.out.println(apiService.showAllWeapons());
 		System.out.println(apiService.showCharacter(9));
