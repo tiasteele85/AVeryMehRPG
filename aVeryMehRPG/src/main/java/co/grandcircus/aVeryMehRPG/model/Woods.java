@@ -1,14 +1,18 @@
 package co.grandcircus.aVeryMehRPG.model;
 
+import co.grandcircus.aVeryMehRPG.dm.Player;
+
 public class Woods {
 
-	public String WoodsIntro() {
+	public String WoodsIntro(Player playie) {
 		String woodsIntro = "You wake up several hours in the middle of the woods and realize that your brand-new collectable Batman shoes have been taken \"\r\n"
 				+ "				+ \nand you’ve lost 5 points of health."
 				+ "*******************************************************"
 				+ "\nDo you: 1. Craft makeshift pair of shoes out of leaves and walk back towards civilizations"
 				+ "\n 2.  Go deeper into the woods and just accept the fact that no one will believe you that a stranger took your shoes so that this is now your home.";
+			playie.getHealth().setHealth(5);
 		return woodsIntro;
+		
 	}
 
 	public String CraftShoe() {

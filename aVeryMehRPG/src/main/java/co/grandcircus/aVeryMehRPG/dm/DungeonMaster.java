@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import co.grandcircus.aVeryMehRPG.model.Character;
 import co.grandcircus.aVeryMehRPG.model.Weapon;
+import co.grandcircus.aVeryMehRPG.model.Woods;
 
 /*
  * This guy handles all the stuffs
@@ -225,6 +226,7 @@ public class DungeonMaster {
 			}
 			scnr.close();
 		}
+		System.out.println(Woods.class);
 	}
-
+	
 }
