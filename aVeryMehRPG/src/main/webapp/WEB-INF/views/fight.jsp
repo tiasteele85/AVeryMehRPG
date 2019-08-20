@@ -16,8 +16,6 @@
 	<audio autoplay>
 		<source src="">
 	</audio>
-	<div><a href="/">Home</a></div>
-	
 	<div class="wrapper">
 		<div class="inner" style="float: left">
 			<p></p>
@@ -40,9 +38,10 @@
 	
 	<div></div>
 
-	
-		
-	
+	<p>hello hi</p>
+	<p>
+		<a href="/">Home</a>
+	</p>
 
 
 
