@@ -2,16 +2,26 @@
 
 body {
 	background-color: #67110a;
+	font-family: 'Barriecito', cursive;
+	color: yellow;
+	text-shadow: 2px 2px black;
+	
 }
 
+#storybody {
+	color:yellow;
+	position:relative;
+	width:700px;
+    height:100px;
+}
+
+
 h1 {
-	color: yellow;
 	position: relative;
 	left:10px;
 	top:5px;
-	font-family: 'Barriecito', cursive;
 	font-size: 65px;
-	text-shadow: 2px 2px black;
+	
 }
 
 p {
@@ -20,13 +30,6 @@ p {
 	font-size: 25px;
 	text-shadow: 2px 2px black;
 }
-
-a {
-	color: yellow;
-	font-family: 'Barriecito', cursive;
-	font-size: 35px;
-}
-
 
 select {
 	color: yellow;
@@ -65,26 +68,38 @@ th {
 	font-family: 'Barriecito', cursive;	
 }
 
-span {
-	position: fixed;
-	top:180px;
-	left:20px;
-	width:650px;
-	height:400px;
-	font-size:23px;
-	letter-spacing:3px;
-	line-spacing:6px;
-	color: yellow;
-	font-family: 'Barriecito', cursive;
-}
-
-button {
+#storyoption {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
 	font-size: 35px;
-	margin:520px;
 	background-color:black;
-	
-	
-	
+}
+
+#storytable, th {
+	position:relative;
+	bottom:35px;
+	border-spacing: 45px;
+	color:yellow;
+	font-size:35px;
+}
+
+#death {
+	position:static;
+	left:230px;
+}
+
+#deathstory {
+	position:relative;
+	top:550px;
+	width:55%;
+	height:1px;
+}
+
+#playagain {
+	color: yellow;
+	font-family: 'Barriecito', cursive;
+	font-size: 25px;
+	position:relative;
+	top:120px;
+	margin-left:639px;
 }

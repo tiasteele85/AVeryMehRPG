@@ -46,11 +46,13 @@ public class MehController {
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
 		
-		
-		
-		
 	return new ModelAndView("story", "player", dm.player.getName());
 }
+	@RequestMapping("/deathJoke")
+	public ModelAndView showDeathJoke() {
+		ModelAndView mv = new ModelAndView("deathJoke");
+		return mv;
+	}
 	
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene() {

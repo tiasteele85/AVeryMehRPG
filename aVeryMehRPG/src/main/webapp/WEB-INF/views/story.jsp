@@ -9,12 +9,13 @@
 <meta charset="UTF-8">
 <title>Story Page</title>
 </head>
-<body>
+<body id="storybody">
 <audio autoplay>
       <source src="">
 </audio> 
 <h1>Hello ${player} </h1>
-<span>Astral plane base attack bonus command word item cross-class skill darkness favored class fire 
+
+<p id="storyspan" >Astral plane base attack bonus command word item cross-class skill darkness favored class fire 
 immunity pounce spell slot supernatural ability water domain. Chaos domain creature double weapon 
 evil domain flank good domain melee weapon multiplying native subtype nonabilities pinned plane of 
 existence plant type prone range increment size modifier spell trigger item suppress swift action 
@@ -24,11 +25,16 @@ Adjacent aquatic subtype caster level character level constitution disabled disp
 domain flight immediate action initiative invisible mentalism domain morale bonus negative level 
 pattern subschool prone spell resistance staggered subject swim threat touch attack turning check. 
 
-</span>
-<img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></h1>
-<form action="/fight" method ="get">
-<button><option><input type="submit" value"submit">Fight</button></option>
-</form>
+</p>
 
+<img border="5px" src="bar.jpg" alt = "bar" width="500" height="350">
+<table id="storytable">
+	<tr>
+<th><a href="/woods">Drink</a></th>
+<th><a href="/sideOfRoad">Leave</a></th>
+<th><a href="/deathJoke">I'm a lover not a fighter</a></th>
+</table>
+</form>
+</tr>
 </body>
 </html>
