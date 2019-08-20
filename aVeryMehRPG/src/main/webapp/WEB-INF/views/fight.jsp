@@ -12,37 +12,19 @@
 <audio autoplay>
       <source src="">
 </audio>
-	<div>
-		<div style="float:left;height:100%;">
-			<p></p>
-		</div>
-		<div style="float:right;">
-			<div style="border: 2px solid #000;">
-				<table>
-					<thead>
-						<tr>
-						<td>Fight Story</td>
-						<td></td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-						<td>
+	<div>		
+			                <h1>Fight Story</h1>
 							<p>${ player }</p>
 							<p>${ enemy }</p>
-						</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div style="float:right;">
+						
+			
 				<p></p>
 				<form action="/takeDamage">
 					<input type="submit" name="punch" value="punch">
 					<input type="submit" name="kick" value="kick">
 				</form>
-			</div>
-		</div>
+			
+		
 	</div>
 </body>
 </html>
