@@ -18,12 +18,7 @@
 
 
 	<h1>Welcome to a Very Meh RPG !</h1>
-	<div style="width:21%;height:3;padding-bottom:10%;position:relative;">
-	<iframe src="https://giphy.com/embed/lPulTNfJ53X9BglIZc" width="100%" height="100%" style="position:absolute" frameBorder="0">
-	</iframe>
-	</div>
-	
-	<p>Choose your character, you son of a monkey! </p>
+	<p>Choose your character, you son of a horse! </p>
 	<form action="/story" method="get">
 		<select name="Character">
 		
@@ -31,10 +26,11 @@
 				<option value = "${character.index}" name="character">${character.name} </option>
 			</c:forEach>
 		</select>
-		<p><input type="submit" value="Select"></p>
+		<p><input id="choice" type="submit" value="Select"></p>
 		</form>
-		
-						<br></br>
+	<iframe src="https://media.giphy.com/media/lPulTNfJ53X9BglIZc/giphy.gif" frameBorder="0">
+	</iframe>
+	
 
 </center>
 	

@@ -4,8 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< Updated upstream
 <link rel="stylesheet" type="text/css" href="style.css"></link>
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+=======
+<link
+	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<audio autoplay><source src="http://ccmixter.org/content/airtone/airtone_-_nightWalk.mp3"></audio>
+>>>>>>> Stashed changes
 <meta charset="UTF-8">
 <title>Craft Shoes</title>
 </head>
