@@ -65,16 +65,28 @@ public class MehController {
 	
 	@RequestMapping("/takeDamage")
 	public ModelAndView takeDamage(
-			@RequestParam(value="punch", required=false) String buttonClick) {
-		System.out.println(buttonClick);
+			@RequestParam(value="punch", required=false) String punchbuttonClick,
+			@RequestParam(value="kick", required=false) String kickbuttonClick) {
+		System.out.println(punchbuttonClick);
+		System.out.println(kickbuttonClick);
 		
-		if(buttonClick.equals("punch"))
+		if(punchbuttonClick != null)
 		{		
 			dm.takeAPunch();
 			dm.giveAPunch();
 			if(dm.takeAPunch().equals("You're Dead")) {
 				return new ModelAndView("death");
 			}else if (dm.giveAPunch().equals("They're Dead")) {
+				return new ModelAndView("winner");
+			}else {
+				return new ModelAndView("redirect:/fight");
+			}
+		}else if (kickbuttonClick != null) {
+			dm.takeAKick();
+			dm.giveAKick();
+			if(dm.takeAKick().equals("You're Dead")) {
+				return new ModelAndView("death");
+			}else if (dm.takeAKick().equals("You're Dead")) {
 				return new ModelAndView("winner");
 			}else {
 				return new ModelAndView("redirect:/fight");
@@ -88,6 +100,7 @@ public class MehController {
 				return new ModelAndView("redirect:/fight");
 			}
 		}
+		
 		
 	}
 

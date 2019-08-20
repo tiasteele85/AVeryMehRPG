@@ -75,10 +75,10 @@ public class DungeonMaster {
 
 		System.out.println("Woodblock");
 
-		int damage = dice.basicDamage(enemy.getHit_die() + 1);
+		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
 
 		if (isAlive(player.getHealth().getHealth())) {
-			player.getHealth().setHealth(damage);
+			player.getHealth().setHealth(pDamage);
 			return player.getHealth().toString();
 		} else {
 			return "You're Dead";
@@ -86,10 +86,36 @@ public class DungeonMaster {
 	}
 
 	public String giveAPunch() {
-		int damage = dice.basicDamage(player.getHit_die() + 1);
+		int eDamage = dice.basicDamage(player.getHit_die() + 1);
 
 		if (isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(damage);
+			enemy.getHealth().setHealth(eDamage);
+			return enemy.getHealth().toString();
+		} else {
+			return "They're Dead";
+		}
+	}
+	
+	public String takeAKick() {
+
+		System.out.println("KickPluck");
+
+		int pDamage = dice.basicDamage(enemy.getHit_die() + 1);
+		int kickMultiplier = (int)(.25 * pDamage);
+		
+		if (isAlive(player.getHealth().getHealth())) {
+			player.getHealth().setHealth(pDamage + kickMultiplier);
+			return player.getHealth().toString();
+		} else {
+			return "You're Dead";
+		}
+	}
+
+	public String giveAKick() {
+		int eDamage = dice.basicDamage(player.getHit_die() + 1);
+		int kickMultiplier = (int)(.25 * eDamage);
+		if (isAlive(enemy.getHealth().getHealth())) {
+			enemy.getHealth().setHealth(eDamage + kickMultiplier);
 			return enemy.getHealth().toString();
 		} else {
 			return "They're Dead";
