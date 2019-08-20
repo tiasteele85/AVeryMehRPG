@@ -39,14 +39,14 @@
 	
 
 	<form>
-       Enemy<br>
-       <input type="text" name="player"><br>
+       <p>Enemy:
+       ${ enemy.health.health }</p>
     </form>
       
     
     <form>   
-       Player<br>
-       <input type="text" name="enemy">
+       <p>Player:
+       ${ player.health.health }</p>
     </form>
 	<p>
 		<a href="/">Home</a>

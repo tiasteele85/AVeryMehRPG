@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.aVeryMehRPG.dm.DungeonMaster;
@@ -21,11 +22,11 @@ public class MehController {
 	@Autowired
 	ApiService apiService;
 
-	DungeonMaster dm;
+	
 
 	@RequestMapping("/")
 	public ModelAndView showHome(HttpSession session) {
-		session.setAttribute("master", dm = new DungeonMaster());
+		session.setAttribute("master", new DungeonMaster());
 
 		// dm = new DungeonMaster();
 		System.out.println(apiService.showAll());
@@ -42,9 +43,13 @@ public class MehController {
 	}
 
 	@RequestMapping("/story")
-	public ModelAndView showStory(@RequestParam(value = "Character") int player) {
+	public ModelAndView showStory(
+			@SessionAttribute("master") DungeonMaster dm,
+			@RequestParam(value = "Character") int player) {
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
+		
+		
 		dm.setEnemy(apiService.showCharacter(num), apiService.chooseWeapon(apiService.showCharacter(num)));
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
@@ -74,12 +79,13 @@ public class MehController {
 
 
 	@RequestMapping("/fight")
-	public ModelAndView showFightScene() {
+	public ModelAndView showFightScene(
+			@SessionAttribute("master") DungeonMaster dm) {
 
 		ModelAndView mv = new ModelAndView("fight");
-		mv.addObject("player", dm.getPlayer());
+		mv.addObject("player", dm.player);
 		System.out.println(dm.getPlayer());
-		mv.addObject("enemy", dm.getEnemy());
+		mv.addObject("enemy", dm.enemy);
 		System.out.println(dm.getEnemy());
 		return mv;
 	}
@@ -103,13 +109,16 @@ public class MehController {
 	}
 
 	@RequestMapping("/takeDamage")
-	public ModelAndView takeDamage(@RequestParam(value = "punch", required = false) String punchbuttonClick,
+	public ModelAndView takeDamage(
+			@SessionAttribute("master") DungeonMaster dm,
+			@RequestParam(value = "punch", required = false) String punchbuttonClick,
 			@RequestParam(value = "kick", required = false) String kickbuttonClick) {
 		System.out.println(punchbuttonClick);
 		System.out.println(kickbuttonClick);
 
 		if (punchbuttonClick != null) {
 			System.out.println("Here");
+			
 			dm.takeAPunch();
 			dm.BaseFight();
 			if (dm.player.getHealth().getHealth() == 0) {
@@ -117,7 +126,7 @@ public class MehController {
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
 				return new ModelAndView("winner");
 			} else {
-
+				
 				return new ModelAndView("redirect:/fight");
 			}
 		} else if (kickbuttonClick != null) {
