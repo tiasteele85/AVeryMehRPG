@@ -54,8 +54,8 @@ public class MehController {
 //		int index = Integer.parseInt(player.substring(player.length()-1));
 		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
 		System.out.println(player);
-
-		return new ModelAndView("story");
+		
+		return new ModelAndView("story","player",dm.player.getName());
 	}
 
 	@RequestMapping("/woods")
