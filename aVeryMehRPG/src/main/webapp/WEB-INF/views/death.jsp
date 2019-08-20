@@ -9,6 +9,8 @@
 <title>End of Game</title>
 </head>
 <body>
+<audio autoplay><source src="http://ccmixter.org/content/soundtails/soundtails_-_Dark_Sky_1.mp3">
+</audio>
     
 	<h1 text-align="center" style="color:#FF0000; background: black">You Lost! Please try again!</h1>
 	
