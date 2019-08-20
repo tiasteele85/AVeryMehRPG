@@ -8,9 +8,33 @@
 	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
 	rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>BarFight</title>
 </head>
+<h1>Let's get those shoes back Champ!</h1>
+<h2>${player}</h2>
 <body>
-<p>we're in a fight!</p>
+
+<p id = "storyspan">
+You walk all the way back to the city and eventually make it to the bar as passing by the entrance you ignore the “shoes are required to enter” sign and push your way into the bar.
+Upon entering you see the mysterious man still sitting at the bar wearing your shoes and buying rounds of drinks for everyone around him with your rubies
+<br>
+<br>
+Do you:
+<br>
+1. Walk up to the stranger and try to fight him without saying a word
+2. Yell at him for being a big meanie
+
+</p>
+
+<img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></img>
+<table id="storytable">
+	<tr>
+<th><a href="/fight">Fight</a></th>
+<th><a href="/Meanie">Meanie</a></th>
+
+	</tr>
+</table>
+
+
 </body>
 </html>

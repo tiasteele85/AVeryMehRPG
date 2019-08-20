@@ -6,7 +6,7 @@ public class SideOfRoad {
 
 	public String SideStory(Player playie) {
 		String sideStory =
-				"You walk outside and head down the path as you’re walking a bird flying overhead drops a rock on your head and you lose 3 health."
+				"You walk outside and head down the path as you’re walking a bird flying overhead drops a rock on your head and you lose 5 health."
 						+ "\nWoozy and tired you sit down to regain your stability. "
 						+ "\nAs you do a knight comes up to you and requests to search your person as there has been a recent robbery in the area and someone has stolen the queens diamond dragon trophy"
 						+ "\n*********************************************************************************"

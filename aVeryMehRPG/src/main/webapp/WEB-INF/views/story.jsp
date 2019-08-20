@@ -15,15 +15,17 @@
 </audio> 
 <h1>Hello ${player} </h1>
 
-<p id="storyspan" >Astral plane base attack bonus command word item cross-class skill darkness favored class fire 
-immunity pounce spell slot supernatural ability water domain. Chaos domain creature double weapon 
-evil domain flank good domain melee weapon multiplying native subtype nonabilities pinned plane of 
-existence plant type prone range increment size modifier spell trigger item suppress swift action 
-take 10 threaten war domain will save.
+<p id="storyspan" >We start off in dark and gloomy bar in the heart of Technologica Woods . 
+Our hero sits at the bar after another victorious mission. 
+Then out of nowhere the bartender David the master of all Java comes over and places a drink in-front of you and exclaims "Hero! This drink was bought for you by that mysterious man over there!" 
+<br>
 
-Adjacent aquatic subtype caster level character level constitution disabled dispel turning fire 
-domain flight immediate action initiative invisible mentalism domain morale bonus negative level 
-pattern subschool prone spell resistance staggered subject swim threat touch attack turning check. 
+<br>
+Do you:
+<br>
+1.Drink the beverage 
+<br>
+2.Decline the drink and leave the bar
 
 </p>
 
