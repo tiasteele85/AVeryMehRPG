@@ -3,7 +3,6 @@ package co.grandcircus.aVeryMehRPG.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="SaveData")
 public class SaveData {
 	
 	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,17 +15,22 @@ public class SaveData {
 	private String attackButton;
 	@Column(length = 100)
 	private int punchCount;
+	@Column(length = 100)
+	private int kickCount;
 	
-	public SaveData(Long id, String name, String description, String attackButton, int punchCount) {
+	public SaveData(Long id, String name, String description, String attackButton, int punchCount, int kickCount) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.attackButton = attackButton;
 		this.punchCount = punchCount;
+		this.kickCount = kickCount;
 	}
 	
-	public SaveData() {}
+	public SaveData() {
+		description = "";
+	}
 	
 	public Long getId() {
 		return id;
@@ -45,7 +49,7 @@ public class SaveData {
 		return description;
 	}
 	public void setDescription(String description) {
-		this.description += " " + description;
+		this.description += description + " ";
 	}
 	public String getAttackButton() {
 		return attackButton;
@@ -59,7 +63,30 @@ public class SaveData {
 	public void setPunchCount(int punchCount) {
 		this.punchCount = punchCount;
 	}
+
+	public int getKickCount() {
+		return kickCount;
+	}
+
+	public void setKickCount(int kickCount) {
+		this.kickCount = kickCount;
+	}
+	public void addAttackSequence(String click) {
+		attackButton += click;
+	}
 	
+	public void addPunch() {
+		punchCount++;
+	}
 	
+	public void addKick() {
+		kickCount++;
+	}
+
+	@Override
+	public String toString() {
+		return "SaveData [id=" + id + ", name=" + name + ", description=" + description + ", attackButton="
+				+ attackButton + ", punchCount=" + punchCount + ", kickCount=" + kickCount + "]";
+	}
 	
 }

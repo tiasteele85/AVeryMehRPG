@@ -12,7 +12,7 @@
     
 	<h1 text-align="center" style="color:#FF0000; background: black">You Win!</h1>
 	
-	<p><a href="/">Home</a></p>
+	<p><a href="/winner">Home</a></p>
 	
 
 </body>

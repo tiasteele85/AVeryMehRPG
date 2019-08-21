@@ -27,8 +27,7 @@ public class ClassTypes {
 	public int getIndex() {
 		String test = "/";
 		
-		System.out.println("Captain Joe: " + url.substring(url.length()-2, url.length()-1).equals(test));
-		System.out.println(url.charAt(url.length()-2));
+
 		if(url.substring(url.length()-2, url.length()-1).equals(test))
 		{
 			return Integer.parseInt(url.substring(url.length()-1));
