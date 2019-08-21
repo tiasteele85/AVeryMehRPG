@@ -164,6 +164,50 @@ public class MehController {
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
+	
+	@RequestMapping("/sock")
+	public ModelAndView showSock(
+			@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd) {
+		ModelAndView mv = new ModelAndView("sock");
+		mv.addObject(dm.player.getName());
+		return mv;
+	}
+	@RequestMapping("/snarky")
+	public ModelAndView showSnarky(
+			@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd) {
+		ModelAndView mv = new ModelAndView("snarky");
+		mv.addObject(dm.player.getName());
+		return mv;
+	}
+	
+	@RequestMapping("/meanie")
+	public ModelAndView showMeanie(
+			@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd) {
+		ModelAndView mv = new ModelAndView("meanie");
+		mv.addObject(dm.player.getName());
+		return mv;
+	}
+	@RequestMapping("/wrong")
+	public ModelAndView showWrong(
+			@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd) {
+		ModelAndView mv = new ModelAndView("wrong");
+		mv.addObject(dm.player.getName());
+		return mv;
+	}
+	@RequestMapping("/refuse")
+	public ModelAndView showRefuse(
+			@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd) {
+		ModelAndView mv = new ModelAndView("refuse");
+		mv.addObject(dm.player.getName());
+		return mv;
+	}
+	
+			
 
 	@RequestMapping("/takeDamage")
 	public ModelAndView takeDamage(
