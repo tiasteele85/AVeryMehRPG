@@ -92,14 +92,11 @@ a {
 	color:yellow;
 }
 
-/*fight css*/
+/*fight styling on fight page*/
 
-#wrapper {
-	margin-left:2.5%;
-	position:relative;
-	left:2.5%;
-	margin-top:6%;
-	font-size:120%;
+#punchKickButtons {
+	color:yellow;
+	background:black;
 }
 
 #choice {

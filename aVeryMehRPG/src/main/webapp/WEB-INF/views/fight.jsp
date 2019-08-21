@@ -12,9 +12,9 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 
-	<audio autoplay>
-		<source src="">
-	</audio>
+	<!--<audio autoplay>-->
+		<!--<source src="http://ccmixter.org/content/speck/speck_-_Sirius_Crystal_1.mp3">-->
+	<!--</audio>-->
 	<div class="wrapper">
 		<div class="inner" style="float: left">
 			<p></p>
@@ -22,15 +22,16 @@
 		</div>
 		<div style="float: left">
 			<div>
-				<h1 align="center">Fight Story</h1>
+				<h1 align="center"><font size="6">Fight Story</h1>
+				
 				<p>${ punch }</p>
 				<p>${ kick }</p>
-				<p>${ eResponse }</p>
+				<p id="eResponse">${ eResponse }</p>
 
 				<p></p>
-				<form action="/takeDamage">
-					<input type="submit" name="punch" value="punch"> <input
-						type="submit" name="kick" value="kick">
+				<form action="/takeDamage" >
+					<input id="punchKickButtons" type="submit" name="punch" value="punch"> 
+					<input id="punchKickButtons" type="submit" name="kick" value="kick">
 				</form>
 			</div>
 		</div>
@@ -50,7 +51,7 @@
        ${ player.health.health }</p>
     </form>
 	<p>
-		<a href="/">Home</a>
+		<center><style="margin-top:5;"><a href="/">Home</a></center>
 	</p>
 
 
