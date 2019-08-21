@@ -1,6 +1,6 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
-import java.util.Random;
+
 
 import co.grandcircus.aVeryMehRPG.model.Bar;
 import co.grandcircus.aVeryMehRPG.model.Character;
@@ -74,9 +74,8 @@ public class DungeonMaster {
 		return enemy.toString();
 	}
 
-	public String BaseFight() {
-		Random rand = new Random();
-		int toggle = rand.nextInt(2)+1;
+	public String BaseFight(int toggle) {
+		
 		
 		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
 		System.out.println("Random Fun: "+toggle);
@@ -157,6 +156,11 @@ public class DungeonMaster {
 		return test;
 	}
 	
+	public String kickText() {
+		String test = fight.kickie();
+		System.out.println("Kickie: " + test);
+		return test;
+	}
 	
 	public void resetHealth() {
 		player.getHealth().resetHealth();

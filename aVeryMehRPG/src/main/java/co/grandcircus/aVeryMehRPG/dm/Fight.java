@@ -53,19 +53,19 @@ public class Fight {
 			word = "A major drop kick";
 			break;
 		case 2:
-			word = "A whipped whooper to the abdomen";
+			word = "A roundkick to the face";
 			break;
 		case 3:
-			word = "Take 3 knuckles and a finger to the eye";
+			word = "That foot knocked spit out of your mouth";
 			break;
 		case 4:
-			word = "Whoop Whoop Whoop Whoop, punch";
+			word = "That foot hit so hard, I think I tasted toes";
 			break;
 		case 5:
-			word = "Ninja fist so fast you don't know where it landed";
+			word = "Whoooaaack, that kick jiggled the skin on your face";
 			break;
 		default:
-			word = "Just a simple punch";
+			word = "Just a simple kick";
 			break;
 		}
 		

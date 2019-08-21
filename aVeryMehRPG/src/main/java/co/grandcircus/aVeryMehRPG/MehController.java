@@ -59,14 +59,16 @@ public class MehController {
 	}
 
 	@RequestMapping("/woods")
-	public ModelAndView showWoods() {
+	public ModelAndView showWoods(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("woods");
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/sideOfRoad")
-	public ModelAndView showSideOfRoad() {
+	public ModelAndView showSideOfRoad(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -74,7 +76,8 @@ public class MehController {
 	}
 
 	@RequestMapping("/deathJoke")
-	public ModelAndView showDeathJoke() {
+	public ModelAndView showDeathJoke(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("deathJoke");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -85,14 +88,17 @@ public class MehController {
 	public ModelAndView showFightScene(
 			@SessionAttribute("master") DungeonMaster dm,
 			@RequestParam(value = "punch", required = false) String punch,
-			@RequestParam(value = "ePunch", required = false) String ePunch) {
+			@RequestParam(value = "kick", required = false) String kick,
+			@RequestParam(value = "eResponse", required = false) String eResponse) {
 
 		ModelAndView mv = new ModelAndView("fight");
 		
 		if(punch != null) {
 			mv.addObject("punch", punch);
-			mv.addObject("ePunch", ePunch);
-			
+			mv.addObject("eResponse", eResponse);			
+		}else {
+			mv.addObject("kick", kick);
+			mv.addObject("eResponse", eResponse);
 		}
 		mv.addObject("player", dm.player);
 		System.out.println(dm.getPlayer());
@@ -102,27 +108,31 @@ public class MehController {
 	}
 
 	@RequestMapping("/craftShoes")
-	public ModelAndView showShoes() {
+	public ModelAndView showShoes(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("craftShoes");
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/deeperInTheWoods")
-	public ModelAndView showDeeper() {
+	public ModelAndView showDeeper(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("deeperInTheWoods");
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/death")
-	public ModelAndView showDeath() {
+	public ModelAndView showDeath(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("death");
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
 	@RequestMapping("/barFightStory")
-	public ModelAndView showFight() {
+	public ModelAndView showFight(
+			@SessionAttribute("master") DungeonMaster dm) {
 		ModelAndView mv = new ModelAndView("barFightStory");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -135,12 +145,15 @@ public class MehController {
 			@RequestParam(value = "kick", required = false) String kickbuttonClick) {
 		System.out.println(punchbuttonClick);
 		System.out.println(kickbuttonClick);
+		
+		Random rand = new Random();
+		int toggle = rand.nextInt(2)+1;
 
 		if (punchbuttonClick != null) {
 			System.out.println("Here");
 			
 			dm.takeAPunch();
-			dm.BaseFight();
+			dm.BaseFight(toggle);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -149,20 +162,31 @@ public class MehController {
 				ModelAndView mv = new ModelAndView("redirect:/fight");
 				System.out.println(dm.punchText());
 				mv.addObject("punch", dm.punchText());
-				mv.addObject("ePunch", dm.punchText());
+				if(toggle == 1) {
+					mv.addObject("eResponse", dm.punchText());
+				}else {
+					mv.addObject("eResponse", dm.kickText());
+				}
+				
 				return mv;
 			}
 		} else if (kickbuttonClick != null) {
 
 			dm.takeAKick();
-			dm.BaseFight();
+			dm.BaseFight(toggle);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
 				return new ModelAndView("winner");
 			} else {
-
-				return new ModelAndView("redirect:/fight");
+				ModelAndView mv = new ModelAndView("redirect:/fight");
+				mv.addObject("punch", dm.kickText());
+				if(toggle == 1) {
+					mv.addObject("eResponse", dm.punchText());
+				}else {
+					mv.addObject("eResponse", dm.kickText());
+				}
+				return mv;
 			}
 		} else {
 			if (dm.player.getHealth().getHealth() == 0) {
