@@ -115,6 +115,11 @@ public class MehController {
 		ModelAndView mv = new ModelAndView("death");
 		return mv;
 	}
+	@RequestMapping("/barFightStory")
+	public ModelAndView showFight() {
+		ModelAndView mv = new ModelAndView("barFightStory");
+		return mv;
+	}
 
 	@RequestMapping("/takeDamage")
 	public ModelAndView takeDamage(
