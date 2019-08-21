@@ -24,7 +24,7 @@
 			<div>
 				<h1 align="center">Fight Story</h1>
 				<p>${ punch }</p>
-				<p>${ kick },</p>
+				<p>${ kick }</p>
 				<p>${ eResponse }</p>
 
 				<p></p>
