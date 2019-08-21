@@ -13,7 +13,7 @@
 <audio autoplay>
       <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
 </audio> 
-<h1>Hello ${player} </h1>
+<h1 id="storyheader">Hello ${player} </h1>
 
 <p id="storyspan" >We start off in dark and gloomy bar in the heart of Technologica Woods . 
 Our hero sits at the bar after another victorious mission. 

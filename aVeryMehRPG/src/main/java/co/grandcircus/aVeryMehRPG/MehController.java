@@ -22,7 +22,6 @@ public class MehController {
 	@Autowired
 	ApiService apiService;
 
-	
 
 	@RequestMapping("/")
 	public ModelAndView showHome(HttpSession session) {

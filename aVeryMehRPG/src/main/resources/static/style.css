@@ -10,7 +10,7 @@ body {
 
 /*home page css*/
 
-h1 {
+#welcome {
 	position: relative;
 	top:20%;
 	bottom:5%;
@@ -26,12 +26,80 @@ iframe {
 	margin-left:39%;
 	}
 
-p {
+#horse {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
 	font-size: 150%;
 	text-shadow: 5% 5% black;
 	margin-top:4%;
+}
+
+/*story page css*/
+
+#storyheader {
+	margin-left:2.5%;
+	margin-top:6%;
+	font-size:275%;
+
+}
+#storyspan {
+	margin-left:2.5%;
+	position:relative;
+	width:50%;
+	height:10%;
+	font-size:150%;
+}
+
+th {
+	color: yellow;
+	font-family: 'Barriecito', cursive;	
+}
+
+/*woods page css*/
+
+#woods {
+	margin-left:2.5%;
+	margin-top:6%;
+	font-size:275%;
+}
+
+/*craftShoes css*/
+
+#fatherwrong {
+	margin-top:6%;
+	margin-left:2.5%;
+	font-size:275%;
+}
+
+/*deeper in the woods css*/
+
+#deeper {
+	margin-left:2.5%;
+	margin-top:6%;
+	font-size:275%;
+}
+
+#storytable, th, tr {
+	position:relative;
+	bottom:13.5%;
+	color:yellow;
+	font-size:120%;
+	margin-left:2.5%;
+	
+}
+
+a {
+	color:yellow;
+}
+
+/*fight css*/
+
+#wrapper {
+	margin-left:2.5%;
+	position:relative;
+	left:2.5%;
+	margin-top:6%;
+	font-size:120%;
 }
 
 #choice {
@@ -73,10 +141,7 @@ img {
 	border-color: yellow;
 }
 
-th {
-	color: yellow;
-	font-family: 'Barriecito', cursive;	
-}
+
 
 #storyoption {
 	color: yellow;
@@ -85,13 +150,7 @@ th {
 	background-color:black;
 }
 
-table, #storytable, tr, a {
-	position:relative;
-	bottom:15px;
-	border-spacing: 45px;
-	color:yellow;
-	font-size:35px;
-}
+
 
 #death {
 	position:static;
@@ -114,9 +173,6 @@ table, #storytable, tr, a {
 	margin-left:639px;
 }
 
-#storyspan {
-	margin-left:25px;
-}
 
 #knighttable {
 	position:relative;

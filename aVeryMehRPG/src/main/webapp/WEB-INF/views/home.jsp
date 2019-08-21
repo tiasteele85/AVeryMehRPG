@@ -17,8 +17,8 @@
 <center>
 
 
-	<h1>Welcome to a Very Meh RPG !</h1>
-	<p>Choose your character, you son of a horse! </p>
+	<h1 id="welcome">Welcome to a Very Meh RPG !</h1>
+	<p id="horse">Choose your character, you son of a horse! </p>
 	<form action="/story" method="get">
 		<select name="Character">
 		
@@ -28,10 +28,9 @@
 		</select>
 		<p><input id="choice" type="submit" value="Select"></p>
 		</form>
-	<iframe src="https://media.giphy.com/media/lPulTNfJ53X9BglIZc/giphy.gif" frameBorder="0">
+	<iframe src="dragon.gif" frameBorder="0">
 	</iframe>
 	
-
 </center>
 	
 	

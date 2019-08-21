@@ -10,7 +10,7 @@
 <title>Craft Shoes</title>
 </head>
 <body>
-<h1> Prove Your Father Wrong</h1>
+<h1 id="fatherwrong"> Prove Your Father Wrong</h1>
 <h2>${player}</h2>
 
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
@@ -19,14 +19,12 @@
 
 <p id ="storyspan"> 
 <br>
-You try to create a make-shift pair of shoes but fail and feel your father looking down on you disappointed because he was a cobbler and tried to teach you several times.
-So you decide to head back towards the bar to see if you can find the mysterious man
+You try to create a make-shift pair of shoes, but fail and feel your father looking down on you dissapointede, since he was a cobbler and tried to teach you to craft shoes several times.
+You decide to head back towards the bar to see if you can find the mysterious man.
 <br>
 <br>
 <br>
 <a href="/barFightStory">Walk Back in Sorrow</a>
-
-
 
 <img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
 </body>
