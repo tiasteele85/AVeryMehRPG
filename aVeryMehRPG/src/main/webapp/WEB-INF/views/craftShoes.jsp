@@ -4,22 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< Updated upstream
 <link rel="stylesheet" type="text/css" href="style.css"></link>
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
-=======
-<link
-	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
-	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="style.css">
-<audio autoplay><source src="http://ccmixter.org/content/airtone/airtone_-_nightWalk.mp3"></audio>
->>>>>>> Stashed changes
 <meta charset="UTF-8">
 <title>Craft Shoes</title>
 </head>
+<body>
 <h1> Prove Your Father Wrong</h1>
 <h2>${player}</h2>
-<body>
+
+<audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
+</audio>
 
 
 <p id ="storyspan"> 
@@ -31,8 +26,7 @@ So you decide to head back towards the bar to see if you can find the mysterious
 <br>
 <a href="/barFightStory">Walk Back in Sorrow</a>
 
-<audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
-</audio>
+
 
 <img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
 </body>
