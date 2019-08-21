@@ -48,6 +48,7 @@ public class MehController {
 			@RequestParam(value = "Character") int player) {
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
+		dm.player.getHealth().setHealth(5);
 		
 		
 		dm.setEnemy(apiService.showCharacter(num), apiService.chooseWeapon(apiService.showCharacter(num)));
