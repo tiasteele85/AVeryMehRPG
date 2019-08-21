@@ -61,12 +61,14 @@ public class MehController {
 	@RequestMapping("/woods")
 	public ModelAndView showWoods() {
 		ModelAndView mv = new ModelAndView("woods");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/sideOfRoad")
 	public ModelAndView showSideOfRoad() {
 		ModelAndView mv = new ModelAndView("sideOfRoad");
+		mv.addObject(dm.player.getName());
 		return mv;
 
 	}
@@ -74,6 +76,7 @@ public class MehController {
 	@RequestMapping("/deathJoke")
 	public ModelAndView showDeathJoke() {
 		ModelAndView mv = new ModelAndView("deathJoke");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
@@ -101,23 +104,27 @@ public class MehController {
 	@RequestMapping("/craftShoes")
 	public ModelAndView showShoes() {
 		ModelAndView mv = new ModelAndView("craftShoes");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/deeperInTheWoods")
 	public ModelAndView showDeeper() {
 		ModelAndView mv = new ModelAndView("deeperInTheWoods");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
 	@RequestMapping("/death")
 	public ModelAndView showDeath() {
 		ModelAndView mv = new ModelAndView("death");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 	@RequestMapping("/barFightStory")
 	public ModelAndView showFight() {
 		ModelAndView mv = new ModelAndView("barFightStory");
+		mv.addObject(dm.player.getName());
 		return mv;
 	}
 
