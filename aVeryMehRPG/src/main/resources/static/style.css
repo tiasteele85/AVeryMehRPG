@@ -91,7 +91,7 @@ th {
 a {
 	color:yellow;
 	margin-left:2.5%;
-	font-size:300%;
+	font-size:280%;
 }
 
 /*fight styling on fight page*/
@@ -160,7 +160,7 @@ img {
 	position:relative;
 	top:550px;
 	width:55%;
-	height:1px;
+	height:15%;
 }
 
 #playagain {

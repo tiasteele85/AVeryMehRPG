@@ -18,8 +18,8 @@
 
 <p id ="storyspan"> 
 
-You wake up several hours in the middle of the woods and realize that your brand-new collectable Batman shoes have been taken
-and you’ve lost 5 points of health
+You wake up several hours later in the middle of the woods and realize that your brand-new collectable Batman shoes have been taken
+and you’ve lost 5 points of health.
 
 <br>
 <br>

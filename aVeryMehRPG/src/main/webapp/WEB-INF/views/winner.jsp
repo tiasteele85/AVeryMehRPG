@@ -12,8 +12,7 @@
 </head>
 <body>
 
-	<h1 text-align="center" style="color: #FF0000; background: black">You
-		Win!</h1>
+	<h1 text-align="center" style="color: #FF0000; background: black">YouWin!</h1>
 	<table>
 		<tr>
 			<th>Character:</th>

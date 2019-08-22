@@ -10,13 +10,13 @@
 <meta charset="UTF-8">
 <title>BarFight</title>
 </head>
-<h1>Let's get those shoes back Champ!</h1>
+<h1>Let's get those shoes back, Champ!</h1>
 <h2>${player}</h2>
 <body>
 
 <p id = "storyspan">
-You walk all the way back to the city and eventually make it to the bar as passing by the entrance you ignore the “shoes are required to enter” sign and push your way into the bar.
-Upon entering you see the mysterious man still sitting at the bar wearing your shoes and buying rounds of drinks for everyone around him with your rubies
+You walk all the way back to the city and eventually make it to the bar. As you're passing by the entrance, you ignore the “shoes are required to enter” sign and push your way int.
+Upon entering, you see the mysterious man still sitting at the bar. He's wearing your shoes and buying rounds of drinks for everyone around him with your rubies!
 <br>
 <br>
 Do you:

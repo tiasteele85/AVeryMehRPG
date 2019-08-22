@@ -11,7 +11,7 @@
 <body>
 <audio autoplay><source src="http://ccmixter.org/content/soundtails/soundtails_-_Dark_Sky_1.mp3">
 </audio>
-<center><p id="deathstory">"The Knight draws his sword and cuts you in half, you try to love him to death, 
+<center><p id="deathstory">"The Knight draws his sword and cuts you in half. You try to love him to death, 
 but alas your heart is not as powerful as a steel sword."</p></center>
 <center><img id="death" source src="deathJoke.png"></img></center>
 

@@ -16,12 +16,11 @@
 <h1>He wont hurt you twice!</h1>
 
 <p id="storyspan">
-You walk up to the stranger and exclaim 'hey man you poisoned me and stole my shoes!! not cool broheim' 
-The stranger then revels himself as Kyle the TA and proceeds to respond with kindness in his voice 'hey, I am so sorry I got carried away back there let me get you another drink. 
-Poison free this time I promise.'
-As you turn to head to the bar you feel a sharp pain in your side.
-Kyle has stabbed you and you lose 5 additional points of health. 
-Angry you begin to swing wildly at Kyle and the battle begins.
+You walk up to the stranger and exclaim "Hey man, you poisoned me and stole my shoes!! Not cool broheim!" 
+The stranger then reveals himself as Kyle the TA and proceeds to respond with kindness in his voice "Hey, I am so sorry I got carried away back there. Let me get you another drink - poison free this time I promise."
+As you turn toward the bar, you feel a sharp pain in your side.
+Kyle has stabbed you and you lose 5 additional points of health! 
+Angry, you begin to swing wildly at Kyle and a battle ensues.
 </p>
 <img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></img>
 <br>

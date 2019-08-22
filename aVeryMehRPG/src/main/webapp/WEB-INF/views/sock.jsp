@@ -15,10 +15,10 @@
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
 </audio>
 
-<h1>Sockless and Scared</h1>
+<h1 id="welcome">Sockless and scared...</h1>
 <p id = "storyspan">
 <br>
-The spider sick of everyone always treating him with hostility lunges at you screaming “I’m sick of it lets fight!”
+The sock lands on the spider and the smell of foot fungus fills the air. The spider being angry that this isn't the first time this has happened, lunges at you.
 <br>
 <br>
 <br>

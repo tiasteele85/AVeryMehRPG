@@ -10,12 +10,12 @@
 <title>Refuse</title>
 </head>
 <body>
-<h1>I don't think so Knighty McKnighterson</h1>
+<h1>I don't think so Knighty McKnighterson!</h1>
 
 
 <p id="storyspan">
-The night sick of your tone then draws his sword and declares 
-<br>'I will retrieve my trophy off your dead body! Scoundrel!'
+The knight, sick of your tone, then draws his sword and declares 
+<br>"I will reclaim my trophy from off your dead body, scoundrel!"
 </p>
 
 <img border="5px" src="roadside.jpg" alt = "bar" width="500" height="350"></img>
