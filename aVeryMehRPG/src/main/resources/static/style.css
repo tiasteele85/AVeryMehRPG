@@ -96,9 +96,47 @@ a {
 
 /*fight styling on fight page*/
 
+#heart {
+	width:24%;
+	height:40%;
+	margin-right:16%;
+	margin-top:5%;
+	margin-bottom:1%;
+}
+
+#sword {
+	width:22%;
+	height:40%;
+	margin-right:57%;
+	margin-top:5%;
+	margin-bottom:1%;
+}
+#fightheader {
+	font-size:65px;
+	margin-bottom:1%;
+}
+#play {
+	margin-left:27%;
+	margin-top:27%;
+	font-size:117%;
+	margin-right:55%;
+}
+
+#health {
+	margin-left:67%;
+	font-size:117%;
+	margin-top:-5%;
+}
+
 #punchKickButtons {
-	color:yellow;
-	background:black;
+	font-family: 'Barriecito', cursive;
+	color: yellow;
+	background-color:black;
+	position:relative;
+	width:15%;
+	height:5%;
+	border-color:yellow;
+	font-size:125%;
 }
 
 #choice {

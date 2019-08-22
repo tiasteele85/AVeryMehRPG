@@ -15,40 +15,43 @@
 	<audio autoplay>
 		<source src="http://ccmixter.org/content/speck/speck_-_Sirius_Crystal_1.mp3">
 	</audio>
-	<div class="wrapper">
-		<div class="inner" style="float: left">
-			<p></p>
-
-		</div>
-		<div style="float: left">
-			<div>
-				<h1 id="welcome">Fight!</h1>
+				<center><h1 id="fightheader">Fight!</h1></center>
+				
+				<img id="sword" source src="sword.png"</img>
+				
+				<form id="play">
 				<p>${player.name}: ${ punch }</p>
 				<p>${ kick }</p>
 				<p id="eResponse">${enemy.name}: ${ eResponse }</p>
-
-				<p></p>
-				<form action="/takeDamage" >
+				</form>
+				
+				<img id="heart" source src="heartHealth.png"></img>
+       			<form id="health">
+				<p>${player.name}:
+       				${ player.health.health }</p>
+				<p>${enemy.name}:
+      				 ${ enemy.health.health }</p>
+      				
+      				 </form>
+      				 
+				<center><form action="/takeDamage" >
 					<input id="punchKickButtons" type="submit" name="punch" value="punch"> 
 					<input id="punchKickButtons" type="submit" name="kick" value="kick">
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	<div></div>
-	
+				</form></center>
+				
 
+			
+	
+	<form>   
+      
+    </form>
+    
 	<form>
-       <p>${enemy.name}:
-       ${ enemy.health.health }</p>
+       
     </form>
       
     
-    <form>   
-       <p>${player.name}:
-       ${ player.health.health }</p>
-    </form>
+    
 	
 
 
