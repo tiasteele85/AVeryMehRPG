@@ -10,7 +10,9 @@
 <title>Refuse</title>
 </head>
 <body>
-<h1>I don't think so Knighty McKnighterson!</h1>
+<br>
+<br>
+<h1 id="knight">I don't think so Knighty McKnighterson!</h1>
 
 
 <p id="storyspan">
@@ -25,6 +27,6 @@ The knight, sick of your tone, then draws his sword and declares
 </audio>
 <br>
 <br>
-<a href= "/fight">Defend Yourself!</a>
+<a id ="defend" href= "/fight">Defend Yourself!</a>
 </body>
 </html>

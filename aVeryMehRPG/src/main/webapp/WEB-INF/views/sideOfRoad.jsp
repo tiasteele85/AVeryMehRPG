@@ -10,7 +10,8 @@
 <title>Knighty Knight</title>
 </head>
 <body>
-<h1>Meet the hero?</h1>
+<br>
+<h1 id="sockless">Meet the hero?</h1>
 <h2>${player }</h2>
 
 <p id="storyspan"> 
@@ -35,12 +36,12 @@ Do you:
 
 
 
-
+<p id="options">
 <a href="/refuse">Refuse!</a>
 <br>
 <a href="/wrong">Insist he's wrong</a>
 <br>
 <a href="/deathJoke">I'm a lover not a fighter</a>
-	
+	</p>
 </body>
 </html>

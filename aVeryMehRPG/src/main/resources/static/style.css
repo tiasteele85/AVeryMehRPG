@@ -177,6 +177,20 @@ select {
 	border-color:yellow;
 }
 
+#options {
+	font-size:77%;
+}
+
+#knight {
+	margin-left:2.5%;
+	font-size:280%;
+}
+
+#defend {
+	font-size:137%;
+}
+
+
 div {
 	top: 1px;
 	right: 150px;
@@ -208,7 +222,6 @@ img {
 	font-size: 35px;
 	background-color:black;
 }
-
 
 
 #death {
