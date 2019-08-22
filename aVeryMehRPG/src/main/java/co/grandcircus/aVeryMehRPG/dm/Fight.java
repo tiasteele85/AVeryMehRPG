@@ -16,7 +16,7 @@ public class Fight {
 
 	public String punchie() {
 		Random rand = new Random();
-		int num = rand.nextInt(5) + 1;
+		int num = rand.nextInt(11) + 1;
 		String word = "";
 
 		switch (num) {
@@ -35,9 +35,25 @@ public class Fight {
 		case 5:
 			word = "Ninja fist so fast you don't know where it landed";
 			break;
+		case 6:
+			word = "knick knack paddy whack you just got slapped";
+			break;
+		case 7 : 
+			word = "nice punch bro, work out?";
+			break;
+		case 8 :
+			word = "Fist so strong it don't need no man";
+			break;
+		case 9 :
+			word = "puncheroni and cheese";
+			break;
+		case 10:
+			word = "laying the smackdown";
+			break;
 		default:
 			word = "Just a simple punch";
 			break;
+	
 		}
 		
 		return word;
@@ -45,7 +61,7 @@ public class Fight {
 	
 	public String kickie() {
 		Random rand = new Random();
-		int num = rand.nextInt(5) + 1;
+		int num = rand.nextInt(11) + 1;
 		String word = "";
 
 		switch (num) {
@@ -64,9 +80,25 @@ public class Fight {
 		case 5:
 			word = "Whoooaaack, that kick jiggled the skin on your face";
 			break;
+		case 6:
+			word = "Kick so strong it scared Chuck Norris";
+			break;
+		case 7 :
+			word = "Your kick power proves you've never missed a leg day";
+			break;
+		case 8:
+			word = "Kick heard around the world";
+			break;
+		case 9:
+			word = "Can you kick it? Yeah you can";
+			break;
+		case 10:
+			word = "Chipmunks kick harder than that";
+			break;
 		default:
 			word = "Just a simple kick";
 			break;
+		
 		}
 		
 		return word;
