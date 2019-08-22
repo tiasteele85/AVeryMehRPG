@@ -139,6 +139,23 @@ a {
 	font-size:125%;
 }
 
+#sockless {
+	font-size:327%;
+	margin-left:2.5%;
+}
+
+#story {
+	margin-left:2.5%;
+	width:45%;
+	height:47%;
+	font-size:157%;
+}
+
+#champ {
+	margin-left:2.5%;
+	margin-top:3.5%;
+	font-size:300%;
+}
 #choice {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
@@ -147,6 +164,11 @@ a {
 	border-color: yellow;
 }
 
+#meanie {
+	margin-left:2.5%;
+	margin-top:5.5%;
+	font-size:300%;
+}
 select {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
@@ -190,15 +212,24 @@ img {
 
 
 #death {
-	position:static;
-	left:230px;
+	position:relative;
+	margin-left:45%;
+	margin-top:-3%;
+	font-size:138%;
+}
+
+#deathimage {
+	position:relative;
+	margin-top:-2.5%;
+	margin-left:3%;
 }
 
 #deathstory {
 	position:relative;
-	top:550px;
+	font-size:137%;
 	width:55%;
 	height:15%;
+	margin-top:2.5%;
 }
 
 #playagain {

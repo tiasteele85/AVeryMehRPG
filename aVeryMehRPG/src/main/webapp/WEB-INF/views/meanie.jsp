@@ -9,12 +9,12 @@
 <meta charset="ISO-8859-1">
 <title>Mean Man</title>
 </head>
-<body id = "storybody">
+<body>
 <audio autoplay>
  <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
 </audio>
-<h1>He wont hurt you twice!</h1>
-
+<h1 id= "meanie">He wont hurt you twice!</h1>
+<br>
 <p id="storyspan">
 You walk up to the stranger and exclaim "Hey man, you poisoned me and stole my shoes!! Not cool, broheim!" 
 The stranger then reveals himself as Kyle the TA and proceeds to respond with kindness in his voice "Hey, I am so sorry I got carried away back there. Let me get you another drink - poison free this time I promise."

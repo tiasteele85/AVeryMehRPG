@@ -10,9 +10,12 @@
 <meta charset="UTF-8">
 <title>BarFight</title>
 </head>
-<h1>Let's get those shoes back, Champ!</h1>
-<h2>${player}</h2>
 <body>
+<br>
+<br>
+<h1 id="champ">Let's get those shoes back, Champ!</h1>
+
+
 
 <p id = "storyspan">
 You walk all the way back to the city and eventually make it to the bar. As you're passing by the entrance, you ignore the “shoes are required to enter” sign and push your way in.
