@@ -19,6 +19,10 @@
 			<td>${ character.name }</td>
 		</tr>
 		<tr>
+			<th>Enemy:</th>
+			<td>${character.enemy }</td>
+		</tr>
+		<tr>
 			<th>Story Choices:</th>
 			<td>${ character.description }</td>
 		</tr>

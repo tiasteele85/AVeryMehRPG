@@ -14,8 +14,14 @@
 
 
 <p id="storyspan">
+<<<<<<< HEAD
 The knight, sick of your tone, then draws his sword and declares 
 <br>"I will reclaim my trophy from off your dead body, scoundrel!"
+=======
+The night sick of your tone then draws his sword and declares 
+<br>
+'I will retrieve my trophy off your dead body! Scoundrel!'
+>>>>>>> 1d06b0e5821c4625e7b80452bf76d516a84f04d4
 </p>
 
 <img border="5px" src="roadside.jpg" alt = "bar" width="500" height="350"></img>

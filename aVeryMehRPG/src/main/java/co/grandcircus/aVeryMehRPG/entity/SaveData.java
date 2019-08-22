@@ -4,62 +4,71 @@ import javax.persistence.*;
 
 @Entity
 public class SaveData {
-	
-	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(length = 300)
 	private String name;
 	@Column(length = 300)
 	private String description;
 	@Column(length = 300)
-	private String attackButton;
+	private String enemy;
 	@Column(length = 100)
 	private int punchCount;
 	@Column(length = 100)
 	private int kickCount;
-	
-	public SaveData(Long id, String name, String description, String attackButton, int punchCount, int kickCount) {
+
+	public SaveData(Long id, String name, String description, String enemy, int punchCount, int kickCount) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.attackButton = attackButton;
+		this.enemy = enemy;
 		this.punchCount = punchCount;
 		this.kickCount = kickCount;
 	}
-	
+
 	public SaveData() {
 		description = "";
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description += description + " ";
 	}
-	public String getAttackButton() {
-		return attackButton;
+
+	public String getEnemy() {
+		return enemy;
 	}
-	public void setAttackButton(String attackButton) {
-		this.attackButton = attackButton;
+
+	public void setEnemy(String enemy) {
+		this.enemy = enemy;
 	}
+
 	public int getPunchCount() {
 		return punchCount;
 	}
+
 	public void setPunchCount(int punchCount) {
 		this.punchCount = punchCount;
 	}
@@ -71,22 +80,19 @@ public class SaveData {
 	public void setKickCount(int kickCount) {
 		this.kickCount = kickCount;
 	}
-	public void addAttackSequence(String click) {
-		attackButton += click;
-	}
-	
+
 	public void addPunch() {
 		punchCount++;
 	}
-	
+
 	public void addKick() {
 		kickCount++;
 	}
 
 	@Override
 	public String toString() {
-		return "SaveData [id=" + id + ", name=" + name + ", description=" + description + ", attackButton="
-				+ attackButton + ", punchCount=" + punchCount + ", kickCount=" + kickCount + "]";
+		return "SaveData [id=" + id + ", name=" + name + ", description=" + description + ", enemy="
+				+ enemy + ", punchCount=" + punchCount + ", kickCount=" + kickCount + "]";
 	}
-	
+
 }
