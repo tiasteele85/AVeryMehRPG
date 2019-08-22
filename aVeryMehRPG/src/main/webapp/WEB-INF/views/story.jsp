@@ -13,11 +13,11 @@
 <audio autoplay>
       <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
 </audio> 
-<h1 id="storyheader">Hello ${player} </h1>
+<h1 id="storyheader">Hello ${player} . . .</h1>
 
-<p id="storyspan" >We start off in dark and gloomy bar in the heart of Technologica Woods . 
-Our hero sits at the bar after another victorious mission. 
-Then out of nowhere the bartender David the master of all Java comes over and places a drink in-front of you and exclaims "Hero! This drink was bought for you by that mysterious man over there!" 
+<p id="storyspan" >We start off in a dark and gloomy bar in the heart of Technologica Woods. 
+${player} sits at the bar after another victorious mission. 
+All of a sudden, the bartender 'David' (Master of all Java) places a drink in-front of you and exclaims "Hero! This drink was bought for you by that mysterious man over there!" 
 <br>
 
 <br>

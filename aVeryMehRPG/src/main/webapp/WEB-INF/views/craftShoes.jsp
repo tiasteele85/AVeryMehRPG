@@ -10,7 +10,7 @@
 <title>Craft Shoes</title>
 </head>
 <body>
-<h1 id="fatherwrong"> Prove Your Father Wrong</h1>
+<h1 id="fatherwrong"> Prove Your Father Wrong. . .</h1>
 <h2>${player}</h2>
 
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">

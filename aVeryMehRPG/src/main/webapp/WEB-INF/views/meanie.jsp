@@ -16,7 +16,7 @@
 <h1>He wont hurt you twice!</h1>
 
 <p id="storyspan">
-You walk up to the stranger and exclaim "Hey man, you poisoned me and stole my shoes!! Not cool broheim!" 
+You walk up to the stranger and exclaim "Hey man, you poisoned me and stole my shoes!! Not cool, broheim!" 
 The stranger then reveals himself as Kyle the TA and proceeds to respond with kindness in his voice "Hey, I am so sorry I got carried away back there. Let me get you another drink - poison free this time I promise."
 As you turn toward the bar, you feel a sharp pain in your side.
 Kyle has stabbed you and you lose 5 additional points of health! 

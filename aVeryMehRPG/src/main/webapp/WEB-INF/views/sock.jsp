@@ -24,7 +24,7 @@ The sock lands on the spider and the smell of foot fungus fills the air. The spi
 <br>
 <br>
 
-<a href="/fight">Go Sockless Wonder Go!</a>
+<a href="/fight">Go, Sockless Wonder Go!</a>
 <img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
 
 

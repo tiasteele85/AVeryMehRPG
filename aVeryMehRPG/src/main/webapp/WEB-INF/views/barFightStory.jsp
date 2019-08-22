@@ -15,7 +15,7 @@
 <body>
 
 <p id = "storyspan">
-You walk all the way back to the city and eventually make it to the bar. As you're passing by the entrance, you ignore the “shoes are required to enter” sign and push your way int.
+You walk all the way back to the city and eventually make it to the bar. As you're passing by the entrance, you ignore the “shoes are required to enter” sign and push your way in.
 Upon entering, you see the mysterious man still sitting at the bar. He's wearing your shoes and buying rounds of drinks for everyone around him with your rubies!
 <br>
 <br>

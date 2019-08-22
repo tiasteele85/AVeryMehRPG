@@ -7,13 +7,13 @@
 <link rel="stylesheet" type="text/css" href="style.css"></link>
 <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
 <meta charset="ISO-8859-1">
-<title>You're Wrong Bobby boy</title>
+<title>You're wrong, Bobby boy. . .</title>
 </head>
 <body>
 <h1>I guess we're about to be the villain...</h1>
 
 <p id="storyspan">
-As you are trying to tell the Knight that you're actually the good guy he pulls out his sword and swings at you!
+As you're trying to explain to the Knight that you're actually the good guy, he pulls out his sword and swings at you!
 </p>
 
 <img border="5px" src="roadside.jpg" alt = "bar" width="500" height="350"></img>

@@ -22,7 +22,7 @@
 		</div>
 		<div style="float: left">
 			<div>
-				<h1 id="welcome">Fight Story</h1>
+				<h1 id="welcome">Fight</h1>
 				<p>${player.name}: ${ punch }</p>
 				<p>${ kick }</p>
 				<p id="eResponse">${enemy.name}: ${ eResponse }</p>
