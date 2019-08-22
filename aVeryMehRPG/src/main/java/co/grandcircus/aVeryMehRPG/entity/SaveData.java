@@ -54,7 +54,7 @@ public class SaveData {
 	}
 
 	public void setDescription(String description) {
-		this.description += description + " ";
+		this.description += description + ", ";
 	}
 
 	public String getEnemy() {
