@@ -19,7 +19,7 @@
 
 <p id ="storyspan"> 
 <br>
-You try to create a make-shift pair of shoes, but fail and feel your father looking down on you dissapointede, since he was a cobbler and tried to teach you to craft shoes several times.
+You try to create a make-shift pair of shoes, but fail and feel your father looking down on you disappointed, since he was a cobbler and tried to teach you to craft shoes several times.
 You decide to head back towards the bar to see if you can find the mysterious man.
 <br>
 <br>

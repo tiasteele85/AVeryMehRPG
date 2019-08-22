@@ -30,12 +30,16 @@ Do you:
 </p>
 
 <img border="5px" src="bar.jpg" alt = "bar" width="500" height="350"></img>
-<table id="storytable">
-	<tr>
-<th><a href="/woods">Drink</a></th>
-<th><a href="/sideOfRoad">Leave</a></th>
 
-	</tr>
-</table>
+<br>
+<br>
+
+<a href="/woods">Drink</a>
+<br>
+<a href="/sideOfRoad">Leave</a>
+
+
+
+
 </body>
 </html>

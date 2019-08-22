@@ -8,38 +8,25 @@
 	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
-<meta charset="UTF-8">
-<title>DEEPER WE GO</title>
+<meta charset="ISO-8859-1">
+<title>Sock Em'</title>
 </head>
 <body>
 <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
 </audio>
 
-<h1 id="deeper">Deeper We Go. . .</h1>
+<h1>Sockless and Scared</h1>
 <p id = "storyspan">
 <br>
-As you head further into the woods, you are confronted by a giant spider and realize that peace may not be in his nature.
-The spider looks at you and exclaims “Hey bro, quick question… where are your shoes?"
+The spider sick of everyone always treating him with hostility lunges at you screaming “I’m sick of it lets fight!”
 <br>
 <br>
-Do you:
 <br>
 <br>
- 1.Respond with a snarky comment “wouldn’t you like to know Spider-boy?"
- <br>
- 2.Take off your sock and chuck it at the Spider to try and scare if off
- 
 
-</p>
-
-	
-<a href="/snarky">Snarky comment</a>
-<br>
-<a href="/sock">Throw My Sock</a>
-
-
-
+<a href="/fight">Go Sockless Wonder Go!</a>
 <img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
+
 
 </body>
 </html>

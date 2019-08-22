@@ -33,12 +33,11 @@ Do you:
 </p>
 
 <img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
-<table id="storytable">
-	<tr>
-<th><a href="/craftShoes">Craft Shoes</a></th>
-<th><a href="/deeperInTheWoods">Go Deeper Into the Woods</a></th>
 
-	</tr>
-</table>
+<a href="/craftShoes">Craft Shoes</a>
+<br>
+<a href="/deeperInTheWoods">Go Deeper Into the Woods</a>
+
+	
 </body>
 </html>
