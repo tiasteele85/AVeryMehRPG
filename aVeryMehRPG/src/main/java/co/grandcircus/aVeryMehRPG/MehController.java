@@ -50,9 +50,7 @@ public class MehController {
 	}
 
 	@RequestMapping("/story")
-	public ModelAndView showStory(
-			@SessionAttribute("master") DungeonMaster dm, 
-			@SessionAttribute("saver") SaveData sd,
+	public ModelAndView showStory(@SessionAttribute("master") DungeonMaster dm, @SessionAttribute("saver") SaveData sd,
 			@RequestParam(value = "Character") int player) {
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
@@ -104,20 +102,19 @@ public class MehController {
 
 	@RequestMapping("/fight")
 	public ModelAndView showFightScene(@SessionAttribute("master") DungeonMaster dm,
-			@SessionAttribute("saver") SaveData sd, 
-			@RequestParam(value = "punch", required = false) String punch,
+			@SessionAttribute("saver") SaveData sd, @RequestParam(value = "punch", required = false) String punch,
 			@RequestParam(value = "kick", required = false) String kick,
 			@RequestParam(value = "eResponse", required = false) String eResponse) {
 
 		ModelAndView mv = new ModelAndView("fight");
 
 		if (punch != null) {
-			
+
 			// sd.addAttackSequence("punch");
 			mv.addObject("punch", punch);
 			mv.addObject("eResponse", eResponse);
 		} else if (kick != null) {
-			
+
 			// sd.addAttackSequence("kick");
 			mv.addObject("kick", kick);
 			mv.addObject("eResponse", eResponse);
@@ -135,7 +132,7 @@ public class MehController {
 	@RequestMapping("/craftShoes")
 	public ModelAndView showShoes(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
-		
+
 		sd.setDescription("craft shoes");
 		ModelAndView mv = new ModelAndView("craftShoes");
 		mv.addObject(dm.player.getName());
@@ -307,8 +304,7 @@ public class MehController {
 									 */) {
 
 //		sDao.delete(sd.getId());
-		// TESTING
-		// System.out.println(sd);
+
 //		session.invalidate();
 
 		return new ModelAndView("redirect:/");
