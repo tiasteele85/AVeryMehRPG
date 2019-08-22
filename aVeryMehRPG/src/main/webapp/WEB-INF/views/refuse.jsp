@@ -15,7 +15,8 @@
 
 <p id="storyspan">
 The night sick of your tone then draws his sword and declares 
-<br>'I will retrieve my trophy off your dead body! Scoundrel!'
+<br>
+'I will retrieve my trophy off your dead body! Scoundrel!'
 </p>
 
 <img border="5px" src="roadside.jpg" alt = "bar" width="500" height="350"></img>

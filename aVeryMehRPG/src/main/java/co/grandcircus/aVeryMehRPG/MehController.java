@@ -62,6 +62,7 @@ public class MehController {
 
 		// Set attribute for SaveData to be written to Database
 		sd.setName(dm.player.getName());
+		sd.setEnemy(dm.enemy.getName());
 
 		// TESTING
 		System.out.println("Saver: " + sd.getName());
