@@ -38,7 +38,7 @@
 
 
 	<p>
-		<a href="/killer">Home</a>
+		<center><a href="/killer">Home</a></center>
 	</p>
 
 

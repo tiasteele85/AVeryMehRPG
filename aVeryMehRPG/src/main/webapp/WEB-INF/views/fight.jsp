@@ -20,16 +20,18 @@
 				<img id="sword" source src="sword.png"</img>
 				
 				<form id="play">
-				<p>${player.name}: ${ punch }</p>
-				<p>${ kick }</p>
-				<p id="eResponse">${enemy.name}: ${ eResponse }</p>
+				<h3>Move:</h3>
+				<p>${player.name} (player): ${ punch }
+				${ kick }</p>
+				<p id="eResponse">${enemy.name} (enemy): ${ eResponse }</p>
 				</form>
 				
 				<img id="heart" source src="heartHealth.png"></img>
        			<form id="health">
-				<p>${player.name}:
+       			<h3>Health:</h3>
+				<p>${player.name} (player):
        				${ player.health.health }</p>
-				<p>${enemy.name}:
+				<p>${enemy.name} (enemy):
       				 ${ enemy.health.health }</p>
       				
       				 </form>
