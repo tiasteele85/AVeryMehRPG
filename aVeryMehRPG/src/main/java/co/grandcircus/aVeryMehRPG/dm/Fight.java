@@ -24,7 +24,7 @@ public class Fight {
 			word = "A swift fist to the face";
 			break;
 		case 2:
-			word = "A whipped whooper to the abdomen";
+			word = "A whipped whopper to the abdomen";
 			break;
 		case 3:
 			word = "Take 3 knuckles and a finger to the eye";

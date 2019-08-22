@@ -50,7 +50,9 @@ public class MehController {
 	}
 
 	@RequestMapping("/story")
-	public ModelAndView showStory(@SessionAttribute("master") DungeonMaster dm, @SessionAttribute("saver") SaveData sd,
+	public ModelAndView showStory(
+			@SessionAttribute("master") DungeonMaster dm, 
+			@SessionAttribute("saver") SaveData sd,
 			@RequestParam(value = "Character") int player) {
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
@@ -75,6 +77,7 @@ public class MehController {
 	@RequestMapping("/woods")
 	public ModelAndView showWoods(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("drink");
 		ModelAndView mv = new ModelAndView("woods");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -83,6 +86,7 @@ public class MehController {
 	@RequestMapping("/sideOfRoad")
 	public ModelAndView showSideOfRoad(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("leave");
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -92,6 +96,7 @@ public class MehController {
 	@RequestMapping("/deathJoke")
 	public ModelAndView showDeathJoke(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("i'm a lover not a fighter");
 		ModelAndView mv = new ModelAndView("deathJoke");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -107,12 +112,12 @@ public class MehController {
 		ModelAndView mv = new ModelAndView("fight");
 
 		if (punch != null) {
-			sd.addPunch();
+			
 			// sd.addAttackSequence("punch");
 			mv.addObject("punch", punch);
 			mv.addObject("eResponse", eResponse);
 		} else if (kick != null) {
-			sd.addKick();
+			
 			// sd.addAttackSequence("kick");
 			mv.addObject("kick", kick);
 			mv.addObject("eResponse", eResponse);
@@ -130,6 +135,8 @@ public class MehController {
 	@RequestMapping("/craftShoes")
 	public ModelAndView showShoes(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		
+		sd.setDescription("craft shoes");
 		ModelAndView mv = new ModelAndView("craftShoes");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -138,6 +145,7 @@ public class MehController {
 	@RequestMapping("/deeperInTheWoods")
 	public ModelAndView showDeeper(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("go deeper into the woods");
 		ModelAndView mv = new ModelAndView("deeperInTheWoods");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -154,6 +162,7 @@ public class MehController {
 	@RequestMapping("/barFightStory")
 	public ModelAndView showFight(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("walk back in sorrow");
 		ModelAndView mv = new ModelAndView("barFightStory");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -161,6 +170,8 @@ public class MehController {
 
 	@RequestMapping("/sock")
 	public ModelAndView showSock(@SessionAttribute("master") DungeonMaster dm, @SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("throw my sock");
+		sd.setDescription("go sockless wonder go");
 		ModelAndView mv = new ModelAndView("sock");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -169,6 +180,8 @@ public class MehController {
 	@RequestMapping("/snarky")
 	public ModelAndView showSnarky(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("snarky comment");
+		sd.setDescription("smash that spider");
 		ModelAndView mv = new ModelAndView("snarky");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -177,6 +190,7 @@ public class MehController {
 	@RequestMapping("/meanie")
 	public ModelAndView showMeanie(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("whip your shoes off him");
 		ModelAndView mv = new ModelAndView("meanie");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -185,6 +199,8 @@ public class MehController {
 	@RequestMapping("/wrong")
 	public ModelAndView showWrong(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("insist he's wrong");
+		sd.setDescription("block");
 		ModelAndView mv = new ModelAndView("wrong");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -193,6 +209,8 @@ public class MehController {
 	@RequestMapping("/refuse")
 	public ModelAndView showRefuse(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
+		sd.setDescription("refuse");
+		sd.setDescription("defend yourself");
 		ModelAndView mv = new ModelAndView("refuse");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -212,6 +230,7 @@ public class MehController {
 			System.out.println("Here");
 
 			dm.takeAPunch();
+			sd.addPunch();
 			dm.BaseFight(toggle);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
@@ -233,6 +252,7 @@ public class MehController {
 		} else if (kickbuttonClick != null) {
 
 			dm.takeAKick();
+			sd.addKick();
 			dm.BaseFight(toggle);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
@@ -274,18 +294,22 @@ public class MehController {
 
 		ModelAndView mv = new ModelAndView("winner");
 		mv.addObject("character", sDao.findbyId(sd.getId()));
+		session.invalidate();
 
 		return mv;
 	}
 
 	@RequestMapping("/killer")
-	public ModelAndView killThemAll(@SessionAttribute("master") DungeonMaster dm,
-			@SessionAttribute("saver") SaveData sd, HttpSession session) {
+	public ModelAndView killThemAll(/*
+									 * @SessionAttribute("master") DungeonMaster dm,
+									 * 
+									 * @SessionAttribute("saver") SaveData sd, HttpSession session
+									 */) {
 
 //		sDao.delete(sd.getId());
 		// TESTING
 		// System.out.println(sd);
-		session.invalidate();
+//		session.invalidate();
 
 		return new ModelAndView("redirect:/");
 	}
