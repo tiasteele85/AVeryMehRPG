@@ -88,6 +88,12 @@ public class MehController {
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
+	
+	@RequestMapping("/radiobuttons")
+	public ModelAndView showRadio() {
+		ModelAndView mv = new ModelAndView("radiobuttons");
+		return mv;
+	}
 
 	//Creates SideofRoad 
 	//Collects user choices as they proceed through the story

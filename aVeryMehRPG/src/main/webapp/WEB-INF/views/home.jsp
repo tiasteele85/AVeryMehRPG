@@ -30,6 +30,7 @@
 		</form>
 	<iframe src="dragon.gif" frameBorder="0">
 	</iframe>
+	<a href="/radiobuttons">character</a>
 	
 </center>
 	

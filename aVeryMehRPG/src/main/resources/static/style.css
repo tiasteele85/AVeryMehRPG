@@ -206,6 +206,13 @@ img {
 	border-color:#660000;
 }
 
+#characterselection {
+	font-family: 'Barriecito', cursive;
+	color: yellow;
+	background-color:black;
+}
+
+
 #choice {
 	color: yellow;
 	font-family: 'Barriecito', cursive;
