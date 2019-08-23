@@ -96,7 +96,7 @@ public class MehController {
 	public ModelAndView showSideOfRoad(
 			@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
-		sd.setDescription("leave");
+		sd.setDescription("leave");	
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -158,6 +158,7 @@ public class MehController {
 	public ModelAndView showDeeper(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
 		sd.setDescription("go deeper into the woods");
+		dm.player.setWeapon(apiService.reWeapon(4));
 		ModelAndView mv = new ModelAndView("deeperInTheWoods");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -221,7 +222,9 @@ public class MehController {
 	@RequestMapping("/refuse")
 	public ModelAndView showRefuse(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
-		sd.setDescription("refuse");
+		sd.setDescription("grab the knights dagger and show him how skilled at the blade you are");
+		dm.player.setWeapon(apiService.reWeapon(2));
+		System.out.println("Reweapon: " + dm.player.getWeapon() );
 		sd.setDescription("defend yourself");
 		ModelAndView mv = new ModelAndView("refuse");
 		mv.addObject(dm.player.getName());

@@ -64,5 +64,11 @@ public class ApiService {
 
 		return weapon;
 	}
+	
+	public Weapon reWeapon(int place) {
+		String url = "http://www.dnd5eapi.co/api/equipment/" + place;		
+		Weapon weapon = restTemplate.getForObject(url, Weapon.class);
+		return weapon;
+	}
 
 }
