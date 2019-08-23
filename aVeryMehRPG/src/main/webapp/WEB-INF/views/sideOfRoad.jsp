@@ -37,7 +37,7 @@ Do you:
 
 
 <p id="options">
-<a href="/refuse">Refuse!</a>
+<a href="/refuse">Grab the Knights Weapon!</a>
 <br>
 <a href="/wrong">Insist he's wrong</a>
 <br>

@@ -222,7 +222,7 @@ public class MehController {
 	@RequestMapping("/refuse")
 	public ModelAndView showRefuse(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
-		sd.setDescription("grab the knights dagger and show him how skilled at the blade you are");
+		sd.setDescription("grab the knights dagger and show him how skilled you are with a blade");
 		dm.player.setWeapon(apiService.reWeapon(2));
 		System.out.println("Reweapon: " + dm.player.getWeapon() );
 		sd.setDescription("defend yourself");
