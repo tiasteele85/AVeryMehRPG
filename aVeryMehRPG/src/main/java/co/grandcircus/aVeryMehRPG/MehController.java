@@ -238,7 +238,7 @@ public class MehController {
 		
 
 		Random rand = new Random();
-		int toggle = rand.nextInt(2) + 1;
+		int toggle = rand.nextInt(3) + 1;
 
 		if (punchbuttonClick != null) {
 			
@@ -249,6 +249,7 @@ public class MehController {
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
+				sd.setHealth(dm.player.getHealth().getHealth());
 				sDao.create(sd);
 				return new ModelAndView("redirect:/winner");
 			} else {
@@ -271,6 +272,7 @@ public class MehController {
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
+				sd.setHealth(dm.player.getHealth().getHealth());
 				sDao.create(sd);
 				return new ModelAndView("redirect:/winner");
 			} else {
@@ -284,13 +286,26 @@ public class MehController {
 				return mv;
 			}
 		} else {
+			
+			//dm.weaponDamage();
+			dm.BaseFight(toggle);			
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
+				sd.setHealth(dm.player.getHealth().getHealth());
 				sDao.create(sd);
-				return new ModelAndView("/winner");
+				return new ModelAndView("redirect:/winner");
 			} else {
-				return new ModelAndView("redirect:/fight");
+				ModelAndView mv = new ModelAndView("redirect:/fight");
+				mv.addObject("weapon", dm.player.getWeapon().getName());
+				if (toggle == 1) {
+					mv.addObject("eResponse", dm.punchText());
+				} else if (toggle == 2){
+					mv.addObject("eResponse", dm.kickText());
+				}else {
+					mv.addObject("eResponse", dm.enemy.getWeapon().getName());
+				}
+				return mv;
 			}
 		}
 	}
@@ -308,6 +323,7 @@ public class MehController {
 
 		ModelAndView mv = new ModelAndView("winner");
 		mv.addObject("character", sDao.findbyId(sd.getId()));
+		System.out.println("SaveData: " + sd);
 		session.invalidate();
 
 		return mv;

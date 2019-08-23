@@ -23,6 +23,10 @@
 			<td>${character.enemy }</td>
 		</tr>
 		<tr>
+			<th>Ending Health:</th>
+			<td>${character.health }</td>
+		</tr>
+		<tr>
 			<th>Story Choices:</th>
 			<td>${ character.description }</td>
 		</tr>

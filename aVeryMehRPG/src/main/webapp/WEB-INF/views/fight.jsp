@@ -22,7 +22,7 @@
 				<form id="play">
 				<h3>Move:</h3>
 				<p>${player.name} (player): ${ punch }
-				${ kick }</p>
+				${ kick }${ weapon }</p>
 				<p id="eResponse">${enemy.name} (enemy): ${ eResponse }</p>
 				</form>
 				
@@ -39,6 +39,7 @@
 				<center><form action="/takeDamage" >
 					<input id="punchKickButtons" type="submit" name="punch" value="punch"> 
 					<input id="punchKickButtons" type="submit" name="kick" value="kick">
+					<input id="punchKickButtons" type="submit" name="weapon" value="${ player.weapon.name }">
 				</form></center>
 				
 

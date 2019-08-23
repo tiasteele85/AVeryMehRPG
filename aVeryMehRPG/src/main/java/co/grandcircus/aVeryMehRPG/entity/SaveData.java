@@ -18,8 +18,9 @@ public class SaveData {
 	private int punchCount;
 	@Column(length = 100)
 	private int kickCount;
+	private int health;
 
-	public SaveData(Long id, String name, String description, String enemy, int punchCount, int kickCount) {
+	public SaveData(Long id, String name, String description, String enemy, int punchCount, int kickCount, int health) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -27,6 +28,7 @@ public class SaveData {
 		this.enemy = enemy;
 		this.punchCount = punchCount;
 		this.kickCount = kickCount;
+		this.health = health;
 	}
 
 	public SaveData() {
@@ -54,7 +56,7 @@ public class SaveData {
 	}
 
 	public void setDescription(String description) {
-		this.description += description + ", ";
+		this.description += description + ". ";
 	}
 
 	public String getEnemy() {
@@ -88,11 +90,21 @@ public class SaveData {
 	public void addKick() {
 		kickCount++;
 	}
+	
+	public int getHealth() {
+		return health;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
 
 	@Override
 	public String toString() {
-		return "SaveData [id=" + id + ", name=" + name + ", description=" + description + ", enemy="
-				+ enemy + ", punchCount=" + punchCount + ", kickCount=" + kickCount + "]";
+		return "SaveData [id=" + id + ", name=" + name + ", description=" + description + ", enemy=" + enemy
+				+ ", punchCount=" + punchCount + ", kickCount=" + kickCount + ", health=" + health + "]";
 	}
 
+	
+	
 }
