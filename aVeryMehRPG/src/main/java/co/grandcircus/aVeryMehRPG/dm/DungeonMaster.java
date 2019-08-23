@@ -1,5 +1,13 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
+<<<<<<< Updated upstream
+=======
+
+
+import java.util.Random;
+
+import co.grandcircus.aVeryMehRPG.model.Bar;
+>>>>>>> Stashed changes
 import co.grandcircus.aVeryMehRPG.model.Character;
 
 import co.grandcircus.aVeryMehRPG.model.Weapon;
@@ -101,21 +109,42 @@ public class DungeonMaster {
 //		}
 //	}
 
-	// Method to create a random damage amount from the hitdie of the player to the
-	// enemy
-	// Then returns the enemy's health
+
+	
+	//Method to create a random damage amount from the hitdie of the player to the enemy
+	//Then returns the enemy's health
+	
+
 	public String takeAKick() {
-
+		Random rand = new Random();
+		int success = rand.nextInt(10);
 		int pDamage = dice.basicDamage(player.getHit_die() + 1);
-		int kickMultiplier = (int) (.15 * pDamage);
-
-		if (isAlive(enemy.getHealth().getHealth())) {
-			enemy.getHealth().setHealth(pDamage + kickMultiplier);
+		int kickMultiplier = (int)(.15 * pDamage);
+		
+		if (success<=6) {
+			 if (isAlive(enemy.getHealth().getHealth())) {
+				 enemy.getHealth().setHealth(pDamage + kickMultiplier);
+				 return enemy.getHealth().toString(); 
+				 } else { return "They're Dead"; }					 
+		}else if(success<=8) {
+			enemy.getHealth().setHealth((pDamage + kickMultiplier)/2);
+			return  enemy.getHealth().toString();
+		}else {
 			return enemy.getHealth().toString();
-		} else {
-			return "They're Dead";
 		}
-	}
+		
+}
+	
+	/*
+	 * public String takeAKick() {
+	 * 
+	 * int pDamage = dice.basicDamage(player.getHit_die() + 1); 
+	 * int kickMultiplier = * (int)(.15 * pDamage);
+	 * 
+	 if (isAlive(enemy.getHealth().getHealth())) {
+	 enemy.getHealth().setHealth(pDamage + kickMultiplier); return
+	 enemy.getHealth().toString(); } else { return "They're Dead"; } }
+	 */
 
 //	public String giveAKick() {
 //		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
