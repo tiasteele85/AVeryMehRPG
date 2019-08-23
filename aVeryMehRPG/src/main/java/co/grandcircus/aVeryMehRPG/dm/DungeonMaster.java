@@ -18,9 +18,10 @@ import co.grandcircus.aVeryMehRPG.model.Woods;
  */
 public class DungeonMaster {
 
+	//Give the Dungeon Master access to all the classes needed to run the game
 	public Player player = new Player();
 	public Enemy enemy = new Enemy();
-	Dice dice = new Dice();
+	private Dice dice = new Dice();
 	public Bar bar;
 	public Woods woods;
 	public SideOfRoad sideofroad;
@@ -30,55 +31,41 @@ public class DungeonMaster {
 	 * Collect data from API to create an enemy in the game
 	 * 
 	 */
+	//Creates a Enemy object from the controller
 	public void setEnemy(Character character, Weapon weapon) {
 		enemy.setName(character.getName());
 		enemy.setHit_die(character.getHit_die());
 		enemy.setWeapon(weapon);
 
-		// TESTING
-		System.out.println("Hello:" + enemy);
-		System.out.println("Name: " + enemy.getName());
-		System.out.println("Hit Die: " + enemy.getHit_die());
-		System.out.println("Weapons: " + enemy.getWeapon());
-		System.out.println("E W:" + enemy.getWeapon().getName());
-		System.out.println("E W:" + enemy.getWeapon().getDamage());
-
-		System.out.println("W:" + weapon.getName());
-		System.out.println("D:" + weapon.getDamage());
-		// TESTING
 	}
 
+	//Creates a Player object collected in the controller
 	public void setPlayer(Character character, Weapon weapon) {
 		player.setName(character.getName());
 		player.setHit_die(character.getHit_die());
 		player.setWeapon(weapon);
 
-		// TESTING
-		System.out.println("Hello:" + player);
-		System.out.println("Name: " + player.getName());
-		System.out.println("Hit Die: " + player.getHit_die());
-		System.out.println("Weapons: " + player.getWeapon());
-		System.out.println("P W:" + player.getWeapon().getName());
-		System.out.println("P W:" + player.getWeapon().getDamage());
-
-		System.out.println("W:" + weapon.getName());
-		System.out.println("D:" + weapon.getDamage());
-		// TESTING
 	}
 
+	//Returns the player string
 	public String getPlayer() {
 		return player.toString();
 	}
 
+	//Returns the enemy string
 	public String getEnemy() {
 		return enemy.toString();
 	}
 
+	
+	//Method is used to determine what kind of responsive hit the enemy does
+	//Also assigns the damage amount based on the parameter passed from controller
+	//checks to see if it killed the player
 	public String BaseFight(int toggle) {
 		
 		
 		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
-		System.out.println("Random Fun: "+toggle);
+		
 		if(toggle == 1)
 		{
 			
@@ -99,10 +86,10 @@ public class DungeonMaster {
 		}
 	}
 
-	public String takeAPunch() {
-
-		System.out.println("Woodblocker");
-
+	
+	//Method to create a random damage amount to apply to the enemy character
+	//Then returns the health of that character
+	public String takeAPunch() {		
 		int pDamage = dice.basicDamage(player.getHit_die() + 1);
 
 		if (isAlive(enemy.getHealth().getHealth())) {
@@ -124,9 +111,9 @@ public class DungeonMaster {
 //		}
 //	}
 	
+	//Method to create a random damage amount from the hitdie of the player to the enemy
+	//Then returns the enemy's health
 	public String takeAKick() {
-
-		System.out.println("KickPluck");
 
 		int pDamage = dice.basicDamage(player.getHit_die() + 1);
 		int kickMultiplier = (int)(.15 * pDamage);
@@ -150,22 +137,28 @@ public class DungeonMaster {
 //		}
 //	}
 
+	//Story text on the fight JSP to populate the fight text
+	// for colorful wording of the type of punch
 	public String punchText() {
 		String test = fight.punchie();
-		System.out.println("Punchie: " + test);
+		
 		return test;
 	}
 	
+	//Story text on the fight JSP to populate the fight text
+		// for colorful wording of the type of kick
 	public String kickText() {
 		String test = fight.kickie();
-		System.out.println("Kickie: " + test);
+	
 		return test;
 	}
+	
 	
 	public void resetHealth() {
 		player.getHealth().resetHealth();
 	}
 
+	//Tests to see if something died
 	public boolean isAlive(int health) {
 
 		if (health < 1) {
