@@ -47,7 +47,9 @@ public class ApiService {
 		List<Equipment> equipments = response.getAllEquipment();
 		return equipments;
 	}
-
+	// url  is being parsed twice
+	// starting equipment is a seperate endpoint
+	// we had to pass the se url to get the weapon url
 	public Weapon chooseWeapon(Character character) {
 		// url to populate starting equipment because it's a different end point
 
