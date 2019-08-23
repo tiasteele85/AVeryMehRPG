@@ -1,13 +1,11 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
-<<<<<<< Updated upstream
-=======
+
 
 
 import java.util.Random;
 
-import co.grandcircus.aVeryMehRPG.model.Bar;
->>>>>>> Stashed changes
+
 import co.grandcircus.aVeryMehRPG.model.Character;
 
 import co.grandcircus.aVeryMehRPG.model.Weapon;
