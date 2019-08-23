@@ -16,8 +16,8 @@
 
 
 <p id="storyspan">
-The knight, sick of your tone, then draws his sword and declares 
-<br>"I will reclaim my trophy from off your dead body, scoundrel!"
+The Knight infuriated that you stole his Dagger exclaims!
+<br>"I will reclaim my dagger off your dead body, scoundrel!"
 
 
 <img border="5px" src="roadside.jpg" alt = "bar" width="500" height="350"></img>

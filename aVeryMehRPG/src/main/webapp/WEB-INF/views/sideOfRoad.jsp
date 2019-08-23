@@ -22,7 +22,7 @@ You walk outside and go down the path. A bird flying above you drops a rock on y
 <br>
 Do you: 
 <br> 
-1.Tell the knight you refuse to let him search you and suggest he go elsewhere
+1.Grab the Knight's dagger and show him how skilled with a blade you are
 <br>
 2. Insist that you’re the hero of this story and there's no need for him to inspect you (but aren’t we all the heroes of our own story?)
 <br>
