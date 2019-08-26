@@ -1,10 +1,6 @@
 package co.grandcircus.aVeryMehRPG.dm;
 
-
-
-
 import java.util.Random;
-
 
 import co.grandcircus.aVeryMehRPG.model.Character;
 
@@ -57,6 +53,9 @@ public class DungeonMaster {
 		return enemy.toString();
 	}
 
+	
+	
+	
 	// Method is used to determine what kind of responsive hit the enemy does
 	// Also assigns the damage amount based on the parameter passed from controller
 	// checks to see if it killed the player
@@ -72,10 +71,19 @@ public class DungeonMaster {
 			} else {
 				return "You're Dead";
 			}
-		} else {
+		} else if (toggle == 2) {
 			int kickMultiplier = (int) (.15 * eDamage);
 			if (isAlive(player.getHealth().getHealth())) {
 				player.getHealth().setHealth(eDamage + kickMultiplier);
+				return player.getHealth().toString();
+			} else {
+				return "You're Dead";
+			}
+		} else {
+			int eWDamage = dice.getDamage(enemy.getWeapon().getDamage(), enemy.getHit_die());
+
+			if (isAlive(player.getHealth().getHealth())) {
+				player.getHealth().setHealth(eWDamage);
 				return player.getHealth().toString();
 			} else {
 				return "You're Dead";
@@ -107,41 +115,53 @@ public class DungeonMaster {
 //		}
 //	}
 
-
-	
-	//Method to create a random damage amount from the hitdie of the player to the enemy
-	//Then returns the enemy's health
-	
+	// Method to create a random damage amount from the hitdie of the player to the
+	// enemy
+	// Then returns the enemy's health
 
 	public String takeAKick() {
 		Random rand = new Random();
 		int success = rand.nextInt(10);
 		int pDamage = dice.basicDamage(player.getHit_die() + 1);
-		int kickMultiplier = (int)(.15 * pDamage);
-		
-		if (success<=6) {
-			 if (isAlive(enemy.getHealth().getHealth())) {
-				 enemy.getHealth().setHealth(pDamage + kickMultiplier);
-				 return enemy.getHealth().toString(); 
-				 } else { return "They're Dead"; }					 
-		}else if(success<=8) {
-			enemy.getHealth().setHealth((pDamage + kickMultiplier)/2);
-			return  enemy.getHealth().toString();
-		}else {
+		int kickMultiplier = (int) (.15 * pDamage);
+
+		if (success <= 6) {
+			if (isAlive(enemy.getHealth().getHealth())) {
+				enemy.getHealth().setHealth(pDamage + kickMultiplier);
+				return enemy.getHealth().toString();
+			} else {
+				return "They're Dead";
+			}
+		} else if (success <= 8) {
+			enemy.getHealth().setHealth((pDamage + kickMultiplier) / 2);
+			return enemy.getHealth().toString();
+		} else {
 			return enemy.getHealth().toString();
 		}
-		
-}
+
+	}
 	
+	public String takeAWeaponDamage() {
+		 int pWDamage = dice.getDamage(player.getWeapon().getDamage(), player.getHit_die());
+		 
+		 if(isAlive(enemy.getHealth().getHealth())) {
+			 enemy.getHealth().setHealth(pWDamage);
+			 return enemy.getHealth().toString();
+		 }else {
+			 return "They're Dead";
+		 }
+		
+	}
+
 	/*
 	 * public String takeAKick() {
 	 * 
-	 * int pDamage = dice.basicDamage(player.getHit_die() + 1); 
-	 * int kickMultiplier = * (int)(.15 * pDamage);
+	 * int pDamage = dice.basicDamage(player.getHit_die() + 1); int kickMultiplier =
+	 * * (int)(.15 * pDamage);
 	 * 
-	 if (isAlive(enemy.getHealth().getHealth())) {
-	 enemy.getHealth().setHealth(pDamage + kickMultiplier); return
-	 enemy.getHealth().toString(); } else { return "They're Dead"; } }
+	 * if (isAlive(enemy.getHealth().getHealth())) {
+	 * enemy.getHealth().setHealth(pDamage + kickMultiplier); return
+	 * enemy.getHealth().toString(); } else { return "They're Dead"; } }
 	 */
 
 //	public String giveAKick() {

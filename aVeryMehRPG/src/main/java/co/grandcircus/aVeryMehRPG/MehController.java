@@ -57,11 +57,12 @@ public class MehController {
 		
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
+		int weaponNum = (rand.nextInt(12)+1);
 		dm.player.getHealth().setHealth(5);
 
-		dm.setEnemy(apiService.showCharacter(num), apiService.chooseWeapon(apiService.showCharacter(num)));
-//		int index = Integer.parseInt(player.substring(player.length()-1));
-		dm.setPlayer(apiService.showCharacter(player), apiService.chooseWeapon(apiService.showCharacter(player)));
+		dm.setEnemy(apiService.showCharacter(num), apiService.reWeapon(weaponNum));
+		weaponNum = (rand.nextInt(12)+1);
+		dm.setPlayer(apiService.showCharacter(player), apiService.reWeapon(weaponNum));
 
 		// Set attribute for SaveData to be written to Database
 		sd.setName(dm.player.getName());
@@ -125,6 +126,7 @@ public class MehController {
 			@SessionAttribute("saver") SaveData sd, 
 			@RequestParam(value = "punch", required = false) String punch,
 			@RequestParam(value = "kick", required = false) String kick,
+			@RequestParam(value = "weapon", required = false) String weapon,
 			@RequestParam(value = "eResponse", required = false) String eResponse) {
 
 		ModelAndView mv = new ModelAndView("fight");
@@ -140,7 +142,7 @@ public class MehController {
 			mv.addObject("kick", kick);
 			mv.addObject("eResponse", eResponse);
 		} else {
-			mv.addObject("kick", kick);
+			mv.addObject("weapon", weapon);
 			mv.addObject("eResponse", eResponse);
 		}
 		mv.addObject("player", dm.player);
@@ -293,7 +295,7 @@ public class MehController {
 			}
 		} else {
 			
-			//dm.weaponDamage();
+			dm.takeAWeaponDamage();
 			dm.BaseFight(toggle);			
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
