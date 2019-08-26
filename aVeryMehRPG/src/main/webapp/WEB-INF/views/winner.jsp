@@ -11,24 +11,24 @@
       <br>
       <br>
       <br>
+      <br>
       <center>
-         <div class="card mb-3">
-            <h3 class="card-header">Congratulations Hero!</h3>
+         <div class="card text-white bg-dark mb-3">
+            <h3 class="card-header">Congratulations hero!</h3>
             <div class="card-body">
                <h5 class="card-title">${ character.name }</h5>
-               <h6 class="card-subtitle text-muted">Winner</h6>
             </div>
             <img style="height: 200px; width: 20%; display: block;" src="/img/apple-test.png" alt="Card image">
             <div class="card-body">
-               <p class="card-text">In the story you chose to ${ character.description }</p>
+               <p class="card-text">In the story you chose to ${ character.description } vanquish the enemy!</p>
             </div>
             <ul class="list-group list-group-flush">
-               <li class="list-group-item">Your Health point status is:</li>
-               <li class="list-group-item">Number of Punches: ${ character.punchCount }</li>
-               <li class="list-group-item">Number of Kicks: ${ character.kickCount }</li>
+               <li class="card-text">Your Health point status is: ${ character.health }</li>
+               <li class="card-text">Number of Punches: ${ character.punchCount }</li>
+               <li class="card-text">Number of Kicks: ${ character.kickCount }</li>
             </ul>
             <div class="card-body">
-               <a href="/leaderBoard" class="card-link">Check out how you compare to Leader Board</a>
+               <a href="/leaderBoard" class="card-link">Leader Board</a>
                <a href="/" class="card-link">Play Again</a>
             </div>
          </div>
