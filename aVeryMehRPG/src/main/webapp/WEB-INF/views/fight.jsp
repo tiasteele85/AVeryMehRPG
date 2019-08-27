@@ -10,7 +10,8 @@
 	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
-<body>
+<link rel="stylesheet" type="text/css" href="newstyle.css">
+<body class="fightBody">
 
 	<audio autoplay>
 		<source
@@ -19,39 +20,64 @@
 	<center>
 		<h1 id="fightheader">Fight!</h1>
 	</center>
+	<h2>Rules: To automatically roll the dice, slam on that punch,
+		kick or weapon button. This will determine how much damage is
+		inflicted to your enemy! Watch out for your enemy's counter attack!!</h2>
 
-	<div class="fight-page">
-		<div class="column left2">
-			<img class="sword" src="sword.png"></img>
-			<form class="play">
-				<h3>Move:</h3>
-				<p>${player.name}(player):${ punch }${ kick }${ weapon }</p>
-				<p id="eResponse">${enemy.name}(enemy):${ eResponse }</p>
-			</form>
-		</div>
-		<div class="column middle2">
-			<div class="dice">
-				<h3>Player Dice: ${ pDice }</h3>
-				<h3>Enemy Dice: ${ eDice }</h3>
+	<div class="fight-page container">
+		<div class="row">
+			<div class="col">
+				<img class="sword" src="img/char-${player.name }.png" width=75%;></img>
+				<form class="play">
+					<h3>
+						<strong>${player.name }</strong>
+					</h3>
+					<p>Move: ${ punch }${ kick }${ weapon }</p>
+					<p>Your Roll: ${ pDice }</p>
+					<p>Health: ${ player.health.health }</p>
+				</form>
+			</div>
+
+			<div class="col button-style">
+
+				<form action="/takeDamage">
+					<div class="row button-row">
+						<div class="col">
+							<input class="punchKickButtons btn-primary " type="submit"
+								name="punch" value="punch">
+						</div>
+					</div>
+					<div class="row button-row">
+						<div class="col">
+							<input class="punchKickButtons btn-primary" type="submit"
+								name="kick" value="kick">
+						</div>
+					</div>
+					<div class="row button-row">
+						<div class="col">
+							<input class="punchKickButtons btn-primary" type="submit"
+								name="weapon" value="${ player.weapon.name }">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="col">
+				<img class="heart" src="img/char-${enemy.name }.png" width=75%;></img>
+				<form class="health ">
+					<h3>
+						<strong>${enemy.name }</strong>
+					</h3>
+					<p>Move: ${ eResponse }</p>
+					<p>${enemy.name}Roll:${ eDice }</p>
+					<p>Health: ${ enemy.health.health }</p>
+				</form>
 			</div>
 		</div>
-		<div class="column right2">
-			<img class="heart" src="heartHealth.png"></img>
-			<form class="health ">
-				<h3>Health:</h3>
-				<p>${player.name}(player):${ player.health.health }</p>
-				<p>${enemy.name}(enemy):${ enemy.health.health }</p>
-			</form>
-		</div>
+
+
 	</div>
-	<center>
-		<form action="/takeDamage">
-			<input class="punchKickButtons btn-primary" type="submit" name="punch" value="punch">
-			<input class="punchKickButtons btn-primary" type="submit" name="kick" value="kick">
-			<input class="punchKickButtons btn-primary" type="submit" name="weapon"
-				value="${ player.weapon.name }">
-		</form>
-	</center>
+
 
 
 
@@ -59,13 +85,6 @@
 	<form></form>
 
 	<form></form>
-
-
-
-
-
-
-
 </body>
->>>>>>> Stashed changes
+
 </html>
