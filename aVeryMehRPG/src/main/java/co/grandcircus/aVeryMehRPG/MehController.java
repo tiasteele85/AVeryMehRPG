@@ -129,6 +129,8 @@ public class MehController {
 			@RequestParam(value = "punch", required = false) String punch,
 			@RequestParam(value = "kick", required = false) String kick,
 			@RequestParam(value = "weapon", required = false) String weapon,
+			@RequestParam(value = "pDice", required = false) String pDice,
+			@RequestParam(value = "eDice", required = false) String eDice,
 			@RequestParam(value = "eResponse", required = false) String eResponse) {
 
 		ModelAndView mv = new ModelAndView("fight");
@@ -138,14 +140,21 @@ public class MehController {
 			// sd.addAttackSequence("punch");
 			mv.addObject("punch", punch);
 			mv.addObject("eResponse", eResponse);
+			mv.addObject("pDice", pDice);
+			mv.addObject("eDice", eDice);
+			
 		} else if (kick != null) {
 
 			// sd.addAttackSequence("kick");
 			mv.addObject("kick", kick);
 			mv.addObject("eResponse", eResponse);
+			mv.addObject("pDice", pDice);
+			mv.addObject("eDice", eDice);
 		} else {
 			mv.addObject("weapon", weapon);
 			mv.addObject("eResponse", eResponse);
+			mv.addObject("pDice", pDice);
+			mv.addObject("eDice", eDice);
 		}
 		mv.addObject("player", dm.player);
 		
@@ -249,13 +258,26 @@ public class MehController {
 
 		Random rand = new Random();
 		int toggle = rand.nextInt(3) + 1;
+		int eDamage;
+		if(toggle == 1) {
+			eDamage= dm.diceRolls("enemy", "basicDamage", false);
+		}else if (toggle ==2){
+			eDamage = dm.diceRolls("enemy", "basicDamage", true);
+		}else {
+			eDamage = dm.diceRolls("enemy", "getDamage", false);
+		}
+		
 
 		if (punchbuttonClick != null) {
 			
-
-			dm.takeAPunch();
+			int pDamage = dm.diceRolls("player", "basicDamage", false);
+			//add to fight page dice
+			dm.takeAPunch(pDamage);
 			sd.addPunch();
-			dm.BaseFight(toggle);
+			
+			//add to fight page dice
+			dm.BaseFight(toggle, eDamage);			
+			
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -271,14 +293,18 @@ public class MehController {
 				} else {
 					mv.addObject("eResponse", dm.kickText());
 				}
-
+				mv.addObject("pDice", pDamage);
+				mv.addObject("eDice", eDamage);
 				return mv;
 			}
 		} else if (kickbuttonClick != null) {
-
-			dm.takeAKick();
+			int pDamage = dm.diceRolls("player", "basicDamage", true);
+			//add to fight page
+			dm.takeAKick(pDamage);
+			//
 			sd.addKick();
-			dm.BaseFight(toggle);
+			
+			dm.BaseFight(toggle , eDamage);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -293,12 +319,15 @@ public class MehController {
 				} else {
 					mv.addObject("eResponse", dm.kickText());
 				}
+				mv.addObject("pDice", pDamage);
+				mv.addObject("eDice", eDamage);
 				return mv;
 			}
 		} else {
-			
-			dm.takeAWeaponDamage();
-			dm.BaseFight(toggle);			
+			int pDamage = dm.diceRolls("player", "getDamage", false);
+			//add to fight page
+			dm.takeAWeaponDamage(pDamage);
+			dm.BaseFight(toggle, eDamage);			
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -315,6 +344,8 @@ public class MehController {
 				}else {
 					mv.addObject("eResponse", dm.enemy.getWeapon().getName());
 				}
+				mv.addObject("pDice", pDamage);
+				mv.addObject("eDice", eDamage);
 				return mv;
 			}
 		}
