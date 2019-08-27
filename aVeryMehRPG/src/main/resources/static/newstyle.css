@@ -2,7 +2,6 @@ body {
 	background-color: #373a3c;
 }
 
-
 [type=radio] { 
   position: relative;
   opacity: 0;
@@ -23,6 +22,11 @@ body {
     rotateZ(-10deg) 
     rotateX(10deg);
   
+}
+
+#dragon {
+	width:70%;
+	margin-left:71%;
 }
 
 .images {
@@ -87,8 +91,8 @@ body {
 }
 
 body {
-  color: #373a3c;
+  color: #FFDF00;
   font-family: arial, sans-sarif;
-  background-color: #eeeeee;
+  background: #8B0000;
   text-align: center;
 }
