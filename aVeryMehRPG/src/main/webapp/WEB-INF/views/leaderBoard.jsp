@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>

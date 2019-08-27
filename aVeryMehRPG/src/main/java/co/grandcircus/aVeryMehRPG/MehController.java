@@ -92,7 +92,9 @@ public class MehController {
 	
 	@RequestMapping("/radiobuttons")
 	public ModelAndView showRadio() {
+		List<ClassTypes> characters = apiService.showAll();
 		ModelAndView mv = new ModelAndView("radiobuttons");
+		mv.addObject("list", characters);
 		return mv;
 	}
 
@@ -326,8 +328,6 @@ public class MehController {
 	@RequestMapping("/winnerBig")
 	public ModelAndView winPage(@SessionAttribute("master") DungeonMaster dm, @SessionAttribute("saver") SaveData sd,
 			HttpSession session) {
-
-		
 
 		ModelAndView mv = new ModelAndView("winner");
 		mv.addObject("character", sDao.findbyId(sd.getId()));

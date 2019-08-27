@@ -9,15 +9,14 @@
    <link
       href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="bootstrap.css">
    <body>
       <audio autoplay>
          <source src="http://ccmixter.org/content/speck/speck_-_Sirius_Crystal_1.mp3">
       </audio>
-      <center>
          <h1 id="fightheader">Fight!</h1>
-      </center>
-      <img id="sword" source src="sword.png"</img>
+     
+      <img id="sword" src="sword.png"></img>
       <form id="play">
          <h3>Move:</h3>
          <p>${player.name} (player): ${ punch }
@@ -25,7 +24,7 @@
          </p>
          <p id="eResponse">${enemy.name} (enemy): ${ eResponse }</p>
       </form>
-      <img id="heart" source src="heartHealth.png"></img>
+      <img id="heart" src="heartHealth.png"></img>
       <form id="health">
          <h3>Health:</h3>
          <p>${player.name} (player):
@@ -35,13 +34,12 @@
             ${ enemy.health.health }
          </p>
       </form>
-      <center>
          <form action="/takeDamage" >
             <input id="punchKickButtons" type="submit" name="punch" value="punch"> 
             <input id="punchKickButtons" type="submit" name="kick" value="kick">
             <input id="punchKickButtons" type="submit" name="weapon" value="${ player.weapon.name }">
          </form>
-      </center>
+      
       <form>   
       </form>
       <form>

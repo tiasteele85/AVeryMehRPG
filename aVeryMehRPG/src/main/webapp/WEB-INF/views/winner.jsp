@@ -12,7 +12,6 @@
       <br>
       <br>
       <br>
-      <center>
          <div class="card text-white bg-dark mb-3">
             <h3 class="card-header">Congratulations hero!</h3>
             <div class="card-body">
@@ -32,6 +31,5 @@
                <a href="/" class="card-link">Play Again</a>
             </div>
          </div>
-      </center>
    </body>
 </html>

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap.css">
       </link>
       <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
       <meta charset="UTF-8">

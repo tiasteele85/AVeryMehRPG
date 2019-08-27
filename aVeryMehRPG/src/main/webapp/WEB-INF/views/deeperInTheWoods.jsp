@@ -7,7 +7,7 @@
 <link
 	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
 <meta charset="UTF-8">
 <title>DEEPER WE GO</title>
 </head>
