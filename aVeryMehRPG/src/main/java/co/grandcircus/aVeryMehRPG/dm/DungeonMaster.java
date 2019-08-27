@@ -53,15 +53,10 @@ public class DungeonMaster {
 		return enemy.toString();
 	}
 
-	
-	
-	
 	// Method is used to determine what kind of responsive hit the enemy does
 	// Also assigns the damage amount based on the parameter passed from controller
 	// checks to see if it killed the player
-	public String BaseFight(int toggle) {
-
-		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
+	public String BaseFight(int toggle, int eDamage) {		
 
 		if (toggle == 1) {
 
@@ -71,19 +66,16 @@ public class DungeonMaster {
 			} else {
 				return "You're Dead";
 			}
-		} else if (toggle == 2) {
-			int kickMultiplier = (int) (.15 * eDamage);
+		} else if (toggle == 2) {			
 			if (isAlive(player.getHealth().getHealth())) {
-				player.getHealth().setHealth(eDamage + kickMultiplier);
+				player.getHealth().setHealth(eDamage);
 				return player.getHealth().toString();
 			} else {
 				return "You're Dead";
 			}
-		} else {
-			int eWDamage = dice.getDamage(enemy.getWeapon().getDamage(), enemy.getHit_die());
-
+		} else {			
 			if (isAlive(player.getHealth().getHealth())) {
-				player.getHealth().setHealth(eWDamage);
+				player.getHealth().setHealth(eDamage);
 				return player.getHealth().toString();
 			} else {
 				return "You're Dead";
@@ -93,9 +85,8 @@ public class DungeonMaster {
 
 	// Method to create a random damage amount to apply to the enemy character
 	// Then returns the health of that character
-	public String takeAPunch() {
-		int pDamage = dice.basicDamage(player.getHit_die() + 1);
-
+	public String takeAPunch(int pDamage) {
+		
 		if (isAlive(enemy.getHealth().getHealth())) {
 			enemy.getHealth().setHealth(pDamage);
 			return enemy.getHealth().toString();
@@ -104,53 +95,51 @@ public class DungeonMaster {
 		}
 	}
 
-//	public String giveAPunch() {
-//		int eDamage = dice.basicDamage(player.getHit_die() + 1);
-//
-//		if (isAlive(enemy.getHealth().getHealth())) {
-//			enemy.getHealth().setHealth(eDamage);
-//			return enemy.getHealth().toString();
-//		} else {
-//			return "They're Dead";
-//		}
-//	}
-
 	// Method to create a random damage amount from the hitdie of the player to the
 	// enemy
 	// Then returns the enemy's health
 
-	public String takeAKick() {
+	public String takeAKick(int pDamage) {
 		Random rand = new Random();
 		int success = rand.nextInt(10);
-		int pDamage = dice.basicDamage(player.getHit_die() + 1);
-		int kickMultiplier = (int) (.15 * pDamage);
+		//int pDamage = dice.basicDamage(player.getHit_die() + 1);
+		//int kickMultiplier = (int) (.15 * pDamage);
 
 		if (success <= 6) {
 			if (isAlive(enemy.getHealth().getHealth())) {
-				enemy.getHealth().setHealth(pDamage + kickMultiplier);
+				enemy.getHealth().setHealth(pDamage);
 				return enemy.getHealth().toString();
 			} else {
 				return "They're Dead";
 			}
 		} else if (success <= 8) {
-			enemy.getHealth().setHealth((pDamage + kickMultiplier) / 2);
-			return enemy.getHealth().toString();
+			if (isAlive(enemy.getHealth().getHealth())) {
+				enemy.getHealth().setHealth((pDamage) / 2);
+				return enemy.getHealth().toString();
+			} else {
+				return "They're Dead";
+			}
 		} else {
-			return enemy.getHealth().toString();
+			if (isAlive(enemy.getHealth().getHealth())) {
+				return enemy.getHealth().toString();
+			} else {
+				return "They're Dead";
+			}
+
 		}
 
 	}
-	
-	public String takeAWeaponDamage() {
-		 int pWDamage = dice.getDamage(player.getWeapon().getDamage(), player.getHit_die());
-		 
-		 if(isAlive(enemy.getHealth().getHealth())) {
-			 enemy.getHealth().setHealth(pWDamage);
-			 return enemy.getHealth().toString();
-		 }else {
-			 return "They're Dead";
-		 }
-		
+
+	public String takeAWeaponDamage(int pWDamage) {
+		//int pWDamage = dice.getDamage(player.getWeapon().getDamage(), player.getHit_die());
+
+		if (isAlive(enemy.getHealth().getHealth())) {
+			enemy.getHealth().setHealth(pWDamage);
+			return enemy.getHealth().toString();
+		} else {
+			return "They're Dead";
+		}
+
 	}
 
 	/*
@@ -164,16 +153,37 @@ public class DungeonMaster {
 	 * enemy.getHealth().toString(); } else { return "They're Dead"; } }
 	 */
 
-//	public String giveAKick() {
-//		int eDamage = dice.basicDamage(enemy.getHit_die() + 1);
-//		int kickMultiplier = (int)(.25 * eDamage);
-//		if (isAlive(enemy.getHealth().getHealth())) {
-//			enemy.getHealth().setHealth(eDamage + kickMultiplier);
-//			return enemy.getHealth().toString();
-//		} else {
-//			return "They're Dead";
-//		}
-//	}
+	
+	//Returns the random dice values for punch, kick, and weapon damage
+	public int diceRolls(String who, String type, boolean multiplier) {
+		if (type.equals("basicDamage")) {
+			if (who.equals("player")) {
+				int damage = dice.basicDamage(player.getHit_die() + 1);
+				int bonus = (int) (.15 * dice.basicDamage(player.getHit_die() + 1));
+				if (multiplier) {
+
+					return (damage + bonus);
+				} else {
+					return damage;
+				}
+			} else {
+				int damage = dice.basicDamage(enemy.getHit_die() + 1);
+				int bonus = (int) (.15 * dice.basicDamage(enemy.getHit_die() + 1));
+				if (multiplier) {
+					return (damage + bonus);
+				} else {
+					return damage;
+				}				
+			}
+		} else {
+			if (who.equals("player")) {
+				int bonus = (int)(1.25 * dice.getDamage(player.getWeapon().getDamage(), player.getHit_die() + 1));
+				return bonus;
+			} else {
+				return dice.getDamage(enemy.getWeapon().getDamage(), enemy.getHit_die() + 1);
+			}
+		}
+	}
 
 	// Story text on the fight JSP to populate the fight text
 	// for colorful wording of the type of punch
