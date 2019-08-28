@@ -35,5 +35,8 @@
         </tbody>
     </table>
     </div>
+    <div class="jumbotron">
+    <p><a href="/">Home</a></p>
+    </div>
 </body>
 </html>
