@@ -23,17 +23,6 @@
                             <p>The Knight infuriated that you stole his Dagger exclaims!
 							<br>"I will reclaim my dagger off your dead body, scoundrel!"</p>
                             
-                            
-								
-                            
-								<br>
-									Do you: 
-								<br> 
-									1.Grab the Knight's dagger and show him how skilled with a blade you are
-								<br>
-									2. Insist that you are the hero of this story and there's no need for him to inspect you (but aren't  we all the heroes of our own story?)
-								<br>
-									3. Tell the Knight you're a lover not a fighter
 								<br>
 								<br>
 								<br>
