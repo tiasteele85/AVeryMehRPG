@@ -1,5 +1,7 @@
 package co.grandcircus.aVeryMehRPG.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -14,6 +16,10 @@ public class SaveDao {
 
 	@PersistenceContext
 	EntityManager em;
+	
+	public List<SaveData> findAll(){
+		return em.createQuery("FROM SaveData", SaveData.class).getResultList();
+	}
 	
 	public SaveData findbyId(Long id) {
 		return em.find(SaveData.class,id);
