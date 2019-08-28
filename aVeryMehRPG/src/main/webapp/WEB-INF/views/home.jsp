@@ -19,8 +19,10 @@
             <div class="jumbotron">
                 <h1 class="display-3">Welcome to the Humdrum Dungeon!</h1>
                 <br>
-                <p class="lead" style="font1">Adventure awaits you in this Dungeons & Dragons RPG simulation.</p>
-                <h2 style="font1">Click the button below to start the game!</h2>
+                <br>
+                <br>
+                <p id="font1">Adventure awaits you in this Dungeons & Dragons RPG simulation.</p>
+                <h2 id="font1"><strong>Click the button below to start the game!</strong></h2>
                 <div class="row">
                     <div class="col-3">
                         <img id="dragon" src="dragon.gif"></img>
@@ -34,7 +36,7 @@
                 </div>
                 <br>
                 <br>
-                <br>
+                
                 <p class="lead">
                     <a href="/radiobuttons" class="btn btn-danger btn-lg">CHOOSE YOUR CHARACTER</a>
                 </p>
