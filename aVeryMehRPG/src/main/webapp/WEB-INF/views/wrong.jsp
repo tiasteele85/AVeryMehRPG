@@ -6,8 +6,8 @@
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
             <link rel="stylesheet" type="text/css" href="newstyle.css">
-            <link href="https://fonts.googleapis.com/css?family=Bangers|Barriecito|Luckiest+Guy|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
-<meta charset="ISO-8859-1">
+            <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
+            <meta charset="UTF-8"><meta charset="ISO-8859-1">
 <title>You're wrong, Bobby boy. . .</title>
 
 			<link rel="stylesheet" type="text/css" href="bootstrap.css">
@@ -21,7 +21,7 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-            <h1 style="font-family: 'Abril Fatface', cursive">I guess we're about to be the villain...</h1>
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">I guess we're about to be the villain...</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">

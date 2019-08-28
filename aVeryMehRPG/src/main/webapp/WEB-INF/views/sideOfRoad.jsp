@@ -15,7 +15,7 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-            <h1 style="font-family: 'Abril Fatface', cursive">Meet the hero?</h1>
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Meet the hero?</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">

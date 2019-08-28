@@ -6,27 +6,56 @@
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
             <link rel="stylesheet" type="text/css" href="newstyle.css">
-            <link href="https://fonts.googleapis.com/css?family=Bangers|Barriecito|Luckiest+Guy|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
+            <meta charset="UTF-8">
+            <title>Sock Em'</title>
 <meta charset="ISO-8859-1">
+
 <title>Sock Em'</title>
-</head>
-<body>
-<audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
-</audio>
-<br>
-<br>
-<h1 id="sockless">Sockless and scared...</h1>
-<br>
-<p id="story">
-The sock lands on the spider and the smell of foot fungus fills the air. The spider being angry that this isn't the first time this has happened, lunges at you.
-<br>
-<br>
-<br>
-<br>
-<p>
-<a href="/fight">Go Sockless Wonder, Go!</a></p>
-<img border="5px" src="forest.jpg" alt = "bar" width="500" height="350"></img>
 
+            
+        </head>
 
-</body>
-</html>
+        <body>
+            <!--audio autoplay>
+         <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
+         </audio-->
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Sockless and scared...</h1>
+            <div class="container" style="font1">
+                <div class="row">
+                    <div class="col-6">
+                        <label class="font1">
+                            <p>
+						The sock lands on the spider and the smell of foot fungus fills the air. The spider being angry that this isn't the first time this has happened, lunges at you.</p>
+						 <br>
+					
+                            <a href="/fight">
+                                <button type="submit" class="btn btn-primary btn-lg">Sock Em'</button>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-5">
+                        <label>
+                            <img border="5px" src="forest.jpg" alt="bar" width="500" height="350"></img>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label>
+
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label>
+
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+        </body>
+
+        </html>

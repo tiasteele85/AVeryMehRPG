@@ -7,7 +7,7 @@
 			<link rel="stylesheet" type="text/css" href="bootstrap.css">
             <link rel="stylesheet" type="text/css" href="newstyle.css">
             <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
-            <meta charset="UTF-8">
+            <meta charset="UTF-8"> <meta charset="UTF-8">
             <title>Knighty Knight</title>
         </head>
 
@@ -15,7 +15,7 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-            <h1 style="font-family: 'Abril Fatface', cursive">I don't think so Knighty McKnighterson!</h1>
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">I don't think so Knighty McKnighterson!</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">
