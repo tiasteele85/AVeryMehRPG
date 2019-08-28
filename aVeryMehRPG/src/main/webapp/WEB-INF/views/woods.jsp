@@ -28,11 +28,11 @@
                             <p> Do you:
                                 <br>1. Craft a makeshift pair of shoes out of leaves and walk back towards civilization
                                 <br>2. Go deeper into the woods and accept the fact that no one will believe a stranger took your shoes, so this is now your home.</p>
-                            <a href="/woods">
-                                <button type="button" class="btn btn-primary btn-lg">1. Drink</button>
+                            <a href="/craftShoes">
+                                <button type="button" class="btn btn-primary btn-lg">1. Craft Shoes</button>
                             </a>
-                            <a href="/sideOfRoad">
-                                <button type="submit" class="btn btn-primary btn-lg">2. Leave</button>
+                            <a href="/deeperInTheWoods">
+                                <button type="submit" class="btn btn-primary btn-lg">2. Go deeper into the woods</button>
                             </a>
                         </label>
                     </div>
