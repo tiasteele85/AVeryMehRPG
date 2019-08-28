@@ -2,6 +2,11 @@ body {
 	background-color: #373a3c;
 }
 
+h1 {
+	font-family: 'Barriecito', cursive;
+}
+
+
 [type=radio] { 
   position: relative;
   opacity: 0;
@@ -11,7 +16,7 @@ body {
 
 [type=radio] + img {
   cursor: pointer;
-  width:100%;
+  width:40%;
  
 }
 
@@ -24,7 +29,7 @@ body {
 
 .font1 {
 	font-size:170%;
-	margin-left:5%;
+	margin-left:15%;
 }
 
 [type=radio]:checked + img {
@@ -81,13 +86,14 @@ body {
 	top: 9px;
 	transition: all 0.2s ease-out;
 }
-
+}
 &
 :hover {
 	span: before{  
 			transform: scale(.8) translate(-3px, 0) rotate(42deg);
 }
 
+}
 &
 .mute {
 	span: before{  
@@ -95,6 +101,8 @@ body {
 	opacity: 0;
 }
 
+}
+}
 
 /*Fight Page*/
 #fightheader {
