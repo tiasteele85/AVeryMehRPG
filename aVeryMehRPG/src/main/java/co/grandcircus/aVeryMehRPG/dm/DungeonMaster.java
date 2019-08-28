@@ -102,17 +102,18 @@ public class DungeonMaster {
 	public String takeAKick(int pDamage) {
 		Random rand = new Random();
 		int success = rand.nextInt(10);
+		
 		//int pDamage = dice.basicDamage(player.getHit_die() + 1);
 		//int kickMultiplier = (int) (.15 * pDamage);
 
-		if (success <= 6) {
+		if (success <= 4) {
 			if (isAlive(enemy.getHealth().getHealth())) {
 				enemy.getHealth().setHealth(pDamage);
 				return enemy.getHealth().toString();
 			} else {
 				return "They're Dead";
 			}
-		} else if (success <= 8) {
+		} else if (success <= 5) {
 			if (isAlive(enemy.getHealth().getHealth())) {
 				enemy.getHealth().setHealth((pDamage) / 2);
 				return enemy.getHealth().toString();
@@ -158,8 +159,8 @@ public class DungeonMaster {
 	public int diceRolls(String who, String type, boolean multiplier) {
 		if (type.equals("basicDamage")) {
 			if (who.equals("player")) {
-				int damage = dice.basicDamage(player.getHit_die() + 1);
-				int bonus = (int) (.15 * dice.basicDamage(player.getHit_die() + 1));
+				int damage = dice.basicDamage(player.getHit_die());
+				int bonus = (int) (.15 * dice.basicDamage(player.getHit_die()));
 				if (multiplier) {
 
 					return (damage + bonus);
@@ -167,8 +168,8 @@ public class DungeonMaster {
 					return damage;
 				}
 			} else {
-				int damage = dice.basicDamage(enemy.getHit_die() + 1);
-				int bonus = (int) (.15 * dice.basicDamage(enemy.getHit_die() + 1));
+				int damage = dice.basicDamage(enemy.getHit_die());
+				int bonus = (int) (.15 * dice.basicDamage(enemy.getHit_die()));
 				if (multiplier) {
 					return (damage + bonus);
 				} else {
@@ -177,7 +178,7 @@ public class DungeonMaster {
 			}
 		} else {
 			if (who.equals("player")) {
-				int bonus = (int)(1.25 * dice.getDamage(player.getWeapon().getDamage(), player.getHit_die() + 1));
+				int bonus = (int)(1.25 * dice.getDamage(player.getWeapon().getDamage(), player.getHit_die()));
 				return bonus;
 			} else {
 				return dice.getDamage(enemy.getWeapon().getDamage(), enemy.getHit_die() + 1);

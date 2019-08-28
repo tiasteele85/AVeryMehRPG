@@ -293,6 +293,7 @@ public class MehController {
 		} else if (kickbuttonClick != null) {
 			int pDamage = dm.diceRolls("player", "basicDamage", true);
 			// add to fight page
+			int preHealth = dm.enemy.getHealth().getHealth();
 			dm.takeAKick(pDamage);
 			//
 			sd.addKick();
@@ -306,11 +307,19 @@ public class MehController {
 				return new ModelAndView("redirect:/winner");
 			} else {
 				ModelAndView mv = new ModelAndView("redirect:/fight");
-				mv.addObject("kick", dm.kickText());
+				if(preHealth==dm.enemy.getHealth().getHealth()) {
+					mv.addObject("kick", "Failed");
+				}else {
+					mv.addObject("kick", dm.kickText());
+				}
 				if (toggle == 1) {
 					mv.addObject("eResponse", dm.punchText());
 				} else {
-					mv.addObject("eResponse", dm.kickText());
+					if(eDamage == 0) {
+						mv.addObject("eResponse", "Failed");
+					}else {
+						mv.addObject("eResponse", dm.kickText());
+					}
 				}
 				mv.addObject("pDice", pDamage);
 				mv.addObject("eDice", eDamage);
@@ -376,62 +385,67 @@ public class MehController {
 	}
 
 	@RequestMapping("/leaderBoard")
-    public ModelAndView showWinners() {
-        ModelAndView mv = new ModelAndView("leaderBoard");
-        List<SaveData> allSaves = sDao.findAll();
-        List<LeaderBoard> leaders = new ArrayList<>();
-        List<LeaderBoard> orderedLeaders = new ArrayList<>();
-        boolean added = false;
-        leaders.add(new LeaderBoard());
-        leaders.get(0).setName(allSaves.get(0).getName());
-        leaders.get(0).addPunches(allSaves.get(0).getPunchCount());
-        leaders.get(0).addKicks(allSaves.get(0).getKickCount());
-        // collect all the leaders into a single value
-        for (SaveData saver : allSaves) {
-            
-            if (saver.getName().equalsIgnoreCase(leaders.get(0).getName())) {
-                
-                leaders.get(0).addCount();
-                leaders.get(0).addPunches(saver.getPunchCount());
-                leaders.get(0).addKicks(saver.getKickCount());
-            } else {
-                for (int i = 0; i < leaders.size(); i++) {
-                    if (saver.getName().equalsIgnoreCase(leaders.get(i).getName())) {
-                        
-                        leaders.get(i).addCount();
-                        leaders.get(i).addPunches(saver.getPunchCount());
-                        leaders.get(i).addKicks(saver.getKickCount());
-                        added = true;
-                        
-                    }
-                }
-                if (!added) {
-                    leaders.add(new LeaderBoard(saver.getName(), saver.getPunchCount(), saver.getKickCount()));
-                }
-            }
-            added = false;
-        }
-        
-        int max = leaders.get(0).getCount();
-        int index = 0;
-        int started = leaders.size()-1;
-        for(int i = 0; i < started; i++) {
-            for(int j = 0; j < leaders.size(); j++) {
-                if(max <= leaders.get(j).getCount()) {
-                    max = leaders.get(j).getCount();                    
-                    index = j;
-                }
-            }orderedLeaders.add(leaders.get(index));
-            leaders.remove(index);
-            if(leaders != null) {
-                max = leaders.get(0).getCount();
-                index = 0;
-            }
-        }
-        if(leaders != null) {
-            orderedLeaders.add(leaders.get(0));
-        }
-        mv.addObject("characters", orderedLeaders);
-        return mv;
-    }
+	public ModelAndView showWinners() {
+		ModelAndView mv = new ModelAndView("leaderBoard");
+
+		List<SaveData> allSaves = sDao.findAll();
+		List<LeaderBoard> leaders = new ArrayList<>();
+		List<LeaderBoard> orderedLeaders = new ArrayList<>();
+		boolean added = false;
+
+		leaders.add(new LeaderBoard());
+		leaders.get(0).setName(allSaves.get(0).getName());
+		leaders.get(0).addPunches(allSaves.get(0).getPunchCount());
+		leaders.get(0).addKicks(allSaves.get(0).getKickCount());
+
+		// collect all the leaders into a single value
+		for (SaveData saver : allSaves) {
+			
+			if (saver.getName().equalsIgnoreCase(leaders.get(0).getName())) {
+				
+				leaders.get(0).addCount();
+				leaders.get(0).addPunches(saver.getPunchCount());
+				leaders.get(0).addKicks(saver.getKickCount());
+			} else {
+				for (int i = 0; i < leaders.size(); i++) {
+
+					if (saver.getName().equalsIgnoreCase(leaders.get(i).getName())) {
+						
+						leaders.get(i).addCount();
+						leaders.get(i).addPunches(saver.getPunchCount());
+						leaders.get(i).addKicks(saver.getKickCount());
+						added = true;
+						
+					}
+				}
+				if (!added) {
+					leaders.add(new LeaderBoard(saver.getName(), saver.getPunchCount(), saver.getKickCount()));
+				}
+			}
+			added = false;
+		}
+		
+		int max = leaders.get(0).getCount();
+		int index = 0;
+		int started = leaders.size()-1;
+		for(int i = 0; i < started; i++) {
+			for(int j = 0; j < leaders.size(); j++) {
+				if(max <= leaders.get(j).getCount()) {
+					max = leaders.get(j).getCount();					
+					index = j;
+				}
+			}orderedLeaders.add(leaders.get(index));
+			leaders.remove(index);
+			if(leaders != null) {
+				max = leaders.get(0).getCount();
+				index = 0;
+			}
+		}
+		if(leaders != null) {
+			orderedLeaders.add(leaders.get(0));
+		}
+		mv.addObject("characters", orderedLeaders);
+
+		return mv;
+	}
 }
