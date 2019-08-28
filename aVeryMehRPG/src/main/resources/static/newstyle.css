@@ -27,9 +27,10 @@ h1 {
 	font-size:75%;
 }
 
-.font1 {
+#font1 {
 	font-size:170%;
-	margin-left:15%;
+	margin-left:5%;
+	text-align:center;
 }
 
 [type=radio]:checked + img {
@@ -40,6 +41,11 @@ h1 {
     rotateX(10deg);
   
 }
+
+#leftsetter {
+	margin-left:-5%;
+}
+
 
 #dragon {
 	width: 70%;
