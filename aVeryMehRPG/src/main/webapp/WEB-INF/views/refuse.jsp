@@ -15,16 +15,19 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">I don't think so Knighty McKnighterson!</h1>
+         <br>
+         <br>
+         <br>
+            <h1 class="display-4" style="font-family: 'Abril Fatface', cursive">I don't think so Knighty McKnighterson!</h1>
+            <br>
+            
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">
-                        <label class="font1">
-                            <p>The Knight infuriated that you stole his Dagger exclaims!
+                        <label id="font2">
+                            <p>The Knight, infuriated that you stole his Dagger exclaims
 							<br>"I will reclaim my dagger off your dead body, scoundrel!"</p>
                             
-								<br>
-								<br>
 								<br>
 								
                             <a href="/fight">

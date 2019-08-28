@@ -18,13 +18,18 @@
 
         <body>
             <!--audio autoplay>
-         <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
+         <src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
+         <br>
+         <br>
+         <br>
             <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Sockless and scared...</h1>
-            <div class="container" style="font1">
+            <br>
+            <br>
+            <div class="jumbotron">
                 <div class="row">
                     <div class="col-6">
-                        <label class="font1">
+                        <label id="font2">
                             <p>
 						The sock lands on the spider and the smell of foot fungus fills the air. The spider being angry that this isn't the first time this has happened, lunges at you.</p>
 						 <br>

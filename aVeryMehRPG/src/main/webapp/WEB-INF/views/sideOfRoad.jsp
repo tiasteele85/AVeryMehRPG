@@ -15,21 +15,19 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
+         <br>
+         <br>
             <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Meet the hero?</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">
-                        <label class="font1">
+                        <label id="font2">
                             <p>You walk outside and go down the path. A bird flying above you drops a rock on your head and you lose 5 health.
                            		Woozy and tired, you sit down to recuperate.
                             	As you're resting, a knight approaches you and requests to search your person, as there has been a recent robbery in the area and someone has stolen the Queen's diamond dragon trophy.</p>
-                            
-                            
-								
-                            
-								<br>
-									Do you: 
+                            Do you: 
 								<br> 
+								<br>
 									1.Grab the Knight's dagger and show him how skilled with a blade you are
 								<br>
 									2. Insist that you’re the hero of this story and there's no need for him to inspect you (but aren’t we all the heroes of our own story?)
@@ -37,33 +35,22 @@
 									3. Tell the Knight you're a lover not a fighter
 								<br>
 								</p>
-                            <a href="/refuse">
-                                <button type="button" class="btn btn-primary btn-lg">1. Grab the Knights Weapon!</button>
-                            </a>
-                            <a href="/wrong">
-                                <button type="submit" class="btn btn-primary btn-lg">2. Insist he's wrong</button>
-                            </a>
-                             <a href="/deathJoke">
-                                <button type="button" class="btn btn-primary btn-lg">3. I'm a lover not a fighter</button>
-                            </a>
                         </label>
                     </div>
                     <div class="col-5">
                         <label>
                             <img border="5px" src="roadside.jpg" alt="roadside" width="500" height="350"></img>
+                             <a href="/refuse"><br><br>
+                                <button type="button" class="btn btn-primary btn-lg">1. Grab the Knights Weapon!</button>
+                            </a>
+                            <a href="/wrong">
+                                <button type="submit" class="btn btn-primary btn-lg">2. Insist he's wrong</button>
+                            </a><br><br>
+                             <a href="/deathJoke">
+                                <button type="button" class="btn btn-primary btn-lg">3. I'm a lover not a fighter</button>
+                            </a>
                         </label>
                     </div>
-                    <div class="col-3">
-                        <label>
-
-                        </label>
-                    </div>
-                    <div class="col-3">
-                        <label>
-
-                        </label>
-                    </div>
-
                 </div>
             </div>
 

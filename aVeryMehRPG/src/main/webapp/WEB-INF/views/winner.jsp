@@ -5,7 +5,7 @@
    <head>
       <link rel="stylesheet" type="text/css" href="bootstrap.css">
             <link rel="stylesheet" type="text/css" href="newstyle.css">
-            <link href="https://fonts.googleapis.com/css?family=Bangers|Barriecito|Luckiest+Guy|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
       <meta charset="ISO-8859-1">
       <title>End of Game</title>
    </head>
@@ -19,7 +19,7 @@
             <div class="card-body">
                <h5 class="card-title">${ character.name }</h5>
             </div>
-            <img style="height: 200px; width: 20%; display: block;" src="/img/char-${character.name}.png" alt="Card image">
+            <img src="/img/char-${character.name}.png" alt="Card image">
             <div class="card-body">
                <p class="card-text">In the story you chose to ${ character.description } vanquish the enemy!</p>
             </div>

@@ -16,11 +16,13 @@
             <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-            <h1 style="font-family: 'Abril Fatface', cursive">Hello ${player} . . .</h1>
+         <br>
+         <br>
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Hello ${player} . . .</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">
-                        <label class="font1">
+                        <label id="font2">
                             <p>We start off in a dark and gloomy bar in the heart of Technologica Woods. The ${player} sits at the bar after another victorious mission. All of a sudden, the bartender 'David' (Master of all Java) places a drink in-front of you and exclaims "Hero! This drink was bought for you by that mysterious man over there!"</p>
                             <br>
 

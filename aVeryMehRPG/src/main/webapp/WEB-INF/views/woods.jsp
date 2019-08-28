@@ -16,12 +16,13 @@
         <body>
             <!--audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
 </audio-->
-
-            <h1 style="font-family: 'Abril Fatface', cursive">Later, in the woods . . .</h1>
+<br>
+<br>
+            <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Later, in the woods . . .</h1>
             <div class="container" style="font1">
                 <div class="row">
                     <div class="col-6">
-                        <label class="font1">
+                        <label id="font2">
                             <p>You wake up several hours later in the middle of the woods and realize that your brand-new collectable Batman shoes have been taken and you’ve lost 5 points of health.</p>
                             <br>
 

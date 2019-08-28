@@ -16,7 +16,7 @@
 
             <form action="/story">
                 <!-- Photo Grid -->
-                <h1 style="font-family: 'Abril Fatface', cursive">Choose Your Character...</h1>
+                <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Choose Your Character...</h1>
                 <div class="container">
                     <div class="row">
                         <c:forEach var="character" items="${list}">
