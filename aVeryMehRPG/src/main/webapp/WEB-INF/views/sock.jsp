@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link
-	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
-	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+            <link rel="stylesheet" type="text/css" href="newstyle.css">
+            <link href="https://fonts.googleapis.com/css?family=Bangers|Barriecito|Luckiest+Guy|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Sock Em'</title>
 </head>

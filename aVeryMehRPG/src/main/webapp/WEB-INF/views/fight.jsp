@@ -6,11 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Fight Fight Fight</title>
 </head>
-<link
-	href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
-	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
-<link rel="stylesheet" type="text/css" href="newstyle.css">
+            <link rel="stylesheet" type="text/css" href="newstyle.css">
+            <link href="https://fonts.googleapis.com/css?family=Bangers|Barriecito|Luckiest+Guy|Press+Start+2P|Sacramento&display=swap" rel="stylesheet">
 <body class="fightBody">
 
 	<audio autoplay>
@@ -20,7 +18,7 @@
 	<center>
 		<h1 id="fightheader">Fight!</h1>
 	</center>
-	<h2>Rules: To automatically roll the dice, slam on that punch,
+	<h2>To automatically roll the dice, slam on that punch,
 		kick or weapon button. This will determine how much damage is
 		inflicted to your enemy! Watch out for your enemy's counter attack!!</h2>
 
@@ -33,7 +31,7 @@
 						<strong>${player.name }</strong>
 					</h3>
 					<p>Move: ${ punch }${ kick }${ weapon }</p>
-					<p>Your Roll: ${ pDice }</p>
+					<p>Your roll: ${ pDice }</p>
 					<p>Health: ${ player.health.health }</p>
 				</form>
 			</div>
@@ -69,7 +67,7 @@
 						<strong>${enemy.name }</strong>
 					</h3>
 					<p>Move: ${ eResponse }</p>
-					<p>${enemy.name}Roll:${ eDice }</p>
+					<p>${enemy.name} roll:${ eDice }</p>
 					<p>Health: ${ enemy.health.health }</p>
 				</form>
 			</div>

@@ -2,21 +2,38 @@ body {
 	background-color: #373a3c;
 }
 
-[type=radio] {
-	position: relative;
-	opacity: 0;
-	width: 0;
-	height: 0;
+[type=radio] { 
+  position: relative;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-[type=radio]+img {
-	cursor: pointer;
-	width: 100%;
+[type=radio] + img {
+  cursor: pointer;
+  width:100%;
+ 
 }
 
-[type=radio]:checked+img {
-	outline: 2px solid #f00;
-	transform: rotateZ(-10deg) rotateX(10deg);
+#story1 {
+	width:30%;
+	text-align:left;
+	padding-left:5%;
+	font-size:75%;
+}
+
+.font1 {
+	font-size:170%;
+	margin-left:5%;
+}
+
+[type=radio]:checked + img {
+	
+  outline: 2px solid #f00;
+   transform: 
+    rotateZ(-10deg) 
+    rotateX(10deg);
+  
 }
 
 #dragon {
@@ -65,14 +82,12 @@ body {
 	transition: all 0.2s ease-out;
 }
 
-}
 &
 :hover {
 	span: before{  
 			transform: scale(.8) translate(-3px, 0) rotate(42deg);
 }
 
-}
 &
 .mute {
 	span: before{  
@@ -80,8 +95,6 @@ body {
 	opacity: 0;
 }
 
-}
-}
 
 /*Fight Page*/
 #fightheader {
@@ -167,8 +180,8 @@ body {
 
 /*End Fight Page*/
 body {
-	color: #FFDF00;
-	font-family: arial, sans-sarif;
-	background: #8B0000;
-	text-align: center;
+  color: #FFDF00; 
+  font-family: arial, sans-sarif;
+  background: radial-gradient(#3d0c60 0%, #1c0a43 100%);
+  text-align: center;
 }
