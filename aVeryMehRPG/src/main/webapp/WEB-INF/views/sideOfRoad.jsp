@@ -43,6 +43,7 @@
                <label>
                <img border="5px" src="roadside.jpg" alt="roadside" width="500" height="350"></img>
                <br>
+               <br>
                <a href="/refuse">
                   <button type="button" class="btn btn-primary btn-lg">1. Grab the Knights Weapon!</button>
                   </a>
