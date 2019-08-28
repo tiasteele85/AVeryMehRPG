@@ -381,7 +381,8 @@ public class MehController {
 
 		List<SaveData> allSaves = sDao.findAll();
 		List<LeaderBoard> leaders = new ArrayList<>();
-		List<LeaderBoard> orderedLeaders = new ArrayList();
+		List<LeaderBoard> orderedLeaders = new ArrayList<>();
+		boolean added = false;
 
 		leaders.add(new LeaderBoard());
 		leaders.get(0).setName(allSaves.get(0).getName());
@@ -390,40 +391,51 @@ public class MehController {
 
 		// collect all the leaders into a single value
 		for (SaveData saver : allSaves) {
-
-			// if the first index in leaders matches the name of the save spot add punches
-			// and kicks
-			// if not loop through leaders
-			// check each index for matches of names
-			// if matches the name of the save index add punches and kicks
-			// if not add new index
+			
 			if (saver.getName().equalsIgnoreCase(leaders.get(0).getName())) {
-				System.out.println("Status: " + saver.getName().equalsIgnoreCase(leaders.get(0).getName()));
+				
 				leaders.get(0).addCount();
 				leaders.get(0).addPunches(saver.getPunchCount());
 				leaders.get(0).addKicks(saver.getKickCount());
 			} else {
 				for (int i = 0; i < leaders.size(); i++) {
+
 					if (saver.getName().equalsIgnoreCase(leaders.get(i).getName())) {
-						System.out.println("Status: " + saver.getName().equalsIgnoreCase(leaders.get(i).getName()));
+						
 						leaders.get(i).addCount();
 						leaders.get(i).addPunches(saver.getPunchCount());
 						leaders.get(i).addKicks(saver.getKickCount());
-
-						System.out.println("Index: " + i);
-						System.out.print("Saver: " + saver);
-						System.out.println("Leaders: " + leaders);
-					} 					
-				}leaders.add(new LeaderBoard(saver.getName(), saver.getPunchCount(), saver.getKickCount()));
+						added = true;
+						
+					}
+				}
+				if (!added) {
+					leaders.add(new LeaderBoard(saver.getName(), saver.getPunchCount(), saver.getKickCount()));
+				}
+			}
+			added = false;
+		}
+		
+		int max = leaders.get(0).getCount();
+		int index = 0;
+		int started = leaders.size()-1;
+		for(int i = 0; i < started; i++) {
+			for(int j = 0; j < leaders.size(); j++) {
+				if(max <= leaders.get(j).getCount()) {
+					max = leaders.get(j).getCount();					
+					index = j;
+				}
+			}orderedLeaders.add(leaders.get(index));
+			leaders.remove(index);
+			if(leaders != null) {
+				max = leaders.get(0).getCount();
+				index = 0;
 			}
 		}
-
-		// TESTING
-		System.out.println(allSaves);
-		System.out.println();
-		System.out.println(leaders);
-
-		mv.addObject("characters", leaders);
+		if(leaders != null) {
+			orderedLeaders.add(leaders.get(0));
+		}
+		mv.addObject("characters", orderedLeaders);
 
 		return mv;
 	}
