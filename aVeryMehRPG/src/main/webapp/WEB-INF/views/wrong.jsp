@@ -15,11 +15,13 @@
       <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-      <h1 style="font-family: 'Abril Fatface', cursive">I guess we're about to be the villain...</h1>
-      <div class="container" style="font1">
+         <br>
+         <br>
+      <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">I guess we're about to be the villain...</h1>
+      <div class="jumbotron" style="font1">
          <div class="row">
             <div class="col-6">
-               <label class="font1">
+               <label id="font1">
                   <p>As you're trying to explain to the Knight that you're actually the good guy, he pulls out his sword and swings at you!</p>
                   <br>
                   <br>
@@ -33,13 +35,6 @@
                <img border="5px" src="roadside.jpg" alt="roadside" width="500" height="350"></img>
                </label>
             </div>
-            <div class="col-3">
-               <label>
-               </label>
-            </div>
-            <div class="col-3">
-               <label>
-               </label>
             </div>
          </div>
       </div>

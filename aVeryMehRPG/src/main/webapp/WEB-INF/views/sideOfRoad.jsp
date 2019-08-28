@@ -34,20 +34,22 @@
                   3. Tell the Knight you're a lover not a fighter
                   <br>
                   </p>
-                  <a href="/refuse">
-                  <button type="button" class="btn btn-primary btn-lg">1. Grab the Knights Weapon!</button>
-                  </a>
-                  <a href="/wrong">
-                  <button type="submit" class="btn btn-primary btn-lg">2. Insist he's wrong</button>
-                  </a>
-                  <a href="/deathJoke">
-                  <button type="button" class="btn btn-primary btn-lg">3. I'm a lover not a fighter</button>
-                  </a>
+                  
                </label>
             </div>
             <div class="col-5">
                <label>
                <img border="5px" src="roadside.jpg" alt="roadside" width="500" height="350"></img>
+               <br>
+               <a href="/refuse">
+                  <button type="button" class="btn btn-primary btn-lg">1. Grab the Knights Weapon!</button>
+                  </a>
+                  <a href="/wrong">
+                  <button type="submit" class="btn btn-primary btn-lg">2. Insist he's wrong</button><br><br>
+                  </a>
+                  <a href="/deathJoke">
+                  <button type="button" class="btn btn-primary btn-lg">3. I'm a lover not a fighter</button>
+                  </a>
                </label>
             </div>
             <div class="col-3">
