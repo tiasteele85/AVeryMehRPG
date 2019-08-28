@@ -112,11 +112,30 @@ h1 {
 
 /*Fight Page*/
 #fightheader {
-	margin-top: 2%;
+	margin-top: 0.5%;
 	font-family: 'Barriecito', cursive;
 	font-size: 250%;
+	
 }
 
+.p-background{
+ 	background-image : url("stars.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+ 
+ }
+ 
+ #fight-page margin{
+ 	margin-bottom: -150%;
+ 	margin-top: -150;
+ 	
+ }
+ 
+ #fight-page container{
+ 	margin-bottom: -150%;
+ 	margin-top: -150;
+ 
+ }
 /* .column {
 	font-size: 125%;
 	padding: 2px;
