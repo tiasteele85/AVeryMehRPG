@@ -1,10 +1,10 @@
 package co.grandcircus.aVeryMehRPG;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import javax.servlet.http.HttpSession;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import co.grandcircus.aVeryMehRPG.dao.SaveDao;
 import co.grandcircus.aVeryMehRPG.dm.DungeonMaster;
+import co.grandcircus.aVeryMehRPG.dm.LeaderBoard;
 import co.grandcircus.aVeryMehRPG.entity.SaveData;
 import co.grandcircus.aVeryMehRPG.model.ClassTypes;
 
@@ -28,8 +29,8 @@ public class MehController {
 	@Autowired
 	private SaveDao sDao;
 
-	//Create the homepage
-	//Calls the API to collect the list of selectable characters on the homepage
+	// Create the homepage
+	// Calls the API to collect the list of selectable characters on the homepage
 	//
 	@RequestMapping("/")
 	public ModelAndView showHome() {
@@ -40,28 +41,27 @@ public class MehController {
 		return mv;
 	}
 
-	//Creates the story jsp
-	//Creates the DM that will travel to all pages
-	//Creates the SaveData for the database
-	//Adds DM and SaveData to Session
-	//Creates a random number to assign a random Enemy
-	//Sets Enemy and Player in Class for DM to handle
-	//Sets the Enemy and Player in the SaveData
+	// Creates the story jsp
+	// Creates the DM that will travel to all pages
+	// Creates the SaveData for the database
+	// Adds DM and SaveData to Session
+	// Creates a random number to assign a random Enemy
+	// Sets Enemy and Player in Class for DM to handle
+	// Sets the Enemy and Player in the SaveData
 	@RequestMapping("/story")
-	public ModelAndView showStory(HttpSession session,
-			@RequestParam(value = "Character") int player) {
+	public ModelAndView showStory(HttpSession session, @RequestParam(value = "Character") int player) {
 		DungeonMaster dm = new DungeonMaster();
 		SaveData sd = new SaveData();
 		session.setAttribute("master", dm);
 		session.setAttribute("saver", sd);
-		
+
 		Random rand = new Random();
 		int num = (rand.nextInt(12));
-		int weaponNum = (rand.nextInt(12)+1);
+		int weaponNum = (rand.nextInt(12) + 1);
 		dm.player.getHealth().setHealth(5);
 
 		dm.setEnemy(apiService.showCharacter(num), apiService.reWeapon(weaponNum));
-		weaponNum = (rand.nextInt(12)+1);
+		weaponNum = (rand.nextInt(12) + 1);
 		dm.setPlayer(apiService.showCharacter(player), apiService.reWeapon(weaponNum));
 
 		// Set attribute for SaveData to be written to Database
@@ -72,24 +72,23 @@ public class MehController {
 		System.out.println("Saver: " + sd.getName());
 		System.out.println("Saver id" + sd.getId());
 		System.out.println("Player Num: " + player);
-		//TESTING
+		// TESTING
 
 		return new ModelAndView("story", "player", dm.player.getName());
 	}
 
-	//Creates Woods JSP
-	//Adds user choice to SaveData object for database
-	//Adds player name to jsp as an data object
+	// Creates Woods JSP
+	// Adds user choice to SaveData object for database
+	// Adds player name to jsp as an data object
 	@RequestMapping("/woods")
-	public ModelAndView showWoods(
-			@SessionAttribute("master") DungeonMaster dm,
+	public ModelAndView showWoods(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
 		sd.setDescription("drink");
 		ModelAndView mv = new ModelAndView("woods");
 		mv.addObject(dm.player.getName());
 		return mv;
 	}
-	
+
 	@RequestMapping("/radiobuttons")
 	public ModelAndView showRadio() {
 		List<ClassTypes> characters = apiService.showAll();
@@ -98,14 +97,13 @@ public class MehController {
 		return mv;
 	}
 
-	//Creates SideofRoad 
-	//Collects user choices as they proceed through the story
+	// Creates SideofRoad
+	// Collects user choices as they proceed through the story
 	//
 	@RequestMapping("/sideOfRoad")
-	public ModelAndView showSideOfRoad(
-			@SessionAttribute("master") DungeonMaster dm,
+	public ModelAndView showSideOfRoad(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
-		sd.setDescription("leave");	
+		sd.setDescription("leave");
 		ModelAndView mv = new ModelAndView("sideOfRoad");
 		mv.addObject(dm.player.getName());
 		return mv;
@@ -113,8 +111,7 @@ public class MehController {
 	}
 
 	@RequestMapping("/deathJoke")
-	public ModelAndView showDeathJoke(
-			@SessionAttribute("master") DungeonMaster dm,
+	public ModelAndView showDeathJoke(@SessionAttribute("master") DungeonMaster dm,
 			@SessionAttribute("saver") SaveData sd) {
 		sd.setDescription("i'm a lover not a fighter");
 		ModelAndView mv = new ModelAndView("deathJoke");
@@ -123,10 +120,8 @@ public class MehController {
 	}
 
 	@RequestMapping("/fight")
-	public ModelAndView showFightScene(
-			@SessionAttribute("master") DungeonMaster dm,
-			@SessionAttribute("saver") SaveData sd, 
-			@RequestParam(value = "punch", required = false) String punch,
+	public ModelAndView showFightScene(@SessionAttribute("master") DungeonMaster dm,
+			@SessionAttribute("saver") SaveData sd, @RequestParam(value = "punch", required = false) String punch,
 			@RequestParam(value = "kick", required = false) String kick,
 			@RequestParam(value = "weapon", required = false) String weapon,
 			@RequestParam(value = "pDice", required = false) String pDice,
@@ -142,7 +137,7 @@ public class MehController {
 			mv.addObject("eResponse", eResponse);
 			mv.addObject("pDice", pDice);
 			mv.addObject("eDice", eDice);
-			
+
 		} else if (kick != null) {
 
 			// sd.addAttackSequence("kick");
@@ -157,9 +152,9 @@ public class MehController {
 			mv.addObject("eDice", eDice);
 		}
 		mv.addObject("player", dm.player);
-		
+
 		mv.addObject("enemy", dm.enemy);
-		
+
 		return mv;
 	}
 
@@ -243,7 +238,7 @@ public class MehController {
 			@SessionAttribute("saver") SaveData sd) {
 		sd.setDescription("grab the knights dagger and show him how skilled you are with a blade");
 		dm.player.setWeapon(apiService.reWeapon(2));
-		System.out.println("Reweapon: " + dm.player.getWeapon() );
+		System.out.println("Reweapon: " + dm.player.getWeapon());
 		sd.setDescription("defend yourself");
 		ModelAndView mv = new ModelAndView("refuse");
 		mv.addObject(dm.player.getName());
@@ -254,30 +249,28 @@ public class MehController {
 	public ModelAndView takeDamage(@SessionAttribute("master") DungeonMaster dm, @SessionAttribute("saver") SaveData sd,
 			@RequestParam(value = "punch", required = false) String punchbuttonClick,
 			@RequestParam(value = "kick", required = false) String kickbuttonClick) {
-		
 
 		Random rand = new Random();
 		int toggle = rand.nextInt(3) + 1;
 		int eDamage;
-		if(toggle == 1) {
-			eDamage= dm.diceRolls("enemy", "basicDamage", false);
-		}else if (toggle ==2){
+		if (toggle == 1) {
+			eDamage = dm.diceRolls("enemy", "basicDamage", false);
+		} else if (toggle == 2) {
 			eDamage = dm.diceRolls("enemy", "basicDamage", true);
-		}else {
+		} else {
 			eDamage = dm.diceRolls("enemy", "getDamage", false);
 		}
-		
 
 		if (punchbuttonClick != null) {
-			
+
 			int pDamage = dm.diceRolls("player", "basicDamage", false);
-			//add to fight page dice
+			// add to fight page dice
 			dm.takeAPunch(pDamage);
 			sd.addPunch();
-			
-			//add to fight page dice
-			dm.BaseFight(toggle, eDamage);			
-			
+
+			// add to fight page dice
+			dm.BaseFight(toggle, eDamage);
+
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -286,7 +279,7 @@ public class MehController {
 				return new ModelAndView("redirect:/winner");
 			} else {
 				ModelAndView mv = new ModelAndView("redirect:/fight");
-				
+
 				mv.addObject("punch", dm.punchText());
 				if (toggle == 1) {
 					mv.addObject("eResponse", dm.punchText());
@@ -299,12 +292,12 @@ public class MehController {
 			}
 		} else if (kickbuttonClick != null) {
 			int pDamage = dm.diceRolls("player", "basicDamage", true);
-			//add to fight page
+			// add to fight page
 			dm.takeAKick(pDamage);
 			//
 			sd.addKick();
-			
-			dm.BaseFight(toggle , eDamage);
+
+			dm.BaseFight(toggle, eDamage);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -325,9 +318,9 @@ public class MehController {
 			}
 		} else {
 			int pDamage = dm.diceRolls("player", "getDamage", false);
-			//add to fight page
+			// add to fight page
 			dm.takeAWeaponDamage(pDamage);
-			dm.BaseFight(toggle, eDamage);			
+			dm.BaseFight(toggle, eDamage);
 			if (dm.player.getHealth().getHealth() == 0) {
 				return new ModelAndView("death");
 			} else if (dm.enemy.getHealth().getHealth() == 0) {
@@ -339,9 +332,9 @@ public class MehController {
 				mv.addObject("weapon", dm.player.getWeapon().getName());
 				if (toggle == 1) {
 					mv.addObject("eResponse", dm.punchText());
-				} else if (toggle == 2){
+				} else if (toggle == 2) {
 					mv.addObject("eResponse", dm.kickText());
-				}else {
+				} else {
 					mv.addObject("eResponse", dm.enemy.getWeapon().getName());
 				}
 				mv.addObject("pDice", pDamage);
@@ -380,5 +373,58 @@ public class MehController {
 //		session.invalidate();
 
 		return new ModelAndView("redirect:/");
+	}
+
+	@RequestMapping("/leaderBoard")
+	public ModelAndView showWinners() {
+		ModelAndView mv = new ModelAndView("leaderBoard");
+
+		List<SaveData> allSaves = sDao.findAll();
+		List<LeaderBoard> leaders = new ArrayList<>();
+		List<LeaderBoard> orderedLeaders = new ArrayList();
+
+		leaders.add(new LeaderBoard());
+		leaders.get(0).setName(allSaves.get(0).getName());
+		leaders.get(0).addPunches(allSaves.get(0).getPunchCount());
+		leaders.get(0).addKicks(allSaves.get(0).getKickCount());
+
+		// collect all the leaders into a single value
+		for (SaveData saver : allSaves) {
+
+			// if the first index in leaders matches the name of the save spot add punches
+			// and kicks
+			// if not loop through leaders
+			// check each index for matches of names
+			// if matches the name of the save index add punches and kicks
+			// if not add new index
+			if (saver.getName().equalsIgnoreCase(leaders.get(0).getName())) {
+				System.out.println("Status: " + saver.getName().equalsIgnoreCase(leaders.get(0).getName()));
+				leaders.get(0).addCount();
+				leaders.get(0).addPunches(saver.getPunchCount());
+				leaders.get(0).addKicks(saver.getKickCount());
+			} else {
+				for (int i = 0; i < leaders.size(); i++) {
+					if (saver.getName().equalsIgnoreCase(leaders.get(i).getName())) {
+						System.out.println("Status: " + saver.getName().equalsIgnoreCase(leaders.get(i).getName()));
+						leaders.get(i).addCount();
+						leaders.get(i).addPunches(saver.getPunchCount());
+						leaders.get(i).addKicks(saver.getKickCount());
+
+						System.out.println("Index: " + i);
+						System.out.print("Saver: " + saver);
+						System.out.println("Leaders: " + leaders);
+					} 					
+				}leaders.add(new LeaderBoard(saver.getName(), saver.getPunchCount(), saver.getKickCount()));
+			}
+		}
+
+		// TESTING
+		System.out.println(allSaves);
+		System.out.println();
+		System.out.println(leaders);
+
+		mv.addObject("characters", leaders);
+
+		return mv;
 	}
 }
