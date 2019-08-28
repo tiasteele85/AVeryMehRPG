@@ -293,6 +293,7 @@ public class MehController {
 		} else if (kickbuttonClick != null) {
 			int pDamage = dm.diceRolls("player", "basicDamage", true);
 			// add to fight page
+			int preHealth = dm.enemy.getHealth().getHealth();
 			dm.takeAKick(pDamage);
 			//
 			sd.addKick();
@@ -306,11 +307,19 @@ public class MehController {
 				return new ModelAndView("redirect:/winner");
 			} else {
 				ModelAndView mv = new ModelAndView("redirect:/fight");
-				mv.addObject("kick", dm.kickText());
+				if(preHealth==dm.enemy.getHealth().getHealth()) {
+					mv.addObject("kick", "Failed");
+				}else {
+					mv.addObject("kick", dm.kickText());
+				}
 				if (toggle == 1) {
 					mv.addObject("eResponse", dm.punchText());
 				} else {
-					mv.addObject("eResponse", dm.kickText());
+					if(eDamage == 0) {
+						mv.addObject("eResponse", "Failed");
+					}else {
+						mv.addObject("eResponse", dm.kickText());
+					}
 				}
 				mv.addObject("pDice", pDamage);
 				mv.addObject("eDice", eDamage);
