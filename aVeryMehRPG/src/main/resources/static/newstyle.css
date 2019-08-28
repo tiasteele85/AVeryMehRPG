@@ -122,11 +122,30 @@ h1 {
 
 /*Fight Page*/
 #fightheader {
-	margin-top: 2%;
+	margin-top: 0.5%;
 	font-family: 'Barriecito', cursive;
 	font-size: 250%;
+	
 }
 
+.p-background{
+ 	background-image : url("stars.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+ 
+ }
+ 
+ #fight-page margin{
+ 	margin-bottom: -150%;
+ 	margin-top: -150;
+ 	
+ }
+ 
+ #fight-page container{
+ 	margin-bottom: -150%;
+ 	margin-top: -150;
+ 
+ }
 /* .column {
 	font-size: 125%;
 	padding: 2px;
@@ -203,6 +222,24 @@ h1 {
 
 
 /*End Fight Page*/
+
+/*Leader Board Page*/
+
+.lead-header{
+	font-size:350%;
+	margin-bottom: -2%;
+}
+.leader-table{
+	font-size: 125%;
+	color: #FFDF00;
+}
+
+.leader-table-headers{
+	font-weight: bold;
+	font-size: 175%;
+}
+
+/*End Leader Board Page*/
 body {
   color: #FFDF00; 
   font-family: arial, sans-sarif;
