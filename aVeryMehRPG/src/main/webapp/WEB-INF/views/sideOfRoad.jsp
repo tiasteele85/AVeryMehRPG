@@ -15,11 +15,13 @@
       <!--audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio-->
-      <h1 style="font-family: 'Abril Fatface', cursive">Meet the hero?</h1>
+         <br>
+         <br>
+      <h1 class= "display-3" style="font-family: 'Abril Fatface', cursive">Meet the hero?</h1>
       <div class="container" style="font1">
          <div class="row">
             <div class="col-6">
-               <label class="font1">
+               <label id="font1">
                   <p>You walk outside and go down the path. A bird flying above you drops a rock on your head and you lose 5 health.
                      Woozy and tired, you sit down to recuperate.
                      As you're resting, a knight approaches you and requests to search your person, as there has been a recent robbery in the area and someone has stolen the Queen's diamond dragon trophy.
