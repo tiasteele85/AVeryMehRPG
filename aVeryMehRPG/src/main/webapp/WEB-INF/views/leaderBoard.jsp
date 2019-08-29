@@ -9,7 +9,7 @@
            <link rel="stylesheet" type="text/css" href="newstyle.css">
            <link href="https://fonts.googleapis.com/css?family=Bangers%7CBarriecito%7CLuckiest+Guy%7CPress+Start+2P%7CSacramento&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Leader Board</title>
 </head>
 <body>
 <audio autoplay><source src="http://ccmixter.org/content/NiGiD/NiGiD_-_Wet_Doodles.mp3"></audio>

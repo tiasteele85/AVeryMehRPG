@@ -7,7 +7,7 @@
       <link rel="stylesheet" type="text/css" href="bootstrap.css">
       <link rel="stylesheet" type="text/css" href="newstyle.css">
       <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
-      <title>Home Page</title>
+      <title>Humdrum Dungeon</title>
       <meta charset="ISO-8859-1">
    </head>
    <body>

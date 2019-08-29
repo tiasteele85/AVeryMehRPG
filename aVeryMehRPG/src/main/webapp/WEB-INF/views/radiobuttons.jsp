@@ -9,7 +9,7 @@
             <link rel="stylesheet" type="text/css" href="newstyle.css">
             <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
             <meta charset="UTF-8">
-            <title>Test</title>
+            <title>Choose Your Fighter</title>
         </head>
 
         <body id="images">

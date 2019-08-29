@@ -7,7 +7,7 @@
             <link rel="stylesheet" type="text/css" href="newstyle.css">
    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">      
    <meta charset="UTF-8">
-      <title>BarFight</title>
+      <title>Bar Fight</title>
    </head>
    <body>
    <audio autoplay><source src="http://ccmixter.org/content/cyba/cyba_-_yellow.mp3"></audio>

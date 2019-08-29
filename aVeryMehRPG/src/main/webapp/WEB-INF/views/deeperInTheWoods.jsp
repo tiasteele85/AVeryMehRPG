@@ -7,7 +7,7 @@
       <link rel="stylesheet" type="text/css" href="bootstrap.css">
       <link rel="stylesheet" type="text/css" href="newstyle.css">
       <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Lexend+Zetta&display=swap" rel="stylesheet">
-      <title>Home Page</title>
+      <title>Deeper We Go</title>
       <meta charset="UTF-8">
       <title>DEEPER WE GO</title>
    </head>
@@ -22,7 +22,7 @@
             <div class="col-6">
                <label id="font2">
                   <p>As you head further into the woods you walk past a tree and find a handaxe buried in its stump. You pick up the handaxe and make it your special weapon. 
-                     You continue on your journey you're confronted by a giant spider and realize that peace may not be in his nature.
+                     You continue on your journey when suddenly you're confronted by a giant spider and realize that peace may not be in his nature.
                      The spider looks at you and exclaims “Hey bro, quick question… where are your shoes?"
                   </p>
                   <br>

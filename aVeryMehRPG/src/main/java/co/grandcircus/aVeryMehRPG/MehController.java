@@ -49,7 +49,7 @@ public class MehController {
 	// Sets Enemy and Player in Class for DM to handle
 	// Sets the Enemy and Player in the SaveData
 	@RequestMapping("/story")
-	public ModelAndView showStory(HttpSession session, @RequestParam(value = "Character") int player) {
+	public ModelAndView showStory(HttpSession session, @RequestParam(value = "Character", required = false) Integer player) {
 		DungeonMaster dm = new DungeonMaster();
 		SaveData sd = new SaveData();
 		session.setAttribute("master", dm);
@@ -59,11 +59,15 @@ public class MehController {
 		int num = (rand.nextInt(12));
 		int weaponNum = (rand.nextInt(12) + 1);
 		dm.player.getHealth().setHealth(5);
-
+		
 		dm.setEnemy(apiService.showCharacter(num), apiService.reWeapon(weaponNum));
 		weaponNum = (rand.nextInt(12) + 1);
-		dm.setPlayer(apiService.showCharacter(player), apiService.reWeapon(weaponNum));
-
+		System.out.println("Blah Blah" + player);
+		if(player == null ) {
+			dm.setPlayer(apiService.showCharacter(12), apiService.reWeapon(weaponNum));
+		}else {
+		dm.setPlayer(apiService.showCharacter(player), apiService.reWeapon(weaponNum));}
+		
 		// Set attribute for SaveData to be written to Database
 		sd.setName(dm.player.getName());
 		sd.setEnemy(dm.enemy.getName());
