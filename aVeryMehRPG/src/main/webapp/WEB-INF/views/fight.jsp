@@ -59,13 +59,13 @@
 					<div class="row button-row">
 						<div class="col">
 							<input class="btn btn-primary btn-lg" type="submit"
-								name="Punch" value="Punch">
+								name="punch" value="punch">
 						</div>
 					</div>
 					<div class="row button-row">
 						<div class="col">
 							<input class="btn btn-primary btn-lg" type="submit"
-								name="Kick" value="Kick">
+								name="kick" value="kick">
 						</div>
 					</div>
 					<div class="row button-row">
