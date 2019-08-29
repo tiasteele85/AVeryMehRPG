@@ -135,16 +135,24 @@ h1 {
 }
 
 .p-background{
- 	background-image : url("stars.png");
+ 	background-image : url("2star.png");
 	background-repeat: no-repeat;
-	background-size: 60%;
-	width:12%;
+	background-size: 80%;
+	background-position:65%, 35%;
+	margin-top: 0%;
+	margin-left:6%;
  
  }
+ .p-bar{
+ 	margin-bottom:5%;
+ 	
+ 	
+ 	}
  
  #fight-page margin{
  	margin-bottom: -150%;
  	margin-top: -150;
+ 	
  	
  }
  
