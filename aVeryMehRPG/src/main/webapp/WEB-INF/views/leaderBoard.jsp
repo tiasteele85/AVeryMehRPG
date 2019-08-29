@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<audio autoplay><source src="http://ccmixter.org/content/NiGiD/NiGiD_-_Wet_Doodles.mp3"></audio>
     <h1 class="lead-header">Leader Board</h1>
     <div class="container">
     <table class="table leader-table">

@@ -12,6 +12,7 @@
       <title>Craft Shoes</title>
    </head>
    <body>
+   <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_Didn_t_We_Have_Fun.mp3"></audio>
       <br>
       <br>
       <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Prove your father wrong . . .</h1>

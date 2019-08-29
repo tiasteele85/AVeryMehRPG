@@ -18,7 +18,7 @@
 
         <body>
             <audio autoplay>
-         <src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
+         <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
          </audio>
          <br>
          <br>

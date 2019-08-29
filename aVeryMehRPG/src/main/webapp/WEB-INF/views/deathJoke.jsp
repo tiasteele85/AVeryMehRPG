@@ -11,9 +11,9 @@
       <title>Insert title here</title>
    </head>
    <body>
-      <!--audio autoplay>
-         <src="http://ccmixter.org/content/soundtails/soundtails_-_Dark_Sky_1.mp3">
-         </audio-->
+      <audio autoplay>
+         <source src="http://ccmixter.org/content/soundtails/soundtails_-_Dark_Sky_1.mp3">
+         </audio>
       
       <div class="container">
       <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Uh-oh. . .</h1>
