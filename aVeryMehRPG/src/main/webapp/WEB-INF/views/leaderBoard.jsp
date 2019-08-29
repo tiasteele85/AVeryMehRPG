@@ -35,8 +35,8 @@
         </tbody>
     </table>
     </div>
-    <div class="jumbotron">
-    <p><a href="/">Home</a></p>
+    <div class="display-7">
+    <p style="font-size:200%;"><a href="/">Home</a></p>
     </div>
 </body>
 </html>
