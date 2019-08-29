@@ -11,9 +11,9 @@
       <title>Story Page</title>
    </head>
    <body>
-      <!--audio autoplay>
+      <audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
-         </audio-->
+         </audio>
       <br>
       <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Hello ${player} . . .</h1>
       <div class="container" style="font1">

@@ -12,9 +12,9 @@
       <title>You're wrong, Bobby boy. . .</title>
    </head>
    <body>
-      <!--audio autoplay>
+      <audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
-         </audio-->
+         </audio>
          <br>
          <br>
       <h1 class="display-4" style="font-family: 'Abril Fatface', cursive">I guess we're about to be the villain...</h1>

@@ -12,8 +12,8 @@
       <title>Woods</title>
    </head>
    <body>
-      <!--audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
-         </audio-->
+      <audio autoplay><source src="http://ccmixter.org/content/speck/speck_-_More_Unsettled_Autumn_Snowfall_1.mp3">
+         </audio>
       <br>
       <br>
       <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Later, in the woods . . .</h1>

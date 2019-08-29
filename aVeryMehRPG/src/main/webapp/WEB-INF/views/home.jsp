@@ -12,9 +12,9 @@
         </head>
 
         <body>
-            <!--audio autoplay>
-                <!--src="http://ccmixter.org/content/texasradiofish/texasradiofish_-_Rock_Purple_Wizards_1.mp3"-->
-            </audio-->
+            <audio autoplay>
+                <src="http://ccmixter.org/content/texasradiofish/texasradiofish_-_Rock_Purple_Wizards_1.mp3">
+            </audio>
             <br>
             <br>
             <h1 class="display-3" style="font-family: 'Abril Fatface', cursive">Welcome to the Humdrum Dungeon!</h1>

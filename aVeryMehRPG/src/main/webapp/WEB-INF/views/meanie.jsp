@@ -13,9 +13,9 @@
       <title>Mean Man</title>
    </head>
    <body>
-      <!--audio autoplay>
+      <audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
-         </audio-->
+         </audio>
       <br>
       <br>
       <br>

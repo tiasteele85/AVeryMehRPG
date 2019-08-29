@@ -11,9 +11,9 @@
       <title>Knighty Knight</title>
    </head>
    <body>
-      <!--audio autoplay>
+      <audio autoplay>
          <source src="http://ccmixter.org/content/cyba/cyba_-_new_circle.mp3">
-         </audio-->
+         </audio>
          <br>
          <br>
       <h1 class="display-4" style="font-family: 'Abril Fatface', cursive">I don't think so Knighty McKnighterson!</h1>
