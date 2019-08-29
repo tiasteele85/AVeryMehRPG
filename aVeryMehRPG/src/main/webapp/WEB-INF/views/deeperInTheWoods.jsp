@@ -22,7 +22,7 @@
             <div class="col-6">
                <label id="font2">
                   <p>As you head further into the woods you walk past a tree and find a handaxe buried in its stump. You pick up the handaxe and make it your special weapon. 
-                     As you continue on you're journey your confronted by a giant spider and realize that peace may not be in his nature.
+                     You continue on your journey you're confronted by a giant spider and realize that peace may not be in his nature.
                      The spider looks at you and exclaims “Hey bro, quick question… where are your shoes?"
                   </p>
                   <br>
